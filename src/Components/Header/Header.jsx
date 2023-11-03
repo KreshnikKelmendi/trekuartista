@@ -9,7 +9,7 @@ const hamburgerIcon = (
       height="32"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#DF319A"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -47,7 +47,7 @@ const Header = () => {
   };
 
   return (
-    <header className="px-[50px] py-[20px] flex items-center justify-between text-[22px]">
+    <header className="px-5 md:px-[50px] py-[20px] flex items-center justify-between text-[22px]">
       <div className="hidden sm:block font-custom">Hello</div>
 
       <div className="text-white flex lg:items-center lg:justify-center flex-grow">
@@ -75,8 +75,8 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }} 
             transition={{ duration: 0.5 }}
-            className=" top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-10">
-                <ul className="p-0 m-0 font-custom text-6xl leading-6xl cursor-pointer">
+            className="top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-10">
+                <ul className="font-custom text-7xl leading-[70px] cursor-pointer">
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>HOME</motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>ABOUT US</motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>WORK</motion.li>
