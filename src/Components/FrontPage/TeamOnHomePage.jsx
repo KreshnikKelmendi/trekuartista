@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import pinkLogo from "../Assets/pinkLogo.png";
 import { motion, useAnimation } from 'framer-motion';
 import product1 from "../Assets/bardhi.png";
@@ -66,8 +66,8 @@ const products = [
 const TeamOnHomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(calculateSlidesPerPage());
-  // const autoplayInterval = 2500;
   const [isCarouselPaused, setCarouselPaused] = useState(false);
+  const [touchStartX, setTouchStartX] = useState(null);
 
   function calculateSlidesPerPage() {
     if (window.innerWidth < 768) {
@@ -99,26 +99,37 @@ const TeamOnHomePage = () => {
     }
   };
 
-  // useEffect(() => {
-  //   function handleResize() {
-  //     setSlidesPerPage(calculateSlidesPerPage());
-  //   }
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
 
-  //   handleResize();
-  //   window.addEventListener('resize', handleResize);
+  const handleTouchMove = (e) => {
+    if (touchStartX === null) return;
 
-  //   const autoplay = setInterval(() => {
-  //     nextSlide();
-  //   }, autoplayInterval);
+    const touchEndX = e.touches[0].clientX;
+    const deltaX = touchEndX - touchStartX;
 
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //     clearInterval(autoplay);
-  //   };
-  // }, [nextSlide]);
+    // Adjust the sensitivity according to your preference
+    if (deltaX > 50) {
+      prevSlide();
+      setTouchStartX(null);
+    } else if (deltaX < -50) {
+      nextSlide();
+      setTouchStartX(null);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setTouchStartX(null);
+  };
 
   return (
-    <div className="py-0 md:py-4 lg:px-[50px]">
+    <div
+      className="py-0 md:py-4 lg:px-[50px]"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="px-4 flex mt-14 items-center justify-between">
         <h1 className="flex text-4xl md:text-5xl lg:text-5xl font-bold font-custom leading-[47px]">
           Our people
@@ -168,7 +179,7 @@ const TeamOnHomePage = () => {
             className={`w-full ${window.innerWidth < 768 ? '' : 'md:w-1/2 lg:w-1/3'} px-5 mt-[29px] justify-center text-[#979797] text-[18px]`}
             initial={{ x: -100 }}
             animate={{ x: 0 }}
-            transition={{ ease: 'easeOut', duration: 2 }} 
+            transition={{ ease: 'easeOut', duration: 1 }}
           >
             <div className="rounded-lg">
               <img
