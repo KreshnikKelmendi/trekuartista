@@ -16,3 +16,14 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.latest-image {
+    transition: transform 0.2s;
+  }
+  
+  .latest-image:hover {
+    transform:scaleX(1.2);
+    transition: 2s all ease;
+    z-index: 999;
+    object-fit:cover;
+  }

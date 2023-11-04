@@ -5,6 +5,7 @@ import Clients from '../Components/FrontPage/Clients'
 import HorizontalSlider from '../Components/FrontPage/HorizontalSlider'
 import Newest from '../Components/FrontPage/Newest'
 import Quote from '../Components/FrontPage/Quote'
+import TeamOnHomePage from '../Components/FrontPage/TeamOnHomePage'
 
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
         <HorizontalSlider />
         <Newest />
         <Quote />
+        <TeamOnHomePage />
     </>
   )
 }

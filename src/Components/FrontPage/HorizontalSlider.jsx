@@ -57,7 +57,7 @@ const HorizontalSlider = () => {
           animate={{ scale: [1, 1.3, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-3 ml-4" alt="" />
+          <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-3 ml-4 object-cover" alt="" />
         </motion.div>
       </div>
 
