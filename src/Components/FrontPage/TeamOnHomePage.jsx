@@ -154,7 +154,7 @@ const TeamOnHomePage = () => {
             width="20"
             height="20"
             viewBox="0 0 31 32"
-            fill={isMobile ? '#1E1E1E' : '#DF319A'}
+            fill={isMobile ? '#1E1E1E' : 'black'}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M15.3755 31.6064L15.3611 28.3108L15.3446 24.6863L15.3399 21.8635L15.3251 17.4511L15.3078 12.655L15.2951 8.5852L15.281 5.33069L15.2709 2.70653L15.2603 0.000157L1.71837e-05 15.7439L15.3755 31.6064Z" />
@@ -164,7 +164,7 @@ const TeamOnHomePage = () => {
             width="20"
             height="20"
             viewBox="0 0 31 32"
-            fill={isMobile ? '#1E1E1E' : '#DF319A'}
+            fill={isMobile ? '#1E1E1E' : 'black'}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M15.2603 0L15.2746 3.29562L15.2911 6.92012L15.2958 9.74293L15.3107 14.1553L15.328 18.9514L15.3406 23.0212L15.3547 26.2758L15.3648 28.8999L15.3755 31.6063L30.6357 15.8626L15.2603 0Z" />
@@ -172,12 +172,12 @@ const TeamOnHomePage = () => {
         </div>
       </div>
 
-      <div className="flex overflow-hidden">
+      <div className="flex overflow-hidden px-5">
         {products.slice(currentSlide, currentSlide + slidesPerPage).map((product, index) => (
           <motion.div
             key={product.id}
-            className={`w-full ${isMobile ? 'md:w-full lg:w-full' : 'md:w-1/2 lg:w-1/3'} px-5 mt-[29px] justify-center text-[#979797] text-[18px]`}
-            initial={{ x: -100 }}
+            className={`w-full ${isMobile ? 'md:w-full lg:w-full' : 'md:w-1/2 lg:w-1/3'} mt-[29px] px-1 justify-center text-[#979797] text-[18px]`}
+            initial={{ x: 100 }}
             animate={{ x: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
           >
