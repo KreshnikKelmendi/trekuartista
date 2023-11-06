@@ -12,12 +12,13 @@ const Quote = () => {
       text: "Motivation is the catalyzing ingredient for every successful innovation.",
       author: "Bardh Krasniqi",
       role: "CEO of Trekuartista",
-    },{
-      text: "Simplicity is the most complicated thing.",
-      author: "Endrit Morina",
-      role: "Team Leader / 3D Artist",
-    }
-    // Add more quotes as needed
+    },
+    // {
+    //   text: "Simplicity is the most complicated thing.",
+    //   author: "Endrit Morina",
+    //   role: "Team Leader / 3D Artist",
+    // }
+  
   ];
 
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);

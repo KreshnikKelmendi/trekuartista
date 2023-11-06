@@ -6,7 +6,7 @@ const Footer = () => {
     <div className='bg-black mt-[88px]  px-4 md:px-8 lg:px-12 text-white'>
       <div className='max-w-screen-xl md:py-12 lg:py-20 mx-auto flex flex-col md:flex-row justify-between'>
         <div className='text-center md:text-left mt-10 lg:mt-5'>
-          <img src={footerLogo} className='w-[220px] h-[26px] object-cover' alt='' />
+          <img src={footerLogo} className='w-[220px] h-[26px] object-cover mx-auto lg:mx-0' alt='' />
           <p className='font-custom text-xl mt-[20px]'>
             We drive your business growth
           </p>
@@ -61,11 +61,11 @@ const Footer = () => {
         </div>
       </div>
       <hr className="border-t-[1px] border-white" />
-      <div className="flex flex-col lg:flex-row items-center justify-between py-[38px]">
+      <div className="flex px-[5px] flex-col lg:flex-row items-center justify-between py-[38px]">
         <p className='text-base font-custom1 font-light'>
         © 2023 Trekuartista L.L.C All rights reserved.
         </p>
-        <div className="flex space-x-10 mt-10 lg:mt-0">
+        <div className="flex space-x-16 mt-10 lg:mt-0">
         <a href='#' className='text-white text-[25px] hover:text-blue-400'>
             <i className="fab fa-instagram"></i>
           </a>

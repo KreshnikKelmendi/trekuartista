@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logotrekuartista from "../Assets/logo-treku.png";
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const hamburgerIcon = (
     <svg
@@ -51,7 +52,9 @@ const Header = () => {
       <div className="hidden sm:block font-custom">Hello</div>
 
       <div className="text-white flex lg:items-center lg:justify-center flex-grow">
-        <img src={logotrekuartista} alt="Logo" className="w-[56px] h-[37px]" />
+        <Link to="/">
+          <img src={logotrekuartista} alt="Logo" className="w-[56px] h-[37px]" />
+        </Link>
       </div>
 
   
@@ -81,7 +84,7 @@ const Header = () => {
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>ABOUT US</motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>WORK</motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>CLIENTS</motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>TEAM</motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-team">TEAM</Link></motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>CONTACT</motion.li>
                 </ul>
         </motion.div>
