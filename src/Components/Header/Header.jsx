@@ -80,7 +80,7 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-10">
                 <ul className="font-custom text-7xl leading-[70px] cursor-pointer">
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>HOME</motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/">HOME</Link></motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>ABOUT US</motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>WORK</motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'>CLIENTS</motion.li>
