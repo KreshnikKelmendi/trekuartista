@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Quote = () => {
   const quotes = [
     {
-      text: "We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose.",
+      text: "We believe that the unbelievable can be reached, and we strive toward it by doing it again and again.",
       author: "Arian Ahmeti",
       role: "Art Director of Trekuartista",
     },

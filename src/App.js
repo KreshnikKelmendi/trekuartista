@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import HomePage from "./Pages/HomePage";
 import Footer from "./Components/Footer/Footer";
 import TeamPage from "./Pages/TeamPage";
+import AboutUsPage from "./Pages/AboutUsPage";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/our-team" element={<TeamPage />} />
+          <Route path="/about-trekuartista" element={<AboutUsPage />} />
         </Routes>
         <Footer />
     </BrowserRouter>
