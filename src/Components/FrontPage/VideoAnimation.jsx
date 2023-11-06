@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import video1 from "../Assets/videoTrekuartista.mp4";
 import soundOffIcon from "../Assets/mute.png";
 import soundOnIcon from "../Assets/volume-up.png";
+import scrollDown from "../Assets/scrollButton.png";
+import { Link } from "react-router-dom";
 
 function VideoAnimation() {
-  const [isMuted, setIsMuted] = useState(true); 
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
     const video = document.querySelector('video');
     video.muted = isMuted;
-    video.play(); 
+    video.play();
   }, [isMuted]);
 
   const toggleMute = () => {
@@ -23,7 +25,7 @@ function VideoAnimation() {
         autoPlay
         loop
         playsInline
-        className="w-full h-full object-cover "
+        className="w-full h-full object-cover"
       />
       <button onClick={toggleMute} className="absolute voice-toggle-button left-[50px] top-[83vh] lg:top-[78vh]">
         {isMuted ? (
@@ -40,6 +42,18 @@ function VideoAnimation() {
           />
         )}
       </button>
+      <div className="absolute top-[68vh] lg:top-[60vh] inset-0 flex items-center justify-center">
+      <Link onClick={() => window.scrollTo({
+                      top: 700 ,
+                      left: 0,
+                      behavior: "smooth" })}>
+        <img
+          src={scrollDown}
+          alt=""
+          className="w-[124px] h-[27px] object-contain cursor-pointer transition-transform hover:scale-125"
+        />
+        </Link>
+      </div>
     </div>
   );
 }
