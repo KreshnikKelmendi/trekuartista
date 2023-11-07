@@ -133,7 +133,7 @@ const TeamOnHomePage = () => {
       onTouchEnd={isMobile ? handleTouchEnd : null}
     >
       <div className="px-4 flex mt-14 items-center justify-between">
-        <h1 className="flex text-4xl md:text-5xl lg:text-5xl font-bold font-custom leading-[47px]">
+        <h1 className="flex text-4xl md:text-5xl lg:text-[33px] font-bold font-custom leading-[47px]">
           Our people
           <motion.div
             initial={{ scale: 1 }}
@@ -142,7 +142,7 @@ const TeamOnHomePage = () => {
           >
             <img
               src={pinkLogo}
-              className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-3 ml-4 object-cover"
+              className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-1 ml-4 object-cover"
               alt=""
             />
           </motion.div>

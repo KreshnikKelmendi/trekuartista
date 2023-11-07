@@ -33,7 +33,7 @@ const Newest = () => {
   return (
     <div className="py-0 md:py-4 lg:px-[50px]">
       <div className="px-4 flex mt-14 items-center">
-        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-custom leading-[47px]">
+        <h1 className="text-4xl md:text-5xl lg:text-[33px] font-bold font-custom leading-[47px]">
           NEWEST
         </h1>
         <motion.div

@@ -27,7 +27,7 @@ function VideoAnimation() {
         playsInline
         className="w-full h-full object-cover"
       />
-      <button onClick={toggleMute} className="absolute voice-toggle-button left-[50px] top-[83vh] lg:top-[78vh]">
+      <button onClick={toggleMute} className="absolute voice-toggle-button left-[50px] top-[83vh] lg:top-[82vh]">
         {isMuted ? (
           <img
             src={soundOffIcon}
@@ -42,9 +42,9 @@ function VideoAnimation() {
           />
         )}
       </button>
-      <div className="absolute top-[68vh] lg:top-[60vh] inset-0 flex items-center justify-center">
+      <div className="absolute top-[68vh] lg:top-[65vh] 2xl:top-[70vh] inset-0 flex items-center justify-center">
       <Link onClick={() => window.scrollTo({
-                      top: 700 ,
+                      top: 750,
                       left: 0,
                       behavior: "smooth" })}>
         <img
