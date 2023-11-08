@@ -1,6 +1,6 @@
 @font-face {
     font-family: Integral;
-    src: url(../public/fonts/font1/Fontspring-DEMO-integralcf-extrabold.otf);
+    src: url(../public/fonts/font1/IntegralCF-ExtraBold.ttf);
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: Integral;
-    src: url(../public/fonts/font1/Fontspring-DEMO-integralcf-medium.otf);
+    src: url(../public/fonts/font1/IntegralCF-Medium.eot);
 }
 
 @import 'tailwindcss/base';
@@ -32,4 +32,9 @@
     .latest-image:hover{
         transform: none;
     }
+  }
+
+  .cartoon-effect:hover {
+    filter: saturate(200%) brightness(150%);
+    transition: filter 0.3s ease;
   }

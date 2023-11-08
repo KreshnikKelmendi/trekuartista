@@ -47,8 +47,8 @@ const HorizontalSlider = () => {
   }, [autoChangeSlide]);
 
   return (
-    <div className="relative py-0 md:py-4 bg-[#E6E6E6] lg:px-[50px]">
-      <div className="px-4 flex mt-14 items-center">
+    <div className="relative py-8 md:py-[60px] bg-[#E6E6E6] lg:px-[50px]">
+      <div className="px-4 flex items-center">
         <h1 className="text-4xl md:text-5xl lg:text-[33px] font-bold font-custom leading-[47px]">
           SPOTLIGHTED
         </h1>
@@ -78,10 +78,10 @@ const HorizontalSlider = () => {
           </AnimatePresence>
         </div>
         <motion.div
-          initial={{ opacity: 0, x: -20 }} // Initial opacity and x position
-          animate={{ opacity: 1, x: 0 }} // Animation to full opacity and original x position
+          initial={{ opacity: 0, x: -20 }} 
+          animate={{ opacity: 1, x: 0 }} 
           transition={transition}
-          className="slider-text p-6 text-base w-full lg:w-1/2"
+          className="slider-text p-4 lg:p-6  text-base w-full lg:w-1/2"
         >
           <div className="flex items-center text-[#979797]">
             {sliderData[currentSlide].categories.map((category, index) => (

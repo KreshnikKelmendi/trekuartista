@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import video1 from "../Assets/videoTrekuartista.mp4";
-import soundOffIcon from "../Assets/mute.png";
-import soundOnIcon from "../Assets/volume-up.png";
+import soundOffIcon from "../Assets/off.png";
+import soundOnIcon from "../Assets/on.png";
 import scrollDown from "../Assets/scrollButton.png";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,7 @@ function VideoAnimation() {
         playsInline
         className="w-full h-full object-cover"
       />
-      <button onClick={toggleMute} className="absolute voice-toggle-button left-[50px] top-[83vh] lg:top-[82vh]">
+      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[83vh] lg:top-[82vh]">
         {isMuted ? (
           <img
             src={soundOffIcon}

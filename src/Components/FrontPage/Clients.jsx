@@ -32,13 +32,13 @@ const Clients = () => {
 
   const slideInVariants = {
     hidden: { y: -50, opacity: 0.3 },
-    visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
   };
 
   return (
     <div className="lg:flex lg:justify-between py-0 md:py-4 lg:px-[50px]">
       <div className="px-4">
-        <h1 className="text-[33px] font-bold font-custom leading-[47px]">
+        <h1 className="text-[33px] font-bold font-custom leading-[40px]">
           Our beloved<br />partners
         </h1>
 
