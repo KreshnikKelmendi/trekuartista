@@ -43,7 +43,13 @@ const Newest = () => {
         <h1 className="text-4xl md:text-5xl lg:text-[33px] font-bold font-custom leading-[40px]">
           NEWEST
         </h1>
-        <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-3 ml-4 object-cover" alt="" />
+        <motion.div
+          initial={{ scale: 1 }}
+          animate={{ scale: [1, 1.3, 1] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-1 ml-4 object-cover" alt="" />
+        </motion.div>
       </div>
       <div className="grid lg:grid-cols-2 gap-y-28 mx-2 mt-[50px]">
         {images.map((image, index) => (

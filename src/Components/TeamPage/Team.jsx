@@ -151,7 +151,7 @@ const Team = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[20px] gap-y-4 lg:gap-y-[108px] lg:px-[60px] py-[39px]">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[20px] gap-y-20 lg:gap-y-[108px] lg:px-[60px] py-[39px]">
       {teamMembers.map((member) => (
         <div 
             onMouseEnter={() => setHoveredMember(member.id)}
