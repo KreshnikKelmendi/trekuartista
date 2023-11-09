@@ -5,6 +5,7 @@ import work2 from "../Assets/groupICEtea.png";
 import work3 from "../Assets/wwww1 1.png";
 import work4 from "../Assets/gjelberImageWork.png";
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const images = [
   {
@@ -92,10 +93,18 @@ const Newest = () => {
           </div>
         ))}
       </div>
+      {/* link to go to OUR WORK */}
       <div className='justify-center items-center text-center'>
-        <button className="mt-[120px] w-[207px] text-black hover-bg-black transition duration-500 ease-in-out hover:text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
-          View more
-        </button>
+        <Link 
+            to="/our-works" 
+            onClick={() => window.scrollTo({
+            top: 0,
+            left: 0,
+            })}>
+                <button className="mt-[120px] w-[207px] text-black hover-bg-black transition duration-500 ease-in-out hover:text-white hover:bg-black text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
+                  View more
+                </button>
+        </Link>
       </div>
     </div>
   );

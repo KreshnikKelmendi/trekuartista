@@ -19,7 +19,7 @@ function VideoAnimation() {
   };
 
   return (
-    <div className="relative slider-content p-0 h-[100vh]">
+    <div className="relative slider-content p-0 h-[100vh] z-30">
       <video
         src={video1}
         autoPlay

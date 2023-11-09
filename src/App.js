@@ -6,6 +6,7 @@ import TeamPage from "./Pages/TeamPage";
 import AboutUsPage from "./Pages/AboutUsPage";
 import ContactPage from "./Pages/ContactPage";
 import WorkPage from "./Pages/WorkPage";
+import SinglePageOfWork from "./Pages/SinglePageOfWork";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/our-team" element={<TeamPage />} />
           <Route path="/about-trekuartista" element={<AboutUsPage />} />
           <Route path="/our-works" element={<WorkPage />} />
+          <Route path="/our-works:id" element={<SinglePageOfWork />} />
           <Route path="/contact" element={<ContactPage/>} />
         </Routes>
         <Footer />

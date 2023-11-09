@@ -6,6 +6,7 @@ import work2 from "../Assets/gjelber.png"
 import work3 from "../Assets/DokuTechFinal.mp4"
 import work4 from "../Assets/mokne.png"
 import work5 from "../Assets/termokos.png"
+import { Link } from 'react-router-dom';
 
 const ourWorks = [
     { 
@@ -45,9 +46,14 @@ const OurWorks = () => {
    <div className='grid grid-cols-1 lg:grid-cols-2 py-[25px] px-5 lg:px-[50px] gap-x-[23px] gap-y-7 lg:gap-y-0'>
         {ourWorks.slice(0, 2).map((work) => (
           <div key={work.id}>
+            <Link to={`/our-works/${work.id}`} onClick={() => window.scrollTo({
+              top: 0,
+              left: 0,
+              })}>
             <img src={work.workImage} alt="" />
             <p className='mt-[30px] font-custom2 font-extrabold text-[22px]'>{work.workName}</p>
             <p className='w-full lg:w-[403px] font-custom1 font-medium text-[#979797]'>{work.workDescription}</p>
+            </Link>
           </div>
         ))}
       </div>
@@ -74,9 +80,14 @@ const OurWorks = () => {
 <div className='grid grid-cols-1 lg:grid-cols-3 py-[25px] mt-[49px] px-5 lg:px-[50px] gap-x-[23px] gap-y-7 lg:gap-y-0'>
         {ourWorks.slice(2).map((work) => (
           <div key={work.id}>
+            <Link to={`/our-works/${work.id}`} onClick={() => window.scrollTo({
+            top: 0,
+            left: 0,
+            })}>
             <img src={work.workImage} alt="" />
             <p className='mt-[30px] font-custom2 font-extrabold text-[22px]'>{work.workName}</p>
             <p className='w-full lg:w-[403px] font-custom1 font-medium text-[#979797]'>{work.workDescription}</p>
+            </Link>
           </div>
         ))}
       </div>

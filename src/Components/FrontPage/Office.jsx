@@ -3,6 +3,7 @@ import office1 from "../Assets/office1.png";
 import office2 from "../Assets/office2.png";
 import office3 from "../Assets/office3.jpg";
 import office4 from "../Assets/office4.jpg";
+import { Link } from 'react-router-dom';
 
 const Office = () => {
     const sliderImages = [office1, office2, office3, office4]; // Add more images as needed
@@ -34,9 +35,14 @@ const Office = () => {
                         We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose’ and ‘never thought about it like that’ game-changers.
                         <br /> <br /> We see the stories, angles and opportunities. The ways in. And the ways out.
                     </p>
+                    <Link to="/contact" onClick={() => window.scrollTo({
+                            top: 0,
+                            left: 0,
+                            })}>
                     <button className="w-[207px] text-black hover:bg-black transition duration-500 ease-in-out hover:text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
                         View more
                     </button>
+                    </Link>
                 </div>
                 <img
                     src={office1}
