@@ -62,7 +62,7 @@ const OurWorks = () => {
 <div className='px-5 lg:px-[50px] mt-5'>
   
    <>
-      <video src={work3} autoPlay muted loop playsInline controls alt="" className='h-[50vh] lg:h-[391px] w-full object-cover' />
+      <video src={work3} autoPlay muted loop playsInline controls alt="" className='h-[50vh] lg:h-[391px] 2xl:h-[450px] w-full object-cover' />
       <p className='mt-[30px] flex font-custom2 font-extrabold text-[22px]'>DOKUTECH
       <motion.div
           initial={{ scale: 1 }}
