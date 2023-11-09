@@ -41,7 +41,7 @@ const Newest = () => {
   return (
     <div className="py-0 md:py-2 lg:px-[50px]">
       <div className="px-4 flex mt-14 items-center">
-        <h1 className="text-4xl md:text-5xl lg:text-[33px] font-bold font-custom leading-[40px]">
+        <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[40px]">
           NEWEST
         </h1>
         <motion.div
@@ -52,7 +52,7 @@ const Newest = () => {
           <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-1 ml-4 object-cover" alt="" />
         </motion.div>
       </div>
-      <div className="grid lg:grid-cols-2 gap-y-28 mx-2 mt-[50px]">
+      <div className="grid lg:grid-cols-2 gap-y-36 mx-2 mt-[50px]">
         {images.map((image, index) => (
           <div
             key={index}
@@ -60,7 +60,7 @@ const Newest = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(-1)}
           >
-            <p className='font-custom1 text-base text-[#979797] lg:w-[60vh]'>{image.categories}</p>
+            <p className='font-custom1 text-base text-[#979797] lg:w-[60vh] 2xl:w-[40vh]'>{image.categories}</p>
             <div className="relative w-full h-full mt-4">
               <img
                 src={image.url}
@@ -75,7 +75,7 @@ const Newest = () => {
                     variants={textVariants}
                     initial="hidden"
                     animate="visible"
-                    className='font-custom2 text-[33px] font-medium'
+                    className='font-custom2 text-[33px] font-normal'
                   >
                     {image.hoverText.title}
                   </motion.p>

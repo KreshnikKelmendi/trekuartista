@@ -132,8 +132,8 @@ const TeamOnHomePage = () => {
       onTouchMove={isMobile ? handleTouchMove : null}
       onTouchEnd={isMobile ? handleTouchEnd : null}
     >
-      <div className="px-4 flex mt-14 items-center justify-between">
-        <h1 className="flex text-4xl md:text-5xl lg:text-[33px] font-bold font-custom leading-[47px]">
+      <div className="px-4 flex mt-[143px] items-center justify-between">
+        <h1 className="flex text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[47px]">
           Our people
           <motion.div
             initial={{ scale: 1 }}
@@ -172,7 +172,7 @@ const TeamOnHomePage = () => {
         </div>
       </div>
 
-      <div className="flex overflow-hidden px-5">
+      <div className="flex overflow-hidden px-3">
         {products.slice(currentSlide, currentSlide + slidesPerPage).map((product, index) => (
           <motion.div
             key={product.id}

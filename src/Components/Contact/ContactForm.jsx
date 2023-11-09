@@ -18,7 +18,7 @@ const ContactForm = () => {
               <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-3 lg:mt-0 ml-4 object-contain lg:object-cover" alt="" />
             </motion.div>
           </h1>
-          <p className="text-base py-[34px] font-custom1 font-thin md:w-[425px]">
+          <p className="text-base py-[49px] font-custom1 font-thin md:w-[425px]">
             We like working together and performing professionally.<br /> <br />
             Our team includes experienced business strategists, communication specialists, graphic
             and web designers, 3D animators, drawing illustrators, and programmers, ensuring that our
@@ -28,7 +28,7 @@ const ContactForm = () => {
       </div>
 
       {/* Second Div - Contact Form */}
-      <div className="w-full lg:w-1/2 flex px-4 lg:py-[85px]">
+      <div className="w-full lg:w-1/2 flex px-4 2xl:ml-[247px] lg:py-[85px]">
         <form className="w-full max-w-md lg:mx-[47px] lg:mt-14 font-custom text-lg">
           <div className="mb-[11px]">
             <input

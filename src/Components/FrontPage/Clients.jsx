@@ -38,7 +38,7 @@ const Clients = () => {
   return (
     <div className="lg:flex lg:justify-between py-0 md:py-4 lg:px-[50px]">
       <div className="px-4">
-        <h1 className="text-[33px] font-bold font-custom leading-[40px]">
+        <h1 className="text-[45px] font-bold font-custom leading-[55px]">
           Our beloved<br />partners
         </h1>
 

@@ -53,9 +53,9 @@ const Quote = () => {
       >
         {currentQuote.text}
       </motion.h1>
-      <div className='mt-4 md:mt-6 lg:mt-[60px] text-[#C0BBBB]'>
-        <p className='text-base md:text-lg lg:text-xs font-custom1'>{currentQuote.author}</p>
-        <p className='text-base md:text-lg lg:text-xs font-custom1'>{currentQuote.role}</p>
+      <div className='mt-4 md:mt-6 lg:mt-[60px] text-[#C0BBBB] text-center'>
+        <p className='text-base md:text-lg lg:text-base font-custom1'>{currentQuote.author}</p>
+        <p className='text-base md:text-lg lg:text-base font-custom1'>{currentQuote.role}</p>
       </div>
     </motion.div>
   );

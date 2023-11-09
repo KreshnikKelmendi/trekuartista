@@ -10,16 +10,19 @@ const sliderData = [
     image: slidePhoto1,
     text: 'Text for Image 1',
     categories: ['Campaign', 'Logo', 'Brand'],
+    descriptionText: "We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose’ and ‘never thought about it like that’ game-changers. We see the stories, angles and opportunities. The ways in. And the ways out. The tiny tweak that makes the big difference and the big idea that’s bigger than you think."
   },
   {
     image: slidePhoto2,
     text: 'Text for Image 2',
     categories: ['Campaign', 'Logo', 'Brand'],
+    descriptionText:"We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose’ and ‘never thought about it like that’ game-changers. We see the stories, angles and opportunities. The ways in. And the ways out. The tiny tweak that makes the big difference and the big idea that’s bigger than you think."
   },
   {
     image: slidePhoto3,
     text: 'Text for Image 3',
     categories: ['Campaign', 'Web', '3D Design'],
+    descriptionText: "We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose’ and ‘never thought about it like that’ game-changers. We see the stories, angles and opportunities. The ways in. And the ways out. The tiny tweak that makes the big difference and the big idea that’s bigger than you think."
   }
 ];
 
@@ -49,7 +52,7 @@ const HorizontalSlider = () => {
   return (
     <div className="relative py-8 md:py-[60px] bg-[#E6E6E6] lg:px-[50px]">
       <div className="px-4 flex items-center">
-        <h1 className="text-4xl md:text-5xl lg:text-[33px] font-bold font-custom leading-[47px]">
+        <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[55px]">
           SPOTLIGHTED
         </h1>
         <motion.div
@@ -62,7 +65,7 @@ const HorizontalSlider = () => {
       </div>
 
       <div className="lg:mt-4 w-full p-4 flex flex-col lg:flex-row items-center">
-        <div className="w-full lg:w-3/4" style={{ position: 'relative', height: '486px' }}>
+        <div className="relative w-full h-[486px] 2xl:h-[600px] lg:w-3/4">
           <AnimatePresence initial={false} custom={direction}>
             <motion.img
               key={currentSlide}
@@ -83,7 +86,7 @@ const HorizontalSlider = () => {
           transition={transition}
           className="slider-text p-4 lg:p-6  text-base w-full lg:w-1/2"
         >
-          <div className="flex items-center text-[#979797]">
+          <div className="flex items-center text-[#979797] 2xl:ml-[61px] 2xl:mt-[40px]">
             {sliderData[currentSlide].categories.map((category, index) => (
               <React.Fragment key={index}>
                 <div className={index < sliderData[currentSlide].categories.length - 1 ? "mr-2" : ""}>
@@ -97,7 +100,7 @@ const HorizontalSlider = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={transition}
-            className="text-2xl md:text-[33px] lg:text-4xl font-custom2 mb-2"
+            className="text-2xl md:text-[33px] lg:text-4xl font-custom2 mb-2 2xl:ml-[61px]"
           >
             {sliderData[currentSlide].text}
           </motion.h2>
@@ -105,16 +108,15 @@ const HorizontalSlider = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={transition}
-            className="text-[#1E1E1E] font-custom1 pt-6"
+            className="text-[#1E1E1E] font-custom1 text-base pt-6 2xl:ml-[61px] 2xl:w-[425px]"
           >
-            We see the gaps, trends, blind spots, and white spaces. Those 'right under your nose' and 'never thought about it like that' game-changers.
-            We see the stories, angles, and opportunities. The ways in. And the ways out. The tiny tweak that makes the big difference and the big idea that's bigger than you think.
+            {sliderData[currentSlide].descriptionText}
           </motion.p>
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={transition}
-            className="mt-12 lg:mt-[170px] w-[207px] text-black hover:bg-black transition duration-500 ease-linear hover-text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4"
+            className="2xl:ml-[61px] 2xl:mt-[280px] mt-12 lg:mt-[170px] w-[207px] text-black hover:bg-black transition duration-500 ease-linear hover-text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4"
           >
             Show More
           </motion.button>

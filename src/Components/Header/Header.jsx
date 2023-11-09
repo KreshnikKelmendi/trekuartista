@@ -96,13 +96,13 @@ const Header = () => {
       </AnimatePresence>
     </header>
      <div className="flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1 z-40">
-     <a href='#' className='text-black text-[25px] hover:text-[#DF319A]'>
+     <a href='#' className='text-black text-[30px] hover:text-[#DF319A]'>
        <i className="fab fa-instagram"></i>
      </a>
-     <a href='#' className='text-black text-[25px] hover:text-[#DF319A]'>
+     <a href='#' className='text-black text-[30px] hover:text-[#DF319A]'>
        <i className="fab fa-linkedin"></i>
      </a>
-     <a href='#' className='text-black text-[25px] hover:text-[#DF319A]'>
+     <a href='#' className='text-black text-[30px] hover:text-[#DF319A]'>
        <i className="fab fa-facebook"></i>
      </a>
    </div>

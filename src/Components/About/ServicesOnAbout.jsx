@@ -5,7 +5,7 @@ import image1 from "../Assets/office2.png";
 const ServicesOnAbout = () => {
   return (
     <div className="bg-black flex text-white py-0 lg:px-[50px]">
-      <div className="flex flex-col p-4 md:py-[100px]">
+      <div className="flex flex-col p-4 md:py-[124px]">
         <h1 className="text-4xl md:text-[33px] font-bold font-custom leading-[47px]">
           Services
         </h1>
@@ -19,7 +19,7 @@ const ServicesOnAbout = () => {
           Supply; PR - Public Relations; Direct Marketing; B2B; CRM 
         </p>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-x-[19px] md:py-[50px]'>
+      <div className='grid grid-cols-1 md:grid-cols-5 gap-x-[19px] md:py-[50px]'>
         <img className='w-[100%] md:w-[208px] h-[auto] md:h-[494px] object-cover' src={image1} alt="" />
         <img className='w-[100%] md:w-[208px] h-[auto] md:h-[494px] object-cover' src={image1} alt="" />
         <img className='w-[100%] md:w-[208px] h-[auto] md:h-[494px] object-cover' src={image1} alt="" />

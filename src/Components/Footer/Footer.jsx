@@ -4,7 +4,7 @@ import footerLogo from "../Assets/trekuartistaLogoFooter.png";
 const Footer = () => {
   return (
     <div className='bg-black mt-[88px]  px-4 md:px-8 lg:px-12 text-white'>
-      <div className='max-w-screen-xl md:py-12 lg:py-20 mx-auto flex flex-col md:flex-row justify-between'>
+      <div className='px-[30px] md:py-12 lg:py-20 flex flex-col md:flex-row justify-between'>
         <div className='text-center md:text-left mt-10 lg:mt-5'>
           <img src={footerLogo} className='w-[220px] h-[26px] object-cover mx-auto lg:mx-0' alt='' />
           <p className='font-custom text-xl mt-[20px]'>
@@ -60,8 +60,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="border-t-[1px] border-white" />
-      <div className="flex px-[5px] flex-col lg:flex-row items-center justify-between py-[38px]">
+      <hr className="mx-[28px] border-t-[1px] border-white" />
+      <div className="flex px-[30px] flex-col lg:flex-row items-center justify-between py-[38px]">
         <p className='text-base font-custom1 font-light'>
         © 2023 Trekuartista L.L.C All rights reserved.
         </p>
