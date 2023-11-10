@@ -10,25 +10,25 @@ const products = [
   {
     id: 1,
     name: 'Bardh Krasniqi',
-    description: 'Description for Product 1',
+    description: 'CEO Founder',
     image: product1,
   },
   {
     id: 2,
-    name: 'Product 2',
-    description: 'Description for Product 2',
+    name: 'Arian Ahmeti',
+    description: 'CEO Founder',
     image: product2,
   },
   {
     id: 3,
-    name: 'Product 3',
-    description: 'Description for Product 3',
+    name: 'Alba Krasniqi',
+    description: 'Operation Manager',
     image: product3,
   },
   {
     id: 4,
-    name: 'Product 4',
-    description: 'Description for Product 4',
+    name: 'Jetlir Kuleta',
+    description: 'Print Manager',
     image: product4,
   },
   {
@@ -182,12 +182,13 @@ const TeamOnHomePage = () => {
             transition={{ ease: 'easeOut', duration: 1 }}
           >
             <div className="rounded-lg">
-              <img
+              <motion.img
                 src={product.image}
                 alt={product.name}
                 className={`w-full h-[50vh] md:h-[70vh] object-cover cursor-pointer latest-image ${
                   index === 0 ? 'active-slide' : ''
                 }`}
+                whileHover={{ scaleX: 1.04, scaleY: 1.03, transition: {duration:0.3} }} // Add this line for the hover effect
               />
               <h2 className="font-custom1 font-bold mt-2">{product.name}</h2>
               <p className='font-custom1'>{product.description}</p>

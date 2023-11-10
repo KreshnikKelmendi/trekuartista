@@ -79,7 +79,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
-            className="top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-40"
+            className="top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-50"
           >
             <ul className="font-custom text-7xl leading-[70px] cursor-pointer">
               <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/">HOME</Link></motion.li>
@@ -90,22 +90,36 @@ const Header = () => {
             </ul>
             
             {/* Move the social media icons to the right */}
-           
+            {isMenuOpen && (
+                <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1">
+                  <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A]'>
+                    <i className="fab fa-instagram-square"></i>
+                  </a>
+                  <a href='https://www.linkedin.com/company/trekuartista-advertising-agency/mycompany/' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A]'>
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                  <a href='https://www.facebook.com/Trekuartista.LLC' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A]'>
+                    <i className="fab fa-facebook-square"></i>
+                  </a>
+                </div>
+              )}
           </motion.div>
         )}
       </AnimatePresence>
     </header>
-     <div className="flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1 z-40">
-     <a href='#' className='text-black text-[30px] hover:text-[#DF319A]'>
-       <i className="fab fa-instagram"></i>
+     <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1 z-30">
+     <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
+       <i className="fab fa-instagram-square"></i>
      </a>
-     <a href='#' className='text-black text-[30px] hover:text-[#DF319A]'>
+     <a href='https://www.linkedin.com/company/trekuartista-advertising-agency/mycompany/' rel="noreferrer" target='_blank' className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
        <i className="fab fa-linkedin"></i>
      </a>
-     <a href='#' className='text-black text-[30px] hover:text-[#DF319A]'>
-       <i className="fab fa-facebook"></i>
+     <a href='https://www.facebook.com/Trekuartista.LLC' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
+       <i className="fab fa-facebook-square"></i>
      </a>
+    
    </div>
+ 
    </>
   );
 };

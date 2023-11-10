@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const App = () => {
+const AboutUsOnHomePage = () => {
   const [ref, inView] = useInView({ threshold: 0.6 });
 
   const paragraphVariants = {
@@ -30,14 +30,14 @@ const App = () => {
       represent a well-established brand or a rising star, we offer a perspective that breaks the mold and sets 
       your digital presence apart.
     </p>
+   
+    <button className="my-6 lg:mt-[150px] w-[207px] text-black hover:bg-black transition duration-500 ease-in-out hover:text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
     <Link to="/about-trekuartista" onClick={() => window.scrollTo({
                             top: 0,
                             left: 0,
-                            })}>
-    <button className="my-6 lg:mt-[150px] w-[207px] text-black hover:bg-black transition duration-500 ease-in-out hover:text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
-      About us
+                            })}>About us </Link>
     </button>
-    </Link>
+   
   </div>
   <motion.div
     ref={ref}
@@ -70,4 +70,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AboutUsOnHomePage;

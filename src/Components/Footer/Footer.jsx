@@ -14,65 +14,65 @@ const Footer = () => {
         </div>
         <div className='mt-8 md:mt-0 md:flex md:space-x-8 lg:space-x-16 text-center lg:text-start'>
           <div className='text-white py-10 lg:py-0 flex flex-col space-y-[23px]'>
-            <a href='#' className='text-base font-custom1 font-semibold hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-semibold hover:text-[#DF319A]'>
               Company
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Blog
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Careers
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Pricing
             </a>
           </div>
           <div className='text-white py-10 lg:py-0 flex flex-col space-y-[23px]'>
-            <a href='#' className='text-base font-custom1 font-semibold hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-semibold hover:text-[#DF319A]'>
               Resources
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Documentation
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Papers
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Press Conferences
             </a>
           </div>
           <div className='text-white py-10 lg:py-0 flex flex-col space-y-[23px]'>
-            <a href='#' className='text-base font-custom1 font-semibold hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-semibold hover:text-[#DF319A]'>
               Legal
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Terms of Service
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Privacy Policy
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Cookies Policy
             </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-blue-400'>
+            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
               Data Processing
             </a>
           </div>
         </div>
       </div>
       <hr className="mx-[28px] border-t-[1px] border-white" />
-      <div className="flex px-[30px] flex-col lg:flex-row items-center justify-between py-[38px]">
+      <div className="flex lg:px-[30px] flex-col lg:flex-row items-center justify-between py-[38px]">
         <p className='text-base font-custom1 font-light'>
         © 2023 Trekuartista L.L.C All rights reserved.
         </p>
         <div className="flex space-x-16 mt-10 lg:mt-0">
-        <a href='#' className='text-white text-[25px] hover:text-blue-400'>
+        <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-white text-[25px] hover:text-[#DF319A]'>
             <i className="fab fa-instagram"></i>
           </a>
-          <a href='#' className='text-white text-[25px] hover:text-blue-400'>
-            <i className="fab fa-facebook"></i>
+          <a href='https://www.facebook.com/Trekuartista.LLC' target='_blank' rel="noreferrer" className='text-white text-[25px] hover:text-[#DF319A]'>
+            <i className="fab fa-facebook-square"></i>
           </a>
-          <a href='#' className='text-white text-[25px] hover:text-blue-400'>
+          <a href='https://www.linkedin.com/company/trekuartista-advertising-agency/mycompany/' rel="noreferrer" target='_blank' className='text-white text-[25px] hover:text-[#DF319A]'>
             <i className="fab fa-linkedin"></i>
           </a>
         </div>

@@ -50,7 +50,7 @@ const HorizontalSlider = () => {
   }, [autoChangeSlide]);
 
   return (
-    <div className="relative py-8 md:py-[60px] bg-[#E6E6E6] lg:px-[50px]">
+    <div className="relative py-8 md:py-[60px] bg-[#E6E6E6] lg:px-[50px] z-40">
       <div className="px-4 flex items-center">
         <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[55px]">
           SPOTLIGHTED
@@ -116,7 +116,7 @@ const HorizontalSlider = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={transition}
-            className="2xl:ml-[61px] 2xl:mt-[280px] mt-12 lg:mt-[170px] w-[207px] text-black hover:bg-black transition duration-500 ease-linear hover-text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4"
+            className="2xl:ml-[61px] 2xl:mt-[280px] mt-12 lg:mt-[170px] w-[207px] text-black hover:text-white hover:bg-black transition duration-500 ease-linear hover-text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4"
           >
             Show More
           </motion.button>

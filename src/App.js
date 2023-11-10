@@ -18,7 +18,7 @@ function App() {
           <Route path="/our-team" element={<TeamPage />} />
           <Route path="/about-trekuartista" element={<AboutUsPage />} />
           <Route path="/our-works" element={<WorkPage />} />
-          <Route path="/our-works:id" element={<SinglePageOfWork />} />
+          <Route path="/our-works:workID" element={<SinglePageOfWork />} />
           <Route path="/contact" element={<ContactPage/>} />
         </Routes>
         <Footer />

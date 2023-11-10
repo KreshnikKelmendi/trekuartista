@@ -1,43 +1,9 @@
 import React from 'react'
 import pinkLogo from "../Assets/pinkLogo.png";
 import { motion } from 'framer-motion';
-import work1 from "../Assets/groupICEtea.png"
-import work2 from "../Assets/gjelber.png"
-import work3 from "../Assets/DokuTechFinal.mp4"
-import work4 from "../Assets/mokne.png"
-import work5 from "../Assets/termokos.png"
 import { Link } from 'react-router-dom';
-
-const ourWorks = [
-    { 
-      id:1,
-      workImage: work1,
-      workName: "ICE TEA - JAFFA",
-      workDescription: "Bottle / Mokne / Logo / Design / Brand Strategy Natyral Watter from Istog" 
-    },
-
-    { id:2,
-      workImage: work2,
-      workName: "Gjelbër - holtikultura",
-      workDescription: "Gjelbër / Logo / Design / Brand Strategy Natyre in Pristina" 
-    },
-    {
-      id:3,
-      workImage: work4,
-      workName: "MOKNE",
-      workDescription: "Bottle / Mokne / Logo / Design Brand Strategy / Natyral Watter from Istog"
-    },{
-      id:4,
-      workImage: work5,
-      workName: "TERMOKOS",
-      workDescription: "Brand / Logo"
-    },{
-      id:5,
-      workImage: work5,
-      workName: "TERMOKOS",
-      workDescription: "Brand / Logo"
-    }
-]
+import { ourWorks } from './workData';
+import work3 from "../Assets/DokuTechFinal.mp4"
 
 const OurWorks = () => {
   return (
