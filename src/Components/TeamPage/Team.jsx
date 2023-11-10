@@ -73,16 +73,16 @@ const Team = () => {
     },
     {
       id: 8,
-      name: 'Gentrit Mehmeti',
-      position: 'Senior Graphic Designer',
-      image: member8,
+      name: 'Edmir Kuleta',
+      position: 'Team Leader / Senior Graphic Designer',
+      image: member9,
       hoverImage: '',
     },
     {
       id: 9,
-      name: 'Edmir Kuleta',
+      name: 'Gentrit Mehmeti',
       position: 'Senior Graphic Designer',
-      image: member9,
+      image: member8,
       hoverImage: '',
     },
     {
