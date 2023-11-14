@@ -38,8 +38,8 @@ const Quote = () => {
 
   return (
     <motion.div
-      className="bg-black h-[481px] p-4 text-white md:px-8 lg:px-[176px] flex flex-col justify-center items-center mt-20 lg:mx-[65px]"
-      initial={{ opacity: 0.5, scale: 1.2 }}
+      className="bg-black h-[481px] p-4 text-white md:px-8 lg:px-[176px] flex flex-col justify-center items-center  text-center mt-20 lg:mx-[65px]"
+      initial={{ opacity: 0.5, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
@@ -48,8 +48,8 @@ const Quote = () => {
         key={currentQuote.text}
         initial={{ scale: 0.8, opacity: 0.5 }}
         animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0.5 }}
-        transition={{ duration: 2 }}
+        exit={{ scale: 1, opacity: 0.5 }}
+        transition={{ duration: 1 }}
       >
         {currentQuote.text}
       </motion.h1>
