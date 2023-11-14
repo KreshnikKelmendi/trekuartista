@@ -47,12 +47,12 @@ const OurWorks = () => {
         {ourWorks.slice(2).map((work) => (
           <div key={work.id}>
             <Link to={`/our-works/${work.id}`} onClick={() => window.scrollTo({
-            top: 0,
-            left: 0,
-            })}>
-            <img src={work.workImage} alt="" />
-            <p className='mt-[30px] font-custom2 font-extrabold text-[22px]'>{work.workName}</p>
-            <p className='w-full lg:w-[403px] font-custom1 font-medium text-[#979797]'>{work.workDescription}</p>
+              top: 0,
+              left: 0,
+              })}>
+              <img src={work.workImage} alt="" />
+              <p className='mt-[30px] font-custom2 font-extrabold text-[22px]'>{work.workName}</p>
+              <p className='w-full lg:w-[403px] font-custom1 font-medium text-[#979797]'>{work.workDescription}</p>
             </Link>
           </div>
         ))}

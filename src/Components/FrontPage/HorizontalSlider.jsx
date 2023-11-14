@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import pinkLogo from "../Assets/pinkLogo.png";
 import slidePhoto1 from "../Assets/dokutechSlider.png";
 import slidePhoto2 from "../Assets/mokne.png";
 import slidePhoto3 from "../Assets/gjelber.png";
@@ -50,8 +49,26 @@ const HorizontalSlider = () => {
   }, [autoChangeSlide]);
 
   return (
-    <div className="relative py-8 md:py-[60px] bg-[#E6E6E6] lg:px-[50px] z-40">
-      <div className="px-4 flex items-center">
+    <>
+    <div className="relative bg-[#E6E6E6] lg:px-[50px] z-40 logos">
+      <div className='flex logos-slide'>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-4xl ml-6 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] text-[#DF319A]'>WORK</h1>
+      </div>
+      <div className="px-4 flex items-center pt-5">
         <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[55px]">
           SPOTLIGHTED
         </h1>
@@ -59,8 +76,12 @@ const HorizontalSlider = () => {
           initial={{ scale: 1 }}
           animate={{ scale: [1, 1.3, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
+          className='ml-6 mt-3'
         >
-          <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-1 ml-4 object-cover" alt="" />
+          <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.3698 0L20.0635 5.42257V34.1622L0 14.0987L14.3698 0Z" fill="#DF319A"/>
+            <path d="M25.7572 0L20.0635 5.42257V34.1622L40.127 14.0987L25.7572 0Z" fill="#DF319A"/>
+          </svg>
         </motion.div>
       </div>
 
@@ -133,6 +154,7 @@ const HorizontalSlider = () => {
         </svg>
       </button>
     </div>
+    </>
   );
 };
 

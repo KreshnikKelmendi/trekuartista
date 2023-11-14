@@ -4,8 +4,14 @@ import office2 from "../Assets/office2.png";
 import office3 from "../Assets/office3.jpg";
 import office4 from "../Assets/office4.jpg";
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 
 const Office = () => {
+    const [ref, inView] = useInView({ threshold: 0.9 });
+    const [photoRef, photoInView] = useInView({ threshold: 0.9 });
+
     const sliderImages = [office1, office2, office3, office4]; // Add more images as needed
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -29,7 +35,10 @@ const Office = () => {
         <div className="flex flex-col lg:flex-row md:px-[60px] mt-[129px]">
             {/* First Div */}
             <div className="w-full lg:w-1/2 flex flex-col px-3">
-                <div className="h-full">
+                <motion.div className="h-full"
+                 ref={ref}
+                 initial={{ opacity: 0, y: -50 }}
+                 animate={inView && { opacity: 1, y: 0, transition: { duration: 0.5 } }}>
                     <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[47px]">Our Space</h1>
                     <p className="text-base py-[34px] font-custom1 text-[#979797] font-thin md:w-[425px]">
                         We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose’ and ‘never thought about it like that’ game-changers.
@@ -43,10 +52,13 @@ const Office = () => {
                         View more
                     </button>
                     </Link>
-                </div>
-                <img
+                </motion.div>
+                <motion.img
                     src={office1}
                     alt="Our Space"
+                    ref={photoRef}
+                    initial={{ opacity: 0 }}
+                    animate={inView && { opacity: 1 }}
                     className="max-w-full mt-[41px] object-cover"
                 />
             </div>

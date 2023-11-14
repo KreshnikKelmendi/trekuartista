@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import pinkLogo from "../Assets/pinkLogo.png";
 import work1 from "../Assets/2 (1) 1.png";
 import work2 from "../Assets/groupICEtea.png";
 import work3 from "../Assets/wwww1 1.png";
@@ -37,19 +36,25 @@ const textVariants = {
 
 const Newest = () => {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
+  
 
   return (
     <div className="py-0 md:py-2 lg:px-[50px]">
       <div className="px-4 flex mt-14 items-center">
-        <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[40px]">
+        <h1 className="flex text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[40px]">
           NEWEST
         </h1>
         <motion.div
           initial={{ scale: 1 }}
           animate={{ scale: [1, 1.3, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
+          className='ml-6 mt-3'
         >
-          <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-1 ml-4 object-cover" alt="" />
+          <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.3698 0L20.0635 5.42257V34.1622L0 14.0987L14.3698 0Z" fill="#DF319A"/>
+<path d="M25.7572 0L20.0635 5.42257V34.1622L40.127 14.0987L25.7572 0Z" fill="#DF319A"/>
+</svg>
+
         </motion.div>
       </div>
       <div className="grid lg:grid-cols-2 gap-y-36 mx-2 mt-[50px]">

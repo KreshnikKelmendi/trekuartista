@@ -39,3 +39,20 @@
     transition: filter 0.3s ease;
   }
 
+  .logos{
+    overflow: hidden;
+  }
+  .logos-slide{
+    white-space: nowrap;
+    animation: 18s slide infinite linear;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
