@@ -49,7 +49,7 @@ const Header = () => {
 
   return (
     <>
-    <header className="px-5 md:px-[50px] py-[20px] flex items-center justify-between text-[22px]">
+    <header className="px-5 md:px-[50px] py-3 md:py-2 flex text-[22px]">
       <div className="hidden sm:block font-custom">Hello</div>
 
       <div className="text-white flex lg:items-center lg:justify-center flex-grow">
@@ -79,7 +79,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
-            className="top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-50"
+            className="top-14 lg:top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-50"
           >
             <ul className="font-custom text-7xl leading-[70px] cursor-pointer">
               <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/">HOME</Link></motion.li>

@@ -56,3 +56,28 @@
     }
   }
 
+  .motionBg:hover{
+    background-image: url(././Components/Assets/motion3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150px;
+    transition: 1s all ease;
+  }
+  .communicationBg:hover{
+    background-image: url(././Components/Assets/doni.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    transition: 1s all ease;
+  }
+  .webBg:hover{
+    background-image: url(././Components/Assets/webDesign.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    transition: 1s all ease;
+  }
+
