@@ -11,10 +11,10 @@ const AboutUsOnHomePage = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
   };
 
-  const divVariants = {
-    hidden: { x: -500 },
-    visible: { x: 0, transition: { duration: 0.6 } }
-  };
+  // const divVariants = {
+  //   hidden: { x: -500 },
+  //   visible: { x: 0, transition: { duration: 0.6 } }
+  // };
 
   return (
     <>
@@ -59,10 +59,10 @@ const AboutUsOnHomePage = () => {
 </div>
       <div className='flex relative justify-between items-center px-[16px] lg:px-[66px]'>
         <motion.div
-          ref={ref}
-          variants={divVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          // ref={ref}
+          // variants={divVariants}
+          // initial="hidden"
+          // animate={inView ? "visible" : "hidden"}
           className="h-[1px] bg-black flex-grow mt-[-60px] md:mt-[-150px]"
         ></motion.div>
       </div>

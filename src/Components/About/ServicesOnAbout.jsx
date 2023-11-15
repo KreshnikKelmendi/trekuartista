@@ -19,50 +19,50 @@ const ServicesOnAbout = () => {
           Supply; PR - Public Relations; Direct Marketing; B2B; CRM 
         </p>
       </div>
-      <div className='grid grid-cols-2 mt-[70px] px-3 lg:gap-x-20 lg:ml-[20px] relative'>
+      <div className='grid grid-cols-2  mt-[20px] md:mt-[70px] py-8 lg:py-0 px-3 gap-y-5 lg:gap-y-0 lg:gap-x-20 lg:ml-[20px] relative'>
         <motion.button
-          className='font-custom font-normal lg:ml-36 h-[48px] lg:w-[198px] text-[#979797] text-lg webBg uppercase'
+          className='relative font-custom font-normal lg:ml-36 h-[48px] lg:w-[198px] text-[#979797] text-lg webBg uppercase'
         >
-          <span className="hover:opacity-0">
+          <span className="relative text-center hover:opacity-0">
             Web Design
           </span>
         </motion.button>
         <motion.button
-          className='font-custom font-normal lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='relative font-custom font-normal lg:ml-20 lg:mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Campaign
         </motion.button>
         <motion.button
-          className='font-custom font-normal lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='relative font-custom font-normal lg:ml-20 lg:mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Graphic Design
         </motion.button>
         <motion.button
-          className='font-custom font-normal mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='relative font-custom font-normal mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           3D Design
         </motion.button>
         <motion.button
-          className='font-custom font-normal lg:ml-36 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='font-custom font-normal lg:ml-36 lg:mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Campaign
         </motion.button>
         <motion.button
-          className='font-custom font-normal lg:ml-20 mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='font-custom font-normal lg:ml-20 lg:mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Campaign
         </motion.button>
         <motion.button
-          className='font-custom font-normal lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] communicationBg text-lg uppercase'
+          className='font-custom font-normal lg:ml-20 lg:mt-[20px] h-[48px] lg:w-[198px] text-[#979797] communicationBg text-lg uppercase'
         >
-          <span className="hover:opacity-0">
+          <span className="relative hover:opacity-0">
             Communication Strategies
           </span>
         </motion.button>
         <motion.button
           className='font-custom font-normal mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase motionBg'
         >
-          <span className="hover:opacity-0">
+          <span className="relative hover:opacity-0">
             Motion Design
           </span>
         </motion.button>

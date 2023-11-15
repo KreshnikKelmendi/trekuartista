@@ -19,7 +19,7 @@ function VideoAnimation() {
   };
 
   return (
-    <div className="relative slider-content p-0 h-[100vh] lg:h-full z-40">
+    <div className="relative slider-content p-0 h-[100vh] z-40">
       <video
         src={video1}
         autoPlay
@@ -42,17 +42,17 @@ function VideoAnimation() {
           />
         )}
       </button>
-      <div className="absolute top-[88vh] lg:top-[72vh] 2xl:top-[77vh] inset-0 flex items-center justify-center">
-      <Link onClick={() => window.scrollTo({
-                      top: 800,
-                      left: 0,
-                      behavior: "smooth" })}>
-        <img
-          src={scrollDown}
-          alt=""
-          className="w-[124px] h-[27px] object-contain cursor-pointer transition-transform hover:scale-125"
-        />
-        </Link>
+      <div className="absolute top-[88vh] lg:top-[88vh] 2xl:top-[77vh] inset-0 flex items-center justify-center">
+        <Link onClick={() => window.scrollTo({
+                        top: 770,
+                        left: 0,
+                        behavior: "smooth" })}>
+          <img
+            src={scrollDown}
+            alt=""
+            className="w-[124px] h-[27px] object-contain cursor-pointer transition-transform hover:scale-125"
+          />
+          </Link>
       </div>
     </div>
   );

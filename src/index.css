@@ -61,8 +61,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 180px;
-    width: 300px;
+    height: auto;
+    width: auto;
     transition: 1s all ease;
   }
   .communicationBg:hover{
@@ -70,17 +70,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 180px;
-    width: 300px;
+    height: auto;
+    width: auto;
     transition: 1s all ease;
   }
   .webBg:hover{
-    background-image: url(././Components/Assets/webDesign.png);
+    background-image: url(././Components/Assets/122121121221.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 180px;
-    width: 300px;
+    height: auto;
+    width: auto;
     transition: 1s all ease;
   }
 
