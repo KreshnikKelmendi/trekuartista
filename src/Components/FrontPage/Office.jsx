@@ -10,7 +10,8 @@ import { useInView } from "react-intersection-observer";
 
 const Office = () => {
     const [ref, inView] = useInView({ threshold: 0.9 });
-    const [photoRef, photoInView] = useInView({ threshold: 0.9 });
+    const [photoRef, photoInView] = useInView({  triggerOnce: true, // Only trigger the animation once
+    threshold: 0.5 });
 
     const sliderImages = [office1, office2, office3, office4]; // Add more images as needed
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,8 +58,9 @@ const Office = () => {
                     src={office1}
                     alt="Our Space"
                     ref={photoRef}
-                    initial={{ opacity: 0 }}
-                    animate={inView && { opacity: 1 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={inView && { opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: 'easeInOut' }} 
                     className="max-w-full mt-[41px] object-cover"
                 />
             </div>

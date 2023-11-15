@@ -61,7 +61,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 150px;
+    height: 180px;
+    width: 300px;
     transition: 1s all ease;
   }
   .communicationBg:hover{
@@ -69,7 +70,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
+    height: 180px;
+    width: 300px;
     transition: 1s all ease;
   }
   .webBg:hover{
@@ -77,7 +79,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
+    height: 180px;
+    width: 300px;
     transition: 1s all ease;
   }
 

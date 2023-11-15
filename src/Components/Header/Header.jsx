@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logotrekuartista from "../Assets/logo-treku.png";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -10,8 +10,8 @@ const hamburgerIcon = (
     height="32"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#DF319A"
-    strokeWidth="3"
+    stroke="#000"
+    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
@@ -38,6 +38,7 @@ const closeIcon = (
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isFixed, setFixed] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -47,50 +48,88 @@ const Header = () => {
     setMenuOpen(false);
   };
 
+  useEffect(() => {
+    let prevScrollY = 0;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollY) {
+        // Scrolling down
+        setFixed(false);
+      } else {
+        // Scrolling up
+        setFixed(true);
+      }
+
+      prevScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
-    <header className="px-5 md:px-[50px] py-3 md:py-2 flex text-[22px]">
-      <div className="hidden sm:block font-custom">Hello</div>
-
-      <div className="text-white flex lg:items-center lg:justify-center flex-grow">
-        <Link to="/">
-          <img src={logotrekuartista} alt="Logo" className="w-[56px] h-[37px]" />
-        </Link>
-      </div>
-
-      <div
-        className="hidden lg:block font-custom text-xl text-[#DF319A] hover:text-black cursor-pointer md:block sm:hidden"
-        onClick={toggleMenu}
+      <header
+        className={`px-7 md:px-[50px] py-3 md:py-3 flex text-[22px] ${
+          isFixed ? 'fixed top-0 left-0 right-0 bg-white z-50' : ''
+        }`}
       >
-        {isMenuOpen ? closeIcon : 'MENU.'}
-      </div>
+        <div className="hidden sm:block font-custom">Hello</div>
 
-      <div
-        className="font-custom text-xl hover:text-black cursor-pointer sm:block md:hidden"
-        onClick={toggleMenu}
-      >
-        {isMenuOpen ? closeIcon : hamburgerIcon}
-      </div>
+        <div className="text-white flex lg:items-center lg:justify-center flex-grow">
+          <Link to="/">
+            <img src={logotrekuartista} alt="Logo" className="w-[56px] h-[37px]" />
+          </Link>
+        </div>
 
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -100 }}
-            transition={{ duration: 0.5 }}
-            className="top-14 lg:top-16 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-50"
-          >
-            <ul className="font-custom text-7xl leading-[70px] cursor-pointer">
-              <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/">HOME</Link></motion.li>
-              <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/about-trekuartista">ABOUT US</Link></motion.li>
-              <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-works">WORK</Link></motion.li>
-              <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-team">TEAM</Link></motion.li>
-              <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/contact">CONTACT</Link></motion.li>
-            </ul>
-            
-            {/* Move the social media icons to the right */}
-            {isMenuOpen && (
+        <div
+          className={`hidden lg:block font-custom text-xl ${
+            isFixed ? 'text-[#DF319A]' : 'text-[#DF319A]'
+          } hover:text-black cursor-pointer md:block sm:hidden`}
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? closeIcon : 'MENU.'}
+        </div>
+
+        <div
+          className={`font-custom text-xl hover:text-black cursor-pointer sm:block md:hidden ${
+            isFixed ? 'text-black' : 'text-[#DF319A]'
+          }`}
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? closeIcon : hamburgerIcon}
+        </div>
+
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={headerVariants}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className="top-14 lg:top-14 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-50"
+            >
+              <ul className="font-custom text-7xl leading-[70px] cursor-pointer">
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/">HOME</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/about-trekuartista">ABOUT US</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-works">WORK</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-team">TEAM</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/contact">CONTACT</Link></motion.li>
+              </ul>
+
+              {/* Move the social media icons to the right */}
+              {isMenuOpen && (
                 <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1">
                   <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A]'>
                     <i className="fab fa-instagram-square"></i>
@@ -103,24 +142,23 @@ const Header = () => {
                   </a>
                 </div>
               )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
-     <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1 z-30">
-     <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
-       <i className="fab fa-instagram-square"></i>
-     </a>
-     <a href='https://www.linkedin.com/company/trekuartista-advertising-agency/mycompany/' rel="noreferrer" target='_blank' className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
-       <i className="fab fa-linkedin"></i>
-     </a>
-     <a href='https://www.facebook.com/Trekuartista.LLC' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
-       <i className="fab fa-facebook-square"></i>
-     </a>
-    
-   </div>
- 
-   </>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+
+      <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1 z-30">
+        <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
+          <i className="fab fa-instagram-square"></i>
+        </a>
+        <a href='https://www.linkedin.com/company/trekuartista-advertising-agency/mycompany/' rel="noreferrer" target='_blank' className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href='https://www.facebook.com/Trekuartista.LLC' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A] hover:scale-110'>
+          <i className="fab fa-facebook-square"></i>
+        </a>
+      </div>
+    </>
   );
 };
 

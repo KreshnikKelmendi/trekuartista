@@ -21,46 +21,46 @@ const ServicesOnAbout = () => {
       </div>
       <div className='grid grid-cols-2 mt-[70px] px-3 lg:gap-x-20 lg:ml-[20px] relative'>
         <motion.button
-          className='font-custom1 lg:ml-36 h-[48px] lg:w-[198px] text-[#979797] text-lg webBg uppercase'
+          className='font-custom font-normal lg:ml-36 h-[48px] lg:w-[198px] text-[#979797] text-lg webBg uppercase'
         >
           <span className="hover:opacity-0">
             Web Design
           </span>
         </motion.button>
         <motion.button
-          className='font-custom1 lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='font-custom font-normal lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Campaign
         </motion.button>
         <motion.button
-          className='font-custom1 lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='font-custom font-normal lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Graphic Design
         </motion.button>
         <motion.button
-          className='font-custom1 mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='font-custom font-normal mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           3D Design
         </motion.button>
         <motion.button
-          className='font-custom1 lg:ml-36 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='font-custom font-normal lg:ml-36 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Campaign
         </motion.button>
         <motion.button
-          className='font-custom1 lg:ml-20 mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
+          className='font-custom font-normal lg:ml-20 mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase'
         >
           Campaign
         </motion.button>
         <motion.button
-          className='font-custom1 lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] communicationBg text-lg uppercase'
+          className='font-custom font-normal lg:ml-20 mt-[20px] h-[48px] lg:w-[198px] text-[#979797] communicationBg text-lg uppercase'
         >
           <span className="hover:opacity-0">
             Communication Strategies
           </span>
         </motion.button>
         <motion.button
-          className='font-custom1 mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase motionBg'
+          className='font-custom font-normal mt-[0px] h-[48px] lg:w-[198px] text-[#979797] text-lg uppercase motionBg'
         >
           <span className="hover:opacity-0">
             Motion Design

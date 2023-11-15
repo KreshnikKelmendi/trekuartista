@@ -19,7 +19,7 @@ function VideoAnimation() {
   };
 
   return (
-    <div className="relative slider-content p-0 h-[100vh] z-40">
+    <div className="relative slider-content p-0 h-[100vh] lg:h-full z-40">
       <video
         src={video1}
         autoPlay
@@ -27,7 +27,7 @@ function VideoAnimation() {
         playsInline
         className="w-full h-full object-cover"
       />
-      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[83vh] lg:top-[82vh]">
+      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[93vh] lg:top-[92vh]">
         {isMuted ? (
           <img
             src={soundOffIcon}
@@ -42,9 +42,9 @@ function VideoAnimation() {
           />
         )}
       </button>
-      <div className="absolute top-[68vh] lg:top-[65vh] 2xl:top-[70vh] inset-0 flex items-center justify-center">
+      <div className="absolute top-[88vh] lg:top-[72vh] 2xl:top-[77vh] inset-0 flex items-center justify-center">
       <Link onClick={() => window.scrollTo({
-                      top: 750,
+                      top: 800,
                       left: 0,
                       behavior: "smooth" })}>
         <img
