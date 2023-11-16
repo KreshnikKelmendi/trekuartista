@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import pinkLogo from "../Assets/pinkLogo.png";
 import { motion, useAnimation } from 'framer-motion';
 import product1 from "../Assets/bardhi.png";
 import product2 from "../Assets/ariani.png";
@@ -139,12 +138,12 @@ const TeamOnHomePage = () => {
             initial={{ scale: 1 }}
             animate={{ scale: [1, 1.3, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
+            className='ml-6 mt-3'
           >
-            <img
-              src={pinkLogo}
-              className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-1 ml-4 object-cover"
-              alt=""
-            />
+            <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.3698 0L20.0635 5.42257V34.1622L0 14.0987L14.3698 0Z" fill="#DF319A"/>
+              <path d="M25.7572 0L20.0635 5.42257V34.1622L40.127 14.0987L25.7572 0Z" fill="#DF319A"/>
+            </svg>
           </motion.div>
         </h1>
 

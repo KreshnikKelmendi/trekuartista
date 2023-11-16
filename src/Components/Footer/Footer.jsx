@@ -3,6 +3,7 @@ import footerLogo from "../Assets/trekuartistaLogoFooter.png";
 
 const Footer = () => {
   return (
+    <>
     <div className='bg-black mt-[88px]  px-4 md:px-8 lg:px-12 text-white'>
       <div className='px-[30px] md:py-12 lg:py-20 flex flex-col md:flex-row justify-between'>
         <div className='text-center md:text-left mt-10 lg:mt-5'>
@@ -78,6 +79,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
+       </>
   );
 };
 
