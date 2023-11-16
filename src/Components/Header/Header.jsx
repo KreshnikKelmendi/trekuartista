@@ -128,8 +128,9 @@ const Header = () => {
                 <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0})}>CONTACT</Link></motion.li>
               </ul>
 
-              {/* Move the social media icons to the right */}
+           
               {isMenuOpen && (
+                <>
                 <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1">
                   <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-black text-[30px] hover:text-[#DF319A]'>
                     <i className="fab fa-instagram-square"></i>
@@ -141,6 +142,7 @@ const Header = () => {
                     <i className="fab fa-facebook-square"></i>
                   </a>
                 </div>
+                </>
               )}
             </motion.div>
           )}

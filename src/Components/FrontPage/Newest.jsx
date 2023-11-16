@@ -1,34 +1,8 @@
 import React, { useState } from 'react';
-import work1 from "../Assets/2 (1) 1.png";
-import work2 from "../Assets/groupICEtea.png";
-import work3 from "../Assets/wwww1 1.png";
-import work4 from "../Assets/gjelberImageWork.png";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
-
-const images = [
-  {
-    url: work1,
-    categories: 'Bottle / Mokne / Logo / Design / Brand Strategy Natyral Water from Istog',
-    hoverText: { title: 'MOKNE', description: 'Bottle / Logo / Design' },
-  },
-  {
-    url: work2,
-    categories: 'Bottle / Mokne / Logo / Design / Brand Strategy Natyral Water from Istog',
-    hoverText: { title: 'Hover 2', description: 'Additional Description 2' },
-  },
-  {
-    url: work3,
-    categories: 'Bottle / Mokne / Logo / Design / Brand Strategy Natyral Water from Istog',
-    hoverText: { title: 'Hover 3', description: 'Additional Description 3' },
-  },
-  {
-    url: work4,
-    categories: 'Bottle / Mokne / Logo / Design / Brand Strategy Natyral Water from Istog',
-    hoverText: { title: 'Hover 5', description: 'Additional Description 4' },
-  },
-];
+import { ourWorks } from '../Works/workData';
 
 const textVariants = {
   hidden: { y: 10, opacity: 0 },
@@ -68,20 +42,23 @@ const Newest = () => {
           </motion.div>
         </div>
         <div className="grid lg:grid-cols-2 gap-y-36 mx-2 mt-[50px]">
-          {images.map((image, index) => (
+          {ourWorks?.slice(0, 4).map((image, index) => (
             <div
               key={index}
               className="relative mx-2"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(-1)}
-            >
-              <p className='font-custom1 text-base text-[#979797] lg:w-[60vh] 2xl:w-[40vh]'>{image.categories}</p>
+            > 
+              <p className='font-custom1 text-base text-[#979797] lg:w-[60vh] 2xl:w-[40vh]'>{image.workDescription}</p>
               <div className="relative w-full h-full mt-4">
                 <img
-                  src={image.url}
+                  src={image.workImage}
                   alt=""
                   className="w-full h-full object-cover bg-black"
                 />
+                
+                {/* link to single page */}
+               <Link to={`/our-works/${image.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
                 {hoveredIndex === index && (
                   <motion.div
                     className="absolute inset-0 flex flex-col items-center justify-center text-white bg-gray-800 bg-opacity-80 cursor-pointer p-2"
@@ -92,7 +69,7 @@ const Newest = () => {
                       animate="visible"
                       className='font-custom2 text-[33px] font-normal'
                     >
-                      {image.hoverText.title}
+                      {image.workName}
                     </motion.p>
                     <motion.p
                       variants={textVariants}
@@ -100,10 +77,11 @@ const Newest = () => {
                       animate="visible"
                       className='font-custom1 text-lg font-normal'
                     >
-                      {image.hoverText.description}
+                      {image.hoverText}
                     </motion.p>
                   </motion.div>
                 )}
+                </Link>
               </div>
             </div>
           ))}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import video1 from "../Assets/videoTrekuartista.mp4";
 import soundOffIcon from "../Assets/off.png";
 import soundOnIcon from "../Assets/on.png";
-import scrollDown from "../Assets/scrollButton.png";
+import scrollDown from "../Assets/scrollDown.png";
 import { Link } from "react-router-dom";
 
 function VideoAnimation() {
@@ -27,7 +27,7 @@ function VideoAnimation() {
         playsInline
         className="w-full h-full object-cover"
       />
-      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[93vh] lg:top-[90vh]">
+      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[85vh] lg:top-[90vh]">
         {isMuted ? (
           <img
             src={soundOffIcon}
@@ -42,16 +42,16 @@ function VideoAnimation() {
           />
         )}
       </button>
-      <div className="absolute top-[88vh] lg:top-[80vh] 2xl:top-[77vh] inset-0 flex items-center justify-center">
+      <div className="absolute top-[72vh] lg:top-[83vh] 2xl:top-[77vh] inset-0 flex items-center justify-center">
         <Link onClick={() => window.scrollTo({
                         top: 770,
                         left: 0,
                         behavior: "smooth" })}>
-          <img
-            src={scrollDown}
-            alt=""
-            className="w-[124px] h-[27px] object-contain cursor-pointer transition-transform hover:scale-125"
-          />
+            <img
+              src={scrollDown}
+              alt=""
+              className="w-[114px] h-[27px] object-contain cursor-pointer transition-transform hover:scale-125"
+            />
           </Link>
       </div>
     </div>

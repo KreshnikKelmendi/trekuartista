@@ -15,7 +15,8 @@ const ourWorks = [
       thirdSinglePhoto: third,
       workName: "Ice Tea - Jaffa",
       workDescription: "Bottle / Mokne / Logo / Design / Brand Strategy Natyral Water from Istog", 
-      textDescription : "Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate. "
+      textDescription : "Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate.",
+      hoverText: "Campaign / Design / Logo"
     },
 
     { 
@@ -29,12 +30,14 @@ const ourWorks = [
       workImage: work4,
       workName: "Mokne",
       workDescription: "Bottle / Mokne / Logo / Design Brand Strategy / Natyral Water from Istog"
-    },{
+    },
+    {
       id:4,
       workImage: work5,
       workName: "Termokos",
-      workDescription: "Brand / Logo"
-    },{
+      workDescription: "Brand / Logo / Brand Strategy / Design / The city's Heating Station"
+    },
+    {
       id:5,
       workImage: work5,
       workName: "Termokos",
