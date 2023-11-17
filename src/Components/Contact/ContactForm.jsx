@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 const Modal = ({ closeModal }) => (
   <div className="modal">
     <div className="modal-content">
-      <span className="close" onClick={closeModal}>&times;</span>
+      <span className="close" onClick={closeModal}></span>
       <p className="font-custom1">
         We have received your message and would like to thank you for writing to us!
       </p>

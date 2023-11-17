@@ -19,7 +19,7 @@ const ServicesOnAbout = () => {
           Supply; PR - Public Relations; Direct Marketing; B2B; CRM 
         </p>
       </div>
-      <div className='grid grid-cols-2  mt-[20px] md:mt-[70px] py-8 lg:py-0 px-3 gap-y-5 lg:gap-y-0 lg:gap-x-20 lg:ml-[20px] relative'>
+      <div className='grid grid-cols-2 mt-[20px] md:mt-[70px] py-8 lg:py-0 px-3 gap-y-5 lg:gap-y-0 lg:gap-x-20 lg:ml-[20px] 2xl:ml-72 relative'>
         <motion.button
           className='relative font-custom font-normal lg:ml-36 h-[48px] lg:w-[198px] text-[#979797] text-lg webBg uppercase'
         >

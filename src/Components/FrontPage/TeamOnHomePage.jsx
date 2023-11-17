@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import product1 from "../Assets/bardhi.png";
 import product2 from "../Assets/ariani.png";
@@ -65,7 +65,6 @@ const products = [
 const TeamOnHomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(calculateSlidesPerPage());
-  const [isCarouselPaused, setCarouselPaused] = useState(false);
   const [touchStartX, setTouchStartX] = useState(null);
 
   function calculateSlidesPerPage() {
@@ -79,23 +78,19 @@ const TeamOnHomePage = () => {
   const controls = useAnimation();
 
   const nextSlide = () => {
-    if (!isCarouselPaused) {
-      const next = currentSlide + slidesPerPage;
-      setCurrentSlide(next >= products.length ? 0 : next);
-    }
+    const next = currentSlide + slidesPerPage;
+    setCurrentSlide(next >= products.length ? 0 : next);
   };
 
   const prevSlide = () => {
-    if (!isCarouselPaused) {
-      let prev = currentSlide - slidesPerPage;
-      if (prev < 0) {
-        prev = products.length - (products.length % slidesPerPage);
-        if (prev === products.length) {
-          prev = products.length - slidesPerPage;
-        }
+    let prev = currentSlide - slidesPerPage;
+    if (prev < 0) {
+      prev = products.length - (products.length % slidesPerPage);
+      if (prev === products.length) {
+        prev = products.length - slidesPerPage;
       }
-      setCurrentSlide(prev);
     }
+    setCurrentSlide(prev);
   };
 
   const handleTouchStart = (e) => {
@@ -124,6 +119,15 @@ const TeamOnHomePage = () => {
 
   const isMobile = window.innerWidth < 768;
 
+  useEffect(() => {
+    
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
+
   return (
     <div
       className="py-0 md:py-4 lg:px-[50px]"
@@ -140,10 +144,10 @@ const TeamOnHomePage = () => {
             transition={{ duration: 2, repeat: Infinity }}
             className='ml-6 mt-3'
           >
-            <svg width="41" height="35" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.3698 0L20.0635 5.42257V34.1622L0 14.0987L14.3698 0Z" fill="#DF319A"/>
-              <path d="M25.7572 0L20.0635 5.42257V34.1622L40.127 14.0987L25.7572 0Z" fill="#DF319A"/>
+            <svg width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M38.9946 13.5843L39 13.5789H38.9903L25.406 0.0258216L19.5163 5.84967L13.6525 0L0 13.4982C6.55272 19.9988 13.1054 26.4994 19.6592 33L38.9924 13.5865H38.9967L38.9946 13.5843Z" fill="#DF319A"/>
             </svg>
+
           </motion.div>
         </h1>
 
