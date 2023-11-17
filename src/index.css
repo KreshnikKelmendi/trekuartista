@@ -1,3 +1,7 @@
+body{
+  background-color: #F8F8F8;
+}
+
 @font-face {
     font-family: Integral;
     src: url(../public/fonts/font1/IntegralCF-ExtraBold.ttf);
@@ -44,6 +48,7 @@
   }
   .logos-slide{
     white-space: nowrap;
+    opacity: 0.1;
     animation: 18s slide infinite linear;
   }
 
@@ -83,4 +88,5 @@
     width: auto;
     transition: 1s all ease;
   }
+
 

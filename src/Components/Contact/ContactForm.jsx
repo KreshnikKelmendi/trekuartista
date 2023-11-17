@@ -1,8 +1,58 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import pinkLogo from "../Assets/pinkLogo.png";
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
+
+const Modal = ({ closeModal }) => (
+  <div className="modal">
+    <div className="modal-content">
+      <span className="close" onClick={closeModal}>&times;</span>
+      <p className="font-custom1">
+        We have received your message and would like to thank you for writing to us!
+      </p>
+    </div>
+  </div>
+);
 
 const ContactForm = () => {
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    setIsSending(true);
+
+    try {
+      const result = await emailjs.sendForm(
+        'service_aiq8wyl',
+        'template_30u7p67',
+        form.current,
+        'wrDNx2dqNINsXxEHy'
+      );
+
+      console.log(result.text);
+      showSuccessPopup();
+    } catch (error) {
+      console.log(error.text);
+    } finally {
+      setIsSending(false);
+    }
+    e.target.reset();
+  };
+
+  const showSuccessPopup = () => {
+    setIsSent(true);
+    setTimeout(() => {
+      setIsSent(false);
+    }, 4000);
+  };
+
+  const closeModal = () => {
+    setIsSent(false);
+  };
+
   return (
     <div className="flex flex-col bg-black text-white lg:flex-row md:px-[50px] mt-[97px]">
       {/* First Div */}
@@ -29,7 +79,7 @@ const ContactForm = () => {
 
       {/* Second Div - Contact Form */}
       <div className="w-full lg:w-1/2 flex px-4 2xl:ml-[247px] lg:py-[85px]">
-        <form className="w-full max-w-md lg:mx-[47px] lg:mt-14 font-custom text-lg">
+        <form ref={form} onSubmit={sendEmail} className="w-full max-w-md lg:mx-[47px] lg:mt-14 font-custom text-lg">
           <div className="mb-[11px]">
             <input
               type="text"
@@ -88,9 +138,14 @@ const ContactForm = () => {
             ></textarea>
           </div>
           <div className="mt-4">
-          <button className="my-6 w-[207px] text-white hover:bg-white transition duration-500 ease-in-out hover:text-black text-base border border-white font-medium font-custom1 py-2 px-4">
-              SUBMIT
-         </button>
+            <button
+              className="my-6 w-[207px] text-white hover:bg-white transition duration-500 ease-in-out hover:text-black text-base border border-white font-medium font-custom1 py-2 px-4"
+              type="submit"
+              disabled={isSending}
+            >
+              {isSending ? 'SENDING...' : 'SUBMIT'}
+            </button>
+            {isSent && <Modal closeModal={closeModal} />}
           </div>
         </form>
       </div>
