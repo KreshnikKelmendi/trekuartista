@@ -8,11 +8,16 @@ import Quote from '../Components/FrontPage/Quote'
 import TeamOnHomePage from '../Components/FrontPage/TeamOnHomePage'
 import Office from '../Components/FrontPage/Office'
 
+React.lazy(() => import('../Components/FrontPage/VideoAnimation'));
+
 
 const HomePage = () => {
   return (
     <>
+    <React.Suspense fallback={<div>Loading...</div>}>
         <VideoAnimation />
+      </React.Suspense>
+        
         <AboutUsOnHomePage />
         <Clients />
         <HorizontalSlider />
