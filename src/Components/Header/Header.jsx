@@ -10,8 +10,8 @@ const hamburgerIcon = (
     height="32"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#000"
-    strokeWidth="2"
+    stroke="#DF319A"
+    strokeWidth="2.8"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
@@ -80,7 +80,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`px-7 md:px-[50px] py-3 md:py-3 flex text-[22px] ${
+        className={`px-7 md:px-[50px] py-3 md:py-3 flex text-[22px] bg-white ${
           isFixed ? 'fixed top-0 left-0 right-0 bg-white z-50' : ''
         }`}
       >
