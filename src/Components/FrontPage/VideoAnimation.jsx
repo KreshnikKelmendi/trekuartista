@@ -28,7 +28,7 @@ function VideoAnimation() {
         preload="metadata"
         className="w-full h-full object-cover"
       />
-      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[85vh] lg:top-[90vh]">
+      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[85vh] lg:top-[91vh]">
         {isMuted ? (
           <img
             src={soundOffIcon}

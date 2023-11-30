@@ -20,7 +20,7 @@ const AboutUsOnHomePage = () => {
     <>
     <div className=" flex flex-col lg:flex-row py-4 lg:py-[97px] lg:px-[50px]">
     <div className="lg:w-1/2 p-4 flex flex-col lg:order-1">
-    <h1 className="text-[45px] font-bold font-custom leading-[55px]">We unveil <br />the unseen</h1>
+    <h1 className="text-4xl lg:text-[45px] font-bold font-custom leading-[.957142857] lg:leading-[55px]">We unveil <br />the unseen</h1>
     <p className="md:hidden my-6 text-[#979797] font-custom1 text-base leading-normal">
       We uncover the hidden pathways, the shifting landscapes, the unnoticed opportunities, 
       and the untouched canvases. Those "in plain sight" revolutions that will reshape your 

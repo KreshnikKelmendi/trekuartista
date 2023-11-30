@@ -26,7 +26,7 @@ const Newest = () => {
         variants={slideInVariants}
       >
         <div className="px-4 flex mt-14 items-center">
-          <h1 className="flex text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[40px]">
+          <h1 className="flex text-[42px] md:text-5xl lg:text-[45px] font-bold font-custom leading-[40px]">
             NEWEST
           </h1>
           <motion.div
@@ -41,7 +41,7 @@ const Newest = () => {
 
           </motion.div>
         </div>
-        <div className="grid lg:grid-cols-2 gap-y-36 mx-2 mt-[50px]">
+        <div className="grid lg:grid-cols-2 gap-y-24 lg:gap-y-36 mx-2 mt-[50px]">
           {ourWorks?.slice(0, 4).map((image, index) => (
             <div
               key={index}
