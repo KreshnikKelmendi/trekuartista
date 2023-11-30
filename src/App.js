@@ -7,6 +7,7 @@ import AboutUsPage from "./Pages/AboutUsPage";
 import ContactPage from "./Pages/ContactPage";
 import WorkPage from "./Pages/WorkPage";
 import SinglePageOfWork from "./Pages/SinglePageOfWork";
+import ScrollToTop from "./Components/Scroll/ScrollToTop";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         </Routes>
         <Footer />
     </BrowserRouter>
+    <ScrollToTop />
     </>
   );
 }
