@@ -67,7 +67,7 @@ const SinglePageOfWork = () => {
         {mediaItems.map((media, index) => (
           <div key={index} className="w-full h-full relative">
             {media.endsWith('.mp4') ? (
-              <video className="w-full h-full object-cover" autoPlay loop muted controls>
+              <video className="w-full h-full object-cover" autoPlay loop muted>
                 <source src={media} type="video/mp4" />
               </video>
             ) : (
