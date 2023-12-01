@@ -8,12 +8,13 @@ import third from "../Assets/third.png";
 import firstMokne from "../Assets/Evian_Lead.jpg"
 import secondMokne from "../Assets/evian15.jpg"
 import thirdMokne from "../Assets/evianSparkling.jpg"
+import dok from "../Assets/DokuTechFinal.mp4"
 
 const ourWorks = [
     { 
       id:1,
       workImage: work1,
-      firstSinglePhoto: first,
+      firstSinglePhoto: dok,
       secondSinglePhoto: second,
       thirdSinglePhoto: third,
       workName: "Ice Tea - Jaffa",

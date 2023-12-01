@@ -9,8 +9,8 @@ const SinglePageOfWork = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 2500); 
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % 2);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
@@ -24,10 +24,11 @@ const SinglePageOfWork = () => {
 
   const { workName, textDescription, workDescription, firstSinglePhoto, secondSinglePhoto, thirdSinglePhoto } = work;
 
-  const images = [firstSinglePhoto, secondSinglePhoto, thirdSinglePhoto];
+  const mediaItems = [firstSinglePhoto, secondSinglePhoto];
+
+  const slideItems = [thirdSinglePhoto, secondSinglePhoto];
 
   const handleImageChange = () => {
-    
     if (sliderRef.current) {
       sliderRef.current.scrollTop = sliderRef.current.scrollHeight;
     }
@@ -52,7 +53,7 @@ const SinglePageOfWork = () => {
           <motion.img
             key={currentIndex}
             className="w-full h-full object-cover"
-            src={images[currentIndex]}
+            src={slideItems[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
             initial={{ opacity: 0, filter: 'blur(3px)' }}
             animate={{ opacity: 1, filter: 'blur(0px)' }}
@@ -62,9 +63,18 @@ const SinglePageOfWork = () => {
         </AnimatePresence>
       </div>
 
-      <div className='grid grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px]'>
-        <img src={secondSinglePhoto} alt='' className="w-full h-full object-cover" />
-        <img src={thirdSinglePhoto} alt='' className="w-full h-full object-cover" />
+      <div className='grid grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px] test'>
+        {mediaItems.map((media, index) => (
+          <div key={index} className="w-full h-full relative">
+            {media.endsWith('.mp4') ? (
+              <video className="w-full h-full object-cover" autoPlay loop muted controls>
+                <source src={media} type="video/mp4" />
+              </video>
+            ) : (
+              <img src={media} alt='' className="w-full h-full object-cover" />
+            )}
+          </div>
+        ))}
       </div>
     </>
   );

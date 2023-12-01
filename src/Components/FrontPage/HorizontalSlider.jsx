@@ -57,21 +57,21 @@ const HorizontalSlider = () => {
     <>
       <div className="relative bg-[#E6E6E6] lg:px-[50px] z-40 logos">
         <div className='flex logos-slide mt-5'>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px] '>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
-          <h1 className='text-6xl tracking-[5px] ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
+          <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
         </div>
         <div className="px-4 flex items-center pt-5">
           <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[55px]">
