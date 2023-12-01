@@ -27,9 +27,9 @@ const Office = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 5000); // Change the interval duration (in milliseconds) as needed
+        const interval = setInterval(nextSlide, 5000);
 
-        return () => clearInterval(interval); // Clear the interval when the component unmounts
+        return () => clearInterval(interval); 
     }, [currentSlide]);
 
     return (

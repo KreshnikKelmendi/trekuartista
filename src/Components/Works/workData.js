@@ -5,6 +5,9 @@ import work5 from "../Assets/termokos.png"
 import first from "../Assets/jaffaFirst.png"
 import second from "../Assets/second1.png"
 import third from "../Assets/third.png";
+import firstMokne from "../Assets/Evian_Lead.jpg"
+import secondMokne from "../Assets/evian15.jpg"
+import thirdMokne from "../Assets/evianSparkling.jpg"
 
 const ourWorks = [
     { 
@@ -27,6 +30,9 @@ const ourWorks = [
     },
     {
       id:3,
+      firstSinglePhoto: firstMokne,
+      secondSinglePhoto: secondMokne,
+      thirdSinglePhoto:thirdMokne,
       workImage: work4,
       workName: "Mokne",
       workDescription: "Bottle / Mokne / Logo / Design Brand Strategy / Natyral Water from Istog"

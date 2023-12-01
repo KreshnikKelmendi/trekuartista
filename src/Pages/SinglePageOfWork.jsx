@@ -9,8 +9,8 @@ const SinglePageOfWork = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % 3); // Assuming you have three images for each work
-    }, 3000); // Adjust the interval duration (in milliseconds)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
+    }, 2500); 
 
     return () => clearInterval(interval);
   }, []);
@@ -27,7 +27,7 @@ const SinglePageOfWork = () => {
   const images = [firstSinglePhoto, secondSinglePhoto, thirdSinglePhoto];
 
   const handleImageChange = () => {
-    // Ruaj pozicionin e scroll-it kur ndryshon slider-i
+    
     if (sliderRef.current) {
       sliderRef.current.scrollTop = sliderRef.current.scrollHeight;
     }
@@ -54,9 +54,9 @@ const SinglePageOfWork = () => {
             className="w-full h-full object-cover"
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
-            initial={{ opacity: 0, filter: 'blur(10px)' }}
+            initial={{ opacity: 0, filter: 'blur(3px)' }}
             animate={{ opacity: 1, filter: 'blur(0px)' }}
-            exit={{ opacity: 1, filter: 'blur(10px)' }}
+            exit={{ opacity: 1, filter: 'blur(3px)' }}
             transition={{ duration: 0.5 }}
           />
         </AnimatePresence>

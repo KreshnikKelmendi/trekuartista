@@ -31,6 +31,7 @@ const OurWorks = () => {
              muted 
              loop 
              playsInline 
+             autoPlay
              controls 
              alt="" 
              className='h-[50vh] lg:h-[391px] 2xl:h-[450px] w-full object-cover' 

@@ -40,25 +40,17 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isFixed, setFixed] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
   useEffect(() => {
-    let prevScrollY = 0;
+    let prevScrollY = window.scrollY;
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > prevScrollY) {
-        // Scrolling down
+      if (currentScrollY > prevScrollY && isFixed) {
+        // Scrolling down and header is fixed
         setFixed(false);
-      } else {
-        // Scrolling up
+      } else if (currentScrollY <= prevScrollY && !isFixed) {
+        // Scrolling up and header is not fixed
         setFixed(true);
       }
 
@@ -70,7 +62,15 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isFixed]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   const headerVariants = {
     hidden: { opacity: 0, y: -100 },
@@ -80,8 +80,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`px-7 md:px-[50px] py-3 md:py-3 flex text-[22px] bg-white ${
-          isFixed ? 'fixed top-0 left-0 right-0 bg-white z-50' : ''
+        className={`px-7 relative md:px-[50px] py-3 md:py-3 flex text-[22px] bg-white ${
+          isFixed ? 'sticky top-0 left-0 right-0 bg-white z-50' : ''
         }`}
       >
         <div className="hidden sm:block font-custom">Hello</div>
@@ -121,13 +121,13 @@ const Header = () => {
               className="top-14 lg:top-14 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-50"
             >
               <ul className="font-custom text-6xl lg:text-8xl 2xl:text-9xl lg:leading-[90px] cursor-pointer">
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/" onClick={() => window.scrollTo({ top: 0, left: 0})}>HOME</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/about-trekuartista" onClick={() => window.scrollTo({ top: 0, left: 0})}>ABOUT US</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-works" onClick={() => window.scrollTo({ top: 0, left: 0})}>WORK</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-team" onClick={() => window.scrollTo({ top: 0, left: 0})}>TEAM</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0})}>CONTACT</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>HOME</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/about-trekuartista" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>ABOUT US</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-works" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>WORK</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-team" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>TEAM</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>CONTACT</Link></motion.li>
               </ul>
-           
+
               {isMenuOpen && (
                 <>
                 <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1">
