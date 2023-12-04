@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import AboutUsOnHomePage from '../Components/FrontPage/AboutUsOnHomePage';
 import Clients from '../Components/FrontPage/Clients';
 import HorizontalSlider from '../Components/FrontPage/HorizontalSlider';
@@ -11,6 +11,9 @@ import Office from '../Components/FrontPage/Office';
 const VideoAnimation = lazy(() => import('../Components/FrontPage/VideoAnimation'));
 
 const HomePage = () => {
+  useEffect(() => {
+    document.title = 'Trekuartista';
+  }, []);
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>

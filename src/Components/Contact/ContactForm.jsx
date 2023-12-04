@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import pinkLogo from "../Assets/pinkLogo.png";
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 
 const Modal = ({ closeModal }) => (
@@ -18,6 +19,12 @@ const ContactForm = () => {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.6
+  });
+
+  const controls = useAnimation(); // Define controls here
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -53,6 +60,17 @@ const ContactForm = () => {
     setIsSent(false);
   };
 
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const formFieldsVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <div className="flex flex-col bg-black text-white lg:flex-row md:px-[50px] mt-[97px]">
       {/* First Div */}
@@ -78,9 +96,16 @@ const ContactForm = () => {
       </div>
 
       {/* Second Div - Contact Form */}
-      <div className="w-full lg:w-1/2 flex px-4 2xl:ml-[247px] lg:py-[85px]">
+      <motion.div
+        initial="hidden"
+        animate={controls}
+        variants={formFieldsVariants}
+        transition={{ duration: 0.5 }}
+        className="w-full lg:w-1/2 flex px-4 2xl:ml-[247px] lg:py-[85px]"
+        ref={ref}
+      >
         <form ref={form} onSubmit={sendEmail} className="w-full max-w-md lg:mx-[47px] lg:mt-14 font-custom text-lg">
-          <div className="mb-[11px]">
+          <motion.div variants={formFieldsVariants} className="mb-[11px]">
             <input
               type="text"
               id="name"
@@ -89,8 +114,8 @@ const ContactForm = () => {
               placeholder="Your Name"
               required
             />
-          </div>
-          <div className="mb-[11px]">
+          </motion.div>
+          <motion.div variants={formFieldsVariants} className="mb-[11px]">
             <input
               type="text"
               id="company"
@@ -98,8 +123,8 @@ const ContactForm = () => {
               className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
               placeholder="Company Name"
             />
-          </div>
-          <div className="mb-[11px]">
+          </motion.div>
+          <motion.div variants={formFieldsVariants} className="mb-[11px]">
             <input
               type="text"
               id="role"
@@ -107,8 +132,8 @@ const ContactForm = () => {
               className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
               placeholder="Your Role"
             />
-          </div>
-          <div className="mb-[11px]">
+          </motion.div>
+          <motion.div variants={formFieldsVariants} className="mb-[11px]">
             <input
               type="tel"
               id="phone"
@@ -116,8 +141,8 @@ const ContactForm = () => {
               className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
               placeholder="Phone Number"
             />
-          </div>
-          <div className="mb-[11px]">
+          </motion.div>
+          <motion.div variants={formFieldsVariants} className="mb-[11px]">
             <input
               type="email"
               id="email"
@@ -126,8 +151,8 @@ const ContactForm = () => {
               placeholder="Email Address"
               required
             />
-          </div>
-          <div className="mb-[11px]">
+          </motion.div>
+          <motion.div variants={formFieldsVariants} className="mb-[11px]">
             <textarea
               id="message"
               name="message"
@@ -136,7 +161,7 @@ const ContactForm = () => {
               rows="3"
               required
             ></textarea>
-          </div>
+          </motion.div>
           <div className="mt-4">
             <button
               className="my-6 w-[207px] text-white hover:bg-white transition duration-500 ease-in-out hover:text-black text-base border border-white font-medium font-custom1 py-2 px-4"
@@ -148,7 +173,7 @@ const ContactForm = () => {
             {isSent && <Modal closeModal={closeModal} />}
           </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };
