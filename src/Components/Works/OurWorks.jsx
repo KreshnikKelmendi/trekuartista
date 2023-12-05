@@ -98,7 +98,7 @@ const OurWorks = () => {
           {isClearAllVisible && (
           <motion.button
             onClick={handleClearAll}
-            className="p-2 ml-4 text-black font-custom1 cursor-pointer"
+            className="p-2 ml-4 text-black font-custom1 cursor-pointer hidden lg:block"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -131,11 +131,11 @@ const OurWorks = () => {
           </svg>
 
           {showSuggestions && (
-            <ul className="absolute z-10 w-full bg-white  mt-2 rounded-md ">
+            <ul className="absolute z-10 w-full bg-white">
               {clientSuggestions.map((clientName) => (
                 <li
                   key={clientName}
-                  className="p-2 cursor-pointer hover:bg-gray-100"
+                  className="p-2 cursor-pointer"
                   onClick={() => handleSuggestionClick(clientName)}
                 >
                   {clientName}
@@ -143,6 +143,18 @@ const OurWorks = () => {
               ))}
             </ul>
           )}
+          
+        {/* Clear all for mobile devices */}
+        {isClearAllVisible && (
+          <motion.button
+            onClick={handleClearAll}
+            className="p-2 text-red-600 font-custom1 cursor-pointer lg:hidden"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Clear all
+          </motion.button>
+        )}
         </div>
       
       </div>
