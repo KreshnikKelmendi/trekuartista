@@ -60,7 +60,7 @@ const OurWorks = () => {
           name="workSelector"
           onChange={(event) => handleSelectChange(event, setSelectedWork)}
           value={selectedWork}
-          className="lg:mr-[23px] p-2 py-2 font-custom1 uppercase border border-black bg-[#F8F8F8] cursor-pointer w-[100%] lg:w-[23.5%] rounded-none "
+          className="lg:mr-[23px] p-2 py-3 lg:py-2 font-custom1 uppercase border border-black bg-[#F8F8F8] cursor-pointer w-[100%] lg:w-[23.5%] rounded-none "
         >
           <option value="">CLIENT</option>
           <option value=""></option>
@@ -76,7 +76,7 @@ const OurWorks = () => {
           name="categorySelector"
           onChange={(event) => handleSelectChange(event, setSelectedCategory)}
           value={selectedCategory}
-          className="p-2 py-2 font-custom1 uppercase border border-black bg-[#F8F8F8] cursor-pointer w-[100%] lg:w-[23.5%] mt-4 lg:mt-0 rounded-none "
+          className="p-2 py-3 lg:py-2 font-custom1 uppercase border border-black bg-[#F8F8F8] cursor-pointer w-[100%] lg:w-[23.5%] mt-4 lg:mt-0 rounded-none "
         >
           <option value="">CATEGORY</option>
           <option value=""></option>
@@ -114,11 +114,11 @@ const OurWorks = () => {
             onChange={(event) => setSearchQuery(event.target.value)}
             onFocus={handleSearchInputFocus}
             onBlur={handleSearchInputBlur}
-            className="p-2 px-2 font-custom1 uppercase border border-black bg-[#F8F8F8] cursor-pointer lg:mt-0 w-full lg:mx-[23px] rounded-none"
+            className="p-2 px-2 py-3 lg:py-2 font-custom1 uppercase border border-black bg-[#F8F8F8] cursor-pointer lg:mt-0 w-full lg:mx-[23px] rounded-none"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4 absolute right-[4px] lg:right-[-15px] top-3" 
+            className="h-4 w-4 absolute right-[4px] lg:right-[-15px] top-4 lg:top-3" 
             viewBox="0 0 24 24"
             fill="none"
             stroke="#DF319A"
