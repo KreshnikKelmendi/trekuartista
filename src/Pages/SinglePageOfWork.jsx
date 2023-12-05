@@ -63,15 +63,15 @@ const SinglePageOfWork = () => {
         </AnimatePresence>
       </div>
 
-      <div className='grid grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px] test'>
+      <div className='grid grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px]'>
         {mediaItems.map((media, index) => (
-          <div key={index} className="w-full h-full relative">
+          <div key={index} className="w-full h-auto relative">
             {media.endsWith('.mp4') ? (
-              <video className="w-full h-full object-cover" autoPlay loop muted>
+              <video className="w-full h-56 lg:h-[510px] object-cover" autoPlay loop muted>
                 <source src={media} type="video/mp4" />
               </video>
             ) : (
-              <img src={media} alt='' className="w-full h-full object-cover" />
+              <img src={media} alt='' className="w-full h-56 lg:h-[510px] object-cover" />
             )}
           </div>
         ))}
