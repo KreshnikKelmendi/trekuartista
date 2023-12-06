@@ -3,7 +3,7 @@ import React from 'react'
 const WorkDescription = () => {
   return (
     <div className="py-0  bg-[#E6E6E6] lg:px-[50px] z-50 logos">
-      <div className='flex logos-slide'>
+      <div className='flex logos-slide mt-1'>
           <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
           <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
           <h1 className='text-6xl ml-7 md:text-5xl lg:text-[70px] font-bold font-custom leading-[40px]'>WORK</h1>
