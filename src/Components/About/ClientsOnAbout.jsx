@@ -28,9 +28,9 @@ const partnerLogos = [
 const ClientsOnAbout = () => {
   return (
     <>
-      <div className="py-0 md:py-[100px] bg-[#E6E6E6] lg:px-[70px]">
+      <div className="py-0 lg:py-[100px] bg-[#E6E6E6] lg:px-[70px]">
         <div className="flex flex-col lg:flex-row p-4 lg:p-0">
-          <h1 className="text-4xl md:text-[33px] font-bold font-custom leading-[47px]">
+          <h1 className="text-4xl lg:text-[33px] font-bold font-custom leading-[47px]">
             CLIENTS
           </h1>
           <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-[425px] text-lg font-medium font-custom1 text-[#1E1E1E]">
@@ -39,7 +39,7 @@ const ClientsOnAbout = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-[93px] gap-x-14 py-5 lg:gap-y-[110px] gap-y-16 px-16 lg:px-[90px] lg:py-[84px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-[93px] gap-x-14 py-5 lg:gap-y-[110px] gap-y-16 px-16 lg:px-[90px] lg:py-[84px]">
         {partnerLogos.map((logo, index) => (
           <div key={index}>
             <img className='w-[128px] h-[43px] object-contain' src={logo.src} alt={logo.alt} />

@@ -2,9 +2,9 @@ import React from 'react'
 
 const WorkDescription = () => {
   return (
-    <div className="py-0 md:py-[100px] bg-[#E6E6E6] lg:px-[50px] z-50">
+    <div className="py-0 lg:py-[100px] bg-[#E6E6E6] lg:px-[50px] z-50">
       <div className="flex flex-col lg:flex-row p-4 lg:p-0">
-        <h1 className="text-4xl md:text-[33px] font-bold font-custom leading-[47px]">
+        <h1 className="text-4xl lg:text-[33px] font-bold font-custom leading-[47px]">
           OUR WORK
         </h1>
         <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-[425px] text-lg font-medium font-custom1 text-[#1E1E1E]">

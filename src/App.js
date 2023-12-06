@@ -7,22 +7,24 @@ import AboutUsPage from "./Pages/AboutUsPage";
 import ContactPage from "./Pages/ContactPage";
 import WorkPage from "./Pages/WorkPage";
 import SinglePageOfWork from "./Pages/SinglePageOfWork";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/our-team" element={<TeamPage />} />
-          <Route path="/about-trekuartista" element={<AboutUsPage />} />
-          <Route path="/our-works" element={<WorkPage />} />
-          <Route path="/our-works/:workID" element={<SinglePageOfWork />} />
-          <Route path="/contact" element={<ContactPage/>} />
-        </Routes>
+      <BrowserRouter>
+        <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/our-team" element={<TeamPage />} />
+            <Route path="/about-trekuartista" element={<AboutUsPage />} />
+            <Route path="/our-works" element={<WorkPage />} />
+            <Route path="/our-works/:workID" element={<SinglePageOfWork />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
         <Footer />
-    </BrowserRouter>
+      </BrowserRouter>
     </>
   );
 }

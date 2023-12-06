@@ -2,7 +2,7 @@ import React from 'react';
 
 const DescriptionTeam = () => {
   return (
-    <div className="py-0 md:py-[100px] bg-[#E6E6E6] lg:px-[50px]">
+    <div className="py-0 lg:py-[100px] bg-[#E6E6E6] lg:px-[50px]">
       <div className="flex flex-col lg:flex-row p-4 lg:p-0">
         <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-custom leading-[47px]">
           Our people

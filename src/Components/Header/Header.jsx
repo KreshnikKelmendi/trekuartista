@@ -80,13 +80,13 @@ const Header = () => {
   return (
     <>
       <header
-        className={`px-7 relative md:px-[50px] py-3 md:py-3 flex text-[22px] bg-white ${
+        className={`px-7 relative lg:px-[50px] py-3 md:py-3 flex text-[22px] bg-white ${
           isFixed ? 'sticky top-0 left-0 right-0 bg-white z-50' : ''
         }`}
       >
         <div className="hidden sm:block font-custom">Hello</div>
 
-        <div className="text-white flex lg:items-center lg:justify-center flex-grow">
+        <div className="text-white flex md:items-center md:justify-center flex-grow">
           <Link to="/">
             <img src={logotrekuartista} alt="Logo" className="w-[56px] h-[37px]" />
           </Link>

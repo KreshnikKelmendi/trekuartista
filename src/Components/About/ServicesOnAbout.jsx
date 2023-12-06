@@ -5,11 +5,11 @@ import image1 from "../Assets/office1.png";
 const ServicesOnAbout = () => {
   return (
     <div className="bg-black flex flex-col lg:flex-row text-white py-0 lg:px-[50px]">
-      <div className="flex flex-col p-4 md:py-[124px]">
-        <h1 className="text-4xl md:text-[33px] font-bold font-custom leading-[47px]">
+      <div className="flex flex-col p-4 lg:py-[124px]">
+        <h1 className="text-4xl lg:text-[33px] font-bold font-custom leading-[47px]">
           Services
         </h1>
-        <p className='font-custom1 text-base w-[100%] md:w-[433px] mt-[35px]'>
+        <p className='font-custom1 text-base w-[100%] lg:w-[433px] mt-[35px]'>
           We enjoy working together and operating with professionalism.
           <br /> <br />
           By offering a diverse scale of services such as: 

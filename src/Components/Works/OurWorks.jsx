@@ -159,7 +159,7 @@ const OurWorks = () => {
       
       </div>
       <AnimatePresence>
-        <div className="grid grid-cols-1 lg:grid-cols-2 py-[25px] px-5 lg:px-[50px] gap-x-[23px] gap-y-7 lg:gap-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-[25px] px-5 lg:px-[50px] gap-x-[23px] gap-y-7 lg:gap-y-0">
           {filteredWorks.slice(0, 2).map((work) => (
             <motion.div
               key={work.id}
@@ -240,7 +240,7 @@ const OurWorks = () => {
         </div>
       </AnimatePresence>
       <AnimatePresence>
-        <div className="grid grid-cols-1 lg:grid-cols-3 py-[25px] mt-[49px] px-5 lg:px-[50px] gap-x-[23px] gap-y-7 lg:gap-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-[25px] mt-[49px] px-5 lg:px-[50px] gap-x-[23px] gap-y-7 lg:gap-y-0">
           {filteredWorks.slice(3).map((work) => (
             <motion.div
               key={work.id}

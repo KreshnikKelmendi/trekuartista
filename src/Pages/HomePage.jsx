@@ -14,6 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     document.title = 'Trekuartista';
   }, []);
+  
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>

@@ -41,7 +41,7 @@ const Newest = () => {
 
           </motion.div>
         </div>
-        <div className="grid lg:grid-cols-2 gap-y-24 lg:gap-y-36 mx-2 mt-[50px]">
+        <div className="grid md:grid-cols-2 gap-y-24 lg:gap-y-36 mx-2 mt-[50px]">
           {ourWorks?.slice(0, 4).map((image, index) => (
             <div
               key={index}

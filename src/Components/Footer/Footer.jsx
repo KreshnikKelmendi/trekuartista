@@ -5,15 +5,15 @@ const Footer = () => {
   return (
     <>
     <div className='bg-black mt-[88px]  px-4 md:px-8 lg:px-12 text-white'>
-      <div className='px-[30px] md:py-12 lg:py-20 flex flex-col md:flex-row justify-between'>
-        <div className='text-center md:text-left mt-10 lg:mt-5'>
+      <div className='px-[30px] md:py-12 lg:py-20 flex flex-col md:flex-col lg:flex-row justify-between'>
+        <div className='text-center lg:text-left mt-10 lg:mt-5'>
           <img src={footerLogo} className='w-[220px] h-[26px] object-cover mx-auto lg:mx-0' alt='' />
           <p className='font-custom text-xl mt-[20px]'>
             We drive your business growth
           </p>
           <p className='font-custom1 text-base mt-[20px] font-light'>Trekuartista, 2023.</p>
         </div>
-        <div className='mt-8 md:mt-0 md:flex md:space-x-8 lg:space-x-16 text-center lg:text-start'>
+        <div className='mt-8 md:mt-0 flex flex-col lg:flex-row lg:space-x-16 text-center lg:text-start'>
           <div className='text-white py-10 lg:py-0 flex flex-col space-y-[23px]'>
             <a href='#' className='text-base font-custom1 font-semibold hover:text-[#DF319A]'>
               Company

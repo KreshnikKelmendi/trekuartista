@@ -33,7 +33,7 @@ const Office = () => {
     }, [currentSlide]);
 
     return (
-        <div className="flex flex-col lg:flex-row md:px-[60px] mt-[129px]">
+        <div className="flex flex-col lg:flex-row lg:px-[60px] mt-[129px]">
             {/* First Div */}
             <div className="w-full lg:w-1/2 flex flex-col px-3">
                 <motion.div className="h-full"
@@ -41,7 +41,7 @@ const Office = () => {
                  initial={{ opacity: 0, y: -50 }}
                  animate={inView && { opacity: 1, y: 0, transition: { duration: 0.5 } }}>
                     <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[47px]">Our Space</h1>
-                    <p className="text-base py-[34px] font-custom1 text-[#979797] font-thin md:w-[425px]">
+                    <p className="text-base py-[34px] font-custom1 text-[#979797] font-thin lg:w-[425px]">
                         We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose’ and ‘never thought about it like that’ game-changers.
                         <br /> <br /> We see the stories, angles and opportunities. The ways in. And the ways out.
                     </p>

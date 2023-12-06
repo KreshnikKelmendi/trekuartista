@@ -63,7 +63,7 @@ const AboutUsOnHomePage = () => {
           // variants={divVariants}
           // initial="hidden"
           // animate={inView ? "visible" : "hidden"}
-          className="h-[1px] bg-black flex-grow mt-[-60px] md:mt-[-150px]"
+          className="h-[1px] bg-black flex-grow mt-[-60px] md:mt-[0px] lg:mt-[-150px]"
         ></motion.div>
       </div>
         </>

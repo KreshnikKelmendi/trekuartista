@@ -72,9 +72,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col bg-black text-white lg:flex-row md:px-[50px] mt-[97px]">
+    <div className="flex flex-col bg-black text-white lg:flex-row lg:px-[50px] mt-[97px]">
       {/* First Div */}
-      <div className="w-full lg:w-1/2 flex px-4 flex-col py-7 lg:py-[85px]">
+      <div className="w-full lg:w-1/2 flex flex-col px-4 py-7 lg:py-[85px]">
         <div className="h-full">
           <h1 className="text-4xl flex md:text-5xl lg:text-[33px] font-bold font-custom leading-[47px]">
             GET IN TOUCH
@@ -86,7 +86,7 @@ const ContactForm = () => {
               <img src={pinkLogo} className="w-8 md:w-10 lg:w-[40px] h-8 md:h-10 lg:h-[34px] mt-3 lg:mt-0 ml-4 object-contain lg:object-cover" alt="" />
             </motion.div>
           </h1>
-          <p className="text-base py-[49px] font-custom1 font-thin md:w-[425px]">
+          <p className="text-base py-[49px] font-custom1 font-thin lg:w-[425px]">
             We like working together and performing professionally.<br /> <br />
             Our team includes experienced business strategists, communication specialists, graphic
             and web designers, 3D animators, drawing illustrators, and programmers, ensuring that our
@@ -104,7 +104,7 @@ const ContactForm = () => {
         className="w-full lg:w-1/2 flex px-4 2xl:ml-[247px] lg:py-[85px]"
         ref={ref}
       >
-        <form ref={form} onSubmit={sendEmail} className="w-full max-w-md lg:mx-[47px] lg:mt-14 font-custom text-lg">
+        <form ref={form} onSubmit={sendEmail} className="w-full lg:mx-[47px] lg:mt-14 font-custom text-lg">
           <motion.div variants={formFieldsVariants} className="mb-[11px]">
             <input
               type="text"
