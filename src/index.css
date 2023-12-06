@@ -49,7 +49,7 @@ body{
   .logos-slide{
     white-space: nowrap;
     opacity: 0.1;
-    animation: 18s slide infinite linear;
+    animation: 12000ms slide infinite linear;
   }
 
   @keyframes slide {

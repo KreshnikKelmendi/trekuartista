@@ -110,7 +110,7 @@ const ContactForm = () => {
               type="text"
               id="name"
               name="name"
-              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
+              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b rounded-none"
               placeholder="Your Name"
               required
             />
@@ -120,7 +120,7 @@ const ContactForm = () => {
               type="text"
               id="company"
               name="company"
-              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
+              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b rounded-none"
               placeholder="Company Name"
             />
           </motion.div>
@@ -129,7 +129,7 @@ const ContactForm = () => {
               type="text"
               id="role"
               name="role"
-              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
+              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b rounded-none"
               placeholder="Your Role"
             />
           </motion.div>
@@ -138,7 +138,7 @@ const ContactForm = () => {
               type="tel"
               id="phone"
               name="phone"
-              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
+              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b rounded-none"
               placeholder="Phone Number"
             />
           </motion.div>
@@ -147,7 +147,7 @@ const ContactForm = () => {
               type="email"
               id="email"
               name="email"
-              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
+              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b rounded-none"
               placeholder="Email Address"
               required
             />
@@ -156,7 +156,7 @@ const ContactForm = () => {
             <textarea
               id="message"
               name="message"
-              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b"
+              className="w-full py-2 placeholder-[#D9D9D9] text-white bg-black focus:outline-none border-b rounded-none"
               placeholder="Tell Us how we can help"
               rows="3"
               required
@@ -164,7 +164,7 @@ const ContactForm = () => {
           </motion.div>
           <div className="mt-4">
             <button
-              className="my-6 w-[207px] text-white hover:bg-white transition duration-500 ease-in-out hover:text-black text-base border border-white font-medium font-custom1 py-2 px-4"
+              className="my-6 w-[207px] text-white hover:bg-white transition duration-500 ease-in-out hover:text-black text-base border border-white font-medium font-custom1 py-2 px-4 rounded-none"
               type="submit"
               disabled={isSending}
             >

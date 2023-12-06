@@ -11,9 +11,9 @@ const hamburgerIcon = (
     viewBox="0 0 24 24"
     fill="none"
     stroke="#DF319A"
-    strokeWidth="2.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    strokeWidth="2"
+    strokeLinecap=""
+    strokeLinejoin=""
   >
     <path d="M3 12h18M3 6h18M3 18h18" />
   </svg>
@@ -80,7 +80,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`px-7 relative lg:px-[50px] py-3 md:py-3 flex text-[22px] bg-white ${
+        className={`px-4 relative lg:px-[50px] py-3 md:py-3 flex text-[22px] bg-white ${
           isFixed ? 'sticky top-0 left-0 right-0 bg-white z-50' : ''
         }`}
       >
