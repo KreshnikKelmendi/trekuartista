@@ -28,7 +28,7 @@ function VideoAnimation() {
         preload="metadata"
         className="w-full h-full object-cover"
       />
-      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[80vh] lg:top-[91vh]">
+      <button onClick={toggleMute} className="absolute z-50 voice-toggle-button left-[50px] top-[85vh] lg:top-[91vh]">
         {isMuted ? (
           <img
             src={soundOffIcon}
@@ -43,7 +43,7 @@ function VideoAnimation() {
           />
         )}
       </button>
-      <div className="absolute top-[63vh] lg:top-[83vh] 2xl:top-[77vh] inset-0 flex items-center justify-center">
+      <div className="absolute top-[72vh] lg:top-[83vh] 2xl:top-[77vh] inset-0 flex items-center justify-center">
         <Link onClick={() => window.scrollTo({
                         top: 770,
                         left: 0,
