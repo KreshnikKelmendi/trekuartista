@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import { FaRegArrowAltCircleUp } from 'react-icons/fa';
 
 const ScrollToTopButton = () => {
   const scrollToTop = () => {
@@ -13,10 +13,10 @@ const ScrollToTopButton = () => {
     <div className="flex justify-center items-center py-1">
       <button
         onClick={scrollToTop}
-        className="bg-white text-black hover:bg-gray-800 hover:text-white p-[5px] text-[8px]"
+        className="bg-white text-black hover:bg-gray-800 hover:text-white p-[5px] text-[11px]"
         title='Go to Top'
       >
-        <FaArrowUp />
+        <FaRegArrowAltCircleUp />
       </button>
     </div>
   );
