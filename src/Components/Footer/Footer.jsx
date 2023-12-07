@@ -1,5 +1,6 @@
 import React from 'react';
 import footerLogo from "../Assets/trekuartistaLogoFooter.png";
+import ScrollToTopButton from '../ScrollToTop/ScrollToTopButton';
 
 const Footer = () => {
   return (
@@ -77,8 +78,11 @@ const Footer = () => {
             <i className="fab fa-linkedin"></i>
           </a>
         </div>
+       
       </div>
+        <ScrollToTopButton />
     </div>
+    
        </>
   );
 };
