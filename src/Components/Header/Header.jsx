@@ -87,7 +87,7 @@ const Header = () => {
         <div className="hidden sm:block font-custom">Hello</div>
 
         <div className="text-white flex md:items-center md:justify-center flex-grow">
-          <Link to="/">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
             <img src={logotrekuartista} alt="Logo" className="w-[56px] h-[37px]" />
           </Link>
         </div>

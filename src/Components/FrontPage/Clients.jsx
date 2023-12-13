@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import prishtinaHeatSave from '../Assets/prishtinaHeatSave.png';
 import sap from '../Assets/sap.png';
 import unicef from '../Assets/unicef.png';
@@ -7,7 +7,6 @@ import dokutech from '../Assets/dokutech.png';
 import floil from '../Assets/floil.png';
 import doni from '../Assets/doni.png';
 import { motion, AnimatePresence } from 'framer-motion';
-import useFetch from '../hooks/useFetch';
 import { useInView } from 'react-intersection-observer';
 
 const Clients = () => {

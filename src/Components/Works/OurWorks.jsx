@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ourWorks } from './workData';
+import soundOffIcon from "../Assets/off.png";
+import soundOnIcon from "../Assets/on.png";
 
 const OurWorks = () => {
+  const [isMuted, setIsMuted] = useState(true);
   const [selectedWork, setSelectedWork] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const isClearAllVisible = selectedWork !== '' || selectedCategory !== '' || searchQuery !== "";
+
+  const toggleMute = (event) => {
+    event.stopPropagation();
+    setIsMuted((prevMuted) => !prevMuted);
+  };
 
   const handleSelectChange = (event, setFunction) => {
     setFunction(event.target.value);
@@ -200,18 +208,34 @@ const OurWorks = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.5 }}
+              className='relative'
             >
+              <button onClick={(event) => toggleMute(event)} className="absolute top-2 right-2 z-50 p-2 rounded-full">
+              {isMuted ? (
+          <img
+            src={soundOffIcon}
+            alt="Sound Off"
+            className="w-5 h-5"
+          />
+        ) : (
+          <img
+            src={soundOnIcon}
+            alt="Sound On"
+            className="w-5 h-5"
+          />
+        )}
+        </button>
               <Link to={`/our-works/${work.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
                 <motion.video
                   src={work.workImage}
-                  muted
+                  muted={isMuted}
                   loop
                   playsInline
                   autoPlay
-                  controls
                   alt=""
                   className="h-[50vh] lg:h-[391px] 2xl:h-[450px] w-full object-cover"
                 />
+                
                 <motion.p
                   className="mt-[30px] flex font-custom2 font-extrabold text-[22px]"
                   whileTap={{ scale: 0.9 }}
