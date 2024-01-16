@@ -13,12 +13,6 @@ const Quote = () => {
       author: "Bardh Krasniqi",
       role: "CEO of Trekuartista",
     },
-    // {
-    //   text: "Simplicity is the most complicated thing.",
-    //   author: "Endrit Morina",
-    //   role: "Team Leader / 3D Artist",
-    // }
-  
   ];
 
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
@@ -39,16 +33,15 @@ const Quote = () => {
   return (
     <motion.div
       className="bg-black h-[481px] p-4 text-white md:px-8 lg:px-[176px] flex flex-col justify-center items-center  text-center mt-20 lg:mx-[65px]"
-      initial={{ opacity: 0.5, scale: 1 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0.5, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <motion.h1
         className="text-2xl md:text-3xl lg:text-5xl font-bold font-custom leading-normal"
         key={currentQuote.text}
-        initial={{ scale: 0.8, opacity: 0.5 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 1, opacity: 0.5 }}
+        initial={{ y: 0 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         {currentQuote.text}

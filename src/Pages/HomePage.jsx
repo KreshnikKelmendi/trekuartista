@@ -23,8 +23,8 @@ const HomePage = () => {
 
       <AboutUsOnHomePage />
       <Clients />
-      <HorizontalSlider />
-      <Newest />
+      <HorizontalSlider type='spotlighted'/>
+      <Newest type='Newest' />
       <Quote />
       <TeamOnHomePage />
       <Office />
