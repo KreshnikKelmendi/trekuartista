@@ -65,7 +65,7 @@ const SinglePageOfWork = () => {
 
       <div className='grid grid-cols-1 lg:grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px] gap-y-[20px] lg:gap-y-0'>
         {mediaItems?.map((media, index) => (
-          <div key={index} className="w-full h-56 relative">
+          <div key={index} className="w-full h-56 lg:h-[510px] relative">
             {media?.endsWith('.mp4') ? (
               <video className="w-full h-56 lg:h-[510px] object-cover" autoPlay playsInline loop muted>
                 <source src={media} type="video/mp4" />
