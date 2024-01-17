@@ -15,10 +15,10 @@ const ourWorks = [
       firstSinglePhoto: first,
       secondSinglePhoto: second,
       thirdSinglePhoto: third,
-      workName: "Ice Tea - Jaffa",
+      workName: "Floil",
       category:"Brand Strategy",
-      workDescription: "Bottle / Mokne / Logo / Design / Brand Strategy Natyral Water from Istog", 
-      textDescription : "Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate. Lorem ipsum dolor sit amet consectour aset concept parlate.",
+      workDescription: "Logo / Branding / Marketing Strategy / Campaign / PR / Animation & 3D / TV Commercial / Advertisement / Web Design & Development", 
+      textDescription : "Trekuartista took the lead in conceptualizing, designing, and implementing a holistic brand strategy for Floil oil. This encompassed the creation of a distinctive logo, a comprehensive brand book, and captivating label designs. The collaborative effort aimed to not only establish a visual identity but also to articulate the brand's essence and values. Floil stands as a trailblazer in Kosovo's economy sector, proudly holding the distinction of being the first and sole oil refinery in the region. The unparalleled success of Floil can be attributed not only to its cutting-edge refining capabilities but also to the strategic marketing campaigns that have propelled the company to exceed expectations in both export and import.",
       hoverText: "Campaign / Design / Logo"
     },
       // Work 2
@@ -30,7 +30,7 @@ const ourWorks = [
       thirdSinglePhoto:third,
       workName: "Gjelbër - Holtikultura",
       category:"Logo",
-      workDescription: "Gjelbër / Logo / Design / Brand Strategy Natyre in Pristina" 
+      workDescription: "Logo / Branding / Packaging Design / Marketing Strategy / Web Design & Development" 
     },
       // Work 3
     {

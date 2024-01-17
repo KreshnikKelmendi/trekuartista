@@ -36,13 +36,13 @@ const SinglePageOfWork = () => {
 
   return (
     <>
-      <div className="py-0 md:py-[100px] bg-[#E6E6E6] lg:px-[50px]">
+      <div className="py-0 md:py-[50px] bg-[#E6E6E6] lg:px-[50px]">
         <div className="flex flex-col lg:flex-row p-4 lg:p-0">
           <h1 className="text-4xl md:text-[33px] font-bold font-custom leading-[47px]">
             {workName}
-            <p className='font-custom1 mt-[11px] text-lg text-[#979797] w-[207px] font-normal leading-[24px]'>{workDescription}</p>
+            <p className='font-custom1 mt-[11px] text-lg text-[#979797] w-[207px] font-normal leading-[24px]'></p>
           </h1>
-          <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-[425px] text-lg font-medium font-custom1 text-[#1E1E1E]">
+          <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-fit text-lg font-medium font-custom1 text-[#1E1E1E]">
             {textDescription}
           </span>
         </div>

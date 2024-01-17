@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { teamMembers } from '../TeamPage/teamMembers';
+import { FaInstagram } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 const TeamOnHomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -134,7 +136,7 @@ const TeamOnHomePage = () => {
         {teamMembers.slice(currentSlide, currentSlide + slidesPerPage).map((member, index) => (
           <motion.div
             key={member.id}
-            className={`w-full ${isMobile ? 'md:w-full lg:w-full' : 'md:w-1/2 lg:w-1/3'} flex-1 hover:flex-[2] hover:transition-all hover:duration-700 hover:ease-linear mt-[29px] px-1 justify-center text-[#979797] text-[18px]`}
+            className={`w-full ${isMobile ? 'md:w-full lg:w-full' : 'md:w-1/2 lg:w-1/3'} flex-1 hover:flex-[2] hover:transition-all hover:duration-500 hover:ease-linear mt-[29px] px-1 justify-center text-[#979797] text-[18px]`}
             initial={{ x: 100 }}
             animate={{ x: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
@@ -150,8 +152,16 @@ const TeamOnHomePage = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
-              <h2 className="font-custom1 font-bold mt-2">{member.name}</h2>
-              <p className='font-custom1'>{member.position}</p>
+               <div className='flex justify-between items-center'>
+        <div className=''>
+          <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
+          <p className="text-base font-custom1">{member.position}</p>
+        </div>
+        <div className='flex gap-x-[5px]'>
+          <FaInstagram />
+          <FaLinkedin />
+        </div>
+      </div>
             </div>
           </motion.div>
         ))}

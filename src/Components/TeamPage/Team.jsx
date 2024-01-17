@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { teamMembers } from './teamMembers';
+import { FaInstagram } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+
 
 const TeamMember = ({ member, index }) => {
   const [hoveredMember, setHoveredMember] = useState(null);
@@ -32,8 +35,24 @@ const TeamMember = ({ member, index }) => {
         alt={member.name}
         className="w-full h-full object-cover"
       />
-      <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
-      <p className="text-base font-custom1">{member.position}</p>
+      <div className='flex justify-between items-center'>
+        <div className=''>
+          <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
+          <p className="text-base font-custom1">{member.position}</p>
+        </div>
+        <div className='flex gap-x-[10px]'>
+            {member.instagramLink && (
+                <a href={member.instagramLink} target="_blank" rel="noopener noreferrer">
+                  <FaInstagram />
+                </a>
+            )}
+              {member.linkedinLink && (
+                <a href={member.linkedinLink} target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin />
+                </a>
+            )}
+        </div>
+      </div>
     </motion.div>
   );
 };

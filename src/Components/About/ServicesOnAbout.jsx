@@ -30,28 +30,28 @@ const ServicesOnAbout = () => {
           Supply; PR - Public Relations; Direct Marketing; B2B; CRM 
         </p> */}
       </div>
-      <div className='grid lg:grid-cols-2  py-8 lg:py-16 px-3 gap-y-10 lg:gap-y-0 lg:gap-x-20 lg:ml-[80px] 2xl:ml-72 relative'>
+      <div className='grid lg:grid-cols-2 py-8 lg:py-16 px-4 gap-y-10 lg:gap-y-0 lg:gap-x-20 lg:ml-[80px] 2xl:ml-72 relative'>
         <motion.div ref={ref} initial="hidden" animate={inView ? "visible" : "hidden"} variants={serviceVariants} transition={{ delay: 0.8, ease: "easeOut" }}>
           <p className='font-custom text-[#DF319A]'>Branding strategy</p>
-          <p className='font-custom1 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
+          <p className='font-custom1 mt-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
           <hr className='mt-2' />
         </motion.div>
 
         <motion.div ref={ref} initial="hidden" animate={inView ? "visible" : "hidden"} variants={serviceVariants} transition={{ delay: 1, ease: "easeOut" }} className='lg:mt-20'>
           <p className='font-custom text-[#DF319A]'>Creative</p>
-          <p className='font-custom1 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
+          <p className='font-custom1 mt-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
           <hr className='mt-2' />
         </motion.div>
 
         <motion.div ref={ref} initial="hidden" animate={inView ? "visible" : "hidden"} variants={serviceVariants} transition={{ delay: 1.2, ease: "easeOut" }} className='lg:mb-20'>
           <p className='font-custom text-[#DF319A]'>Animation & 3D Modeling</p> 
-          <p className='font-custom1 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
+          <p className='font-custom1 mt-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
           <hr className='mt-2' />
         </motion.div>
         
         <motion.div ref={ref} initial="hidden" animate={inView ? "visible" : "hidden"} variants={serviceVariants} transition={{ delay: 1.4, ease: "easeOut" }} className='lg:mt-20'>
           <p className='font-custom text-[#DF319A]'>Design & Web Development</p>
-          <p className='font-custom1 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
+          <p className='font-custom1 mt-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet veritatis nulla repudiandae, quas excepturi!</p>
           <hr className='mt-2' />
         </motion.div>
       </div>

@@ -25,6 +25,8 @@ const teamMembers = [
       position: 'CEO Founder',
       image: member1,
       hoverImage: hoverImage1,
+      instagramLink: "https://www.instagram.com/bardhkr/",
+      linkedinLink: "https://www.linkedin.com/in/bardh-krasniqi-949872197/"
     },
         // Member 2
     {

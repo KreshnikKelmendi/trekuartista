@@ -10,13 +10,13 @@ const textVariants = {
 };
 
 const slideInVariants = (index) => ({
-     hidden: { x: '-40%', opacity: 0 },
-     visible: {
-       x: 0,
-       opacity: 1,
-       transition: { duration: 0.9, ease: 'easeOut', delay: index * 0.2 },
-     },
-   });
+  hidden: { y: '40%', opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.9, ease: 'easeOut', delay: -(index * 0.2) },
+  },
+});
 
 const Newest = () => {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
@@ -31,7 +31,7 @@ const Newest = () => {
       >
         <div className="px-4 flex mt-14 items-center">
           <h1 className="flex text-[42px] md:text-5xl lg:text-[45px] font-bold font-custom leading-[40px]">
-            NEWEST
+          FRESH VENTURES
           </h1>
           <motion.div
             initial={{ scale: 1 }}
@@ -56,7 +56,7 @@ const Newest = () => {
               onMouseLeave={() => setHoveredIndex(-1)}
             >
               <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
-                <p className='font-custom1 text-base hover:text-[#DF319A] font-normal text-[#979797] lg:w-[60vh] 2xl:w-[433px]'>
+                <p className='font-custom1 text-base hover:text-[#DF319A] font-normal text-[#979797] lg:w-[85vh] 2xl:w-[433px]'>
                   {item?.workDescription}
                 </p>
               </Link>
@@ -107,7 +107,7 @@ const Newest = () => {
               top: 0,
               left: 0,
             })}>
-            <button className="mt-[120px] w-[207px] text-black hover-bg-black transition duration-500 ease-in-out hover:text-white hover:bg-black text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
+            <button className="mt-[60px] w-[207px] text-black hover-bg-black transition duration-500 ease-in-out hover:text-white hover:bg-black text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
               View more
             </button>
           </Link>
