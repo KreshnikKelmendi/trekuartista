@@ -24,9 +24,9 @@ const SinglePageOfWork = () => {
 
   const { workName, textDescription, workDescription, firstSinglePhoto, secondSinglePhoto, thirdSinglePhoto } = work;
 
-  const mediaItems = [firstSinglePhoto, secondSinglePhoto];
+  const mediaItems = [firstSinglePhoto, thirdSinglePhoto];
 
-  const slideItems = [thirdSinglePhoto, secondSinglePhoto];
+  // const slideItems = [thirdSinglePhoto, secondSinglePhoto];
 
   const handleImageChange = () => {
     if (sliderRef.current) {
@@ -48,17 +48,14 @@ const SinglePageOfWork = () => {
         </div>
       </div>
 
-      <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] overflow-hidden relative" ref={sliderRef}>
+      <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] overflow-hidden relative">
         <AnimatePresence initial={false} onExitComplete={handleImageChange}>
           <motion.img
             key={currentIndex}
             className="w-full h-full object-cover"
-            src={slideItems[currentIndex]}
+            src={firstSinglePhoto}
             alt={`Slide ${currentIndex + 1}`}
-            initial={{ opacity: 0, filter: 'blur(3px)' }}
-            animate={{ opacity: 1, filter: 'blur(0px)' }}
-            exit={{ opacity: 1, filter: 'blur(3px)' }}
-            transition={{ duration: 0.5 }}
+            
           />
         </AnimatePresence>
       </div>
