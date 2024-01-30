@@ -48,7 +48,7 @@ const SinglePageOfWork = () => {
         </div>
       </div>
 
-      <div className="w-full h-64 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] overflow-hidden relative" ref={sliderRef}>
+      <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] overflow-hidden relative" ref={sliderRef}>
         <AnimatePresence initial={false} onExitComplete={handleImageChange}>
           <motion.img
             key={currentIndex}
@@ -65,13 +65,13 @@ const SinglePageOfWork = () => {
 
       <div className='grid grid-cols-1 lg:grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px] gap-y-[20px] lg:gap-y-0'>
         {mediaItems?.map((media, index) => (
-          <div key={index} className="w-full h-56 lg:h-[510px] relative">
+          <div key={index} className="w-full h-80 lg:h-[510px] relative">
             {media?.endsWith('.mp4') ? (
-              <video className="w-full h-56 lg:h-[510px] object-cover" autoPlay playsInline loop muted>
+              <video className="w-full h-80 lg:h-[510px] object-cover" autoPlay playsInline loop muted>
                 <source src={media} type="video/mp4" />
               </video>
             ) : (
-              <img src={media} alt='' className="w-full h-56 lg:h-[510px] object-cover" />
+              <img src={media} alt='' className="w-full h-80 lg:h-[510px] object-cover" />
             )}
           </div>
         ))}
