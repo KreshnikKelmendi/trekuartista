@@ -51,10 +51,10 @@ const SinglePageOfWork = () => {
       <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] overflow-hidden relative">
        
           <motion.img
-            key={currentIndex}
+            
             className="w-full h-full object-cover"
             src={firstSinglePhoto}
-            alt={`Slide ${currentIndex + 1}`}
+            alt=""
             
           />
        
