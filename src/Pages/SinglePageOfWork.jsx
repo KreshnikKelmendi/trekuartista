@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ourWorks } from '../Components/Works/workData';
 
 const SinglePageOfWork = () => {
@@ -49,7 +49,7 @@ const SinglePageOfWork = () => {
       </div>
 
       <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] overflow-hidden relative">
-        <AnimatePresence initial={false} onExitComplete={handleImageChange}>
+       
           <motion.img
             key={currentIndex}
             className="w-full h-full object-cover"
@@ -57,7 +57,7 @@ const SinglePageOfWork = () => {
             alt={`Slide ${currentIndex + 1}`}
             
           />
-        </AnimatePresence>
+       
       </div>
 
       <div className='grid grid-cols-1 lg:grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px] gap-y-[20px] lg:gap-y-0'>
