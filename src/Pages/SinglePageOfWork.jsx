@@ -6,6 +6,7 @@ import { ourWorks } from '../Components/Works/workData';
 const SinglePageOfWork = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
+  const videoRef = useRef(null); 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,6 +35,12 @@ const SinglePageOfWork = () => {
     }
   };
 
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+  
   return (
     <>
       <div className="py-0 md:py-[50px] bg-[#E6E6E6] lg:px-[50px]">
@@ -64,7 +71,7 @@ const SinglePageOfWork = () => {
         {mediaItems?.map((media, index) => (
           <div key={index} className="w-full h-80 lg:h-[510px] relative">
             {media?.endsWith('.mp4') ? (
-              <video className="w-full h-80 lg:h-[510px] object-cover" autoPlay playsInline loop muted>
+              <video className="w-full h-80 lg:h-[510px] object-cover"  ref={videoRef} onClick={handleVideoClick} autoPlay playsInline loop muted>
                 <source src={media} type="video/mp4" />
               </video>
             ) : (
