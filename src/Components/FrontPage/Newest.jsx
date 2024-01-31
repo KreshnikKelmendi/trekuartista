@@ -62,7 +62,7 @@ const Newest = () => {
               </Link>
               <div className="relative w-full h-full mt-4">
                 {item?.workImage?.endsWith('.mp4') ? (
-                  <video className="w-full h-[40vh] lg:h-[504px] object-cover" autoPlay controls playsInline loop muted>
+                  <video className="w-full h-[40vh] lg:h-[504px] object-cover" autoPlay playsInline loop muted>
                     <source src={item?.workImage} type="video/mp4" />
                   </video>
                 ) : (
