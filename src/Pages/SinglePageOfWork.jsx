@@ -24,7 +24,7 @@ const SinglePageOfWork = () => {
 
   const { workName, textDescription, workDescription, firstSinglePhoto, secondSinglePhoto, thirdSinglePhoto } = work;
 
-  const mediaItems = [firstSinglePhoto, thirdSinglePhoto];
+  const mediaItems = [secondSinglePhoto, thirdSinglePhoto];
 
   // const slideItems = [thirdSinglePhoto, secondSinglePhoto];
 
@@ -48,7 +48,7 @@ const SinglePageOfWork = () => {
         </div>
       </div>
 
-      <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] overflow-hidden relative">
+      <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px] relative">
        
           <motion.img
             
