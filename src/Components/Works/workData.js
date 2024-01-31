@@ -4,7 +4,7 @@ import work4 from "../Assets/mokne.png"
 import work5 from "../Assets/termokos.png"
 import first from "../Assets/jaffaFirst.png"
 import second from "../Assets/second1.png"
-import third from "../Assets/_Biberi_Final___.mp4";
+import third from "../Assets/biberi.mp4";
 import dok from "../Assets/DokuTechFinal.mp4"
 
 const ourWorks = [
