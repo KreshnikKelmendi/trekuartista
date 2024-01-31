@@ -35,7 +35,7 @@ const ourWorks = [
       // Work 3
     {
       id:3,
-      workImage: dok,
+      workImage: third,
       firstSinglePhoto: first,
       secondSinglePhoto: second,
       thirdSinglePhoto: third,
