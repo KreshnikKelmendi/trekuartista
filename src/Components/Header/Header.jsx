@@ -121,11 +121,11 @@ const Header = () => {
               className="top-14 lg:top-14 left-0 right-0 bottom-0 fixed flex justify-center items-center bg-white z-50"
             >
               <ul className="font-custom text-6xl lg:text-8xl 2xl:text-9xl lg:leading-[90px] cursor-pointer">
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>HOME</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/about-trekuartista" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>ABOUT US</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-works" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>WORK</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/our-team" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>TEAM</Link></motion.li>
-                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover:text-[#DF319A] transform hover:scale-110 transition-transform duration-300'><Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>CONTACT</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover-stroke transform hover:scale-110 transition-transform duration-300'><Link to="/" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>HOME</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover-stroke transform hover:scale-110 transition-transform duration-300'><Link to="/about-trekuartista" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>ABOUT US</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover-stroke transform hover:scale-110 transition-transform duration-300'><Link to="/our-works" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>WORK</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover-stroke transform hover:scale-110 transition-transform duration-300'><Link to="/our-team" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>TEAM</Link></motion.li>
+                <motion.li whileHover={{ scale: 1.1 }} onClick={closeMenu} className='hover-stroke transform hover:scale-110 transition-transform duration-300'><Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>CONTACT</Link></motion.li>
               </ul>
 
               {isMenuOpen && (

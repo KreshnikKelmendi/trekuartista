@@ -69,7 +69,7 @@ const Newest = () => {
                   <img
                     className="w-full h-[40vh] lg:h-[504px] object-cover"
                     src={item?.workImage}
-                    alt={`Slide 1`}
+                    alt=""
                   />
                 )}
                 <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>

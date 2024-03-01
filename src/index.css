@@ -48,7 +48,7 @@ body{
   }
   .logos-slide{
     white-space: nowrap;
-    opacity: 0.1;
+    
     animation: 12000ms slide infinite linear;
   }
 
@@ -88,7 +88,38 @@ body{
     width: auto;
     transition: 1s all ease;
   }
+  .text-stroke {
+    -webkit-text-stroke: 1px black; /* Set the stroke width and color */
+    color: transparent; /* Make the text transparent to show only the stroke */
+    animation: strokeAnimation 1s ease-in-out forwards; /* Apply stroke animation */
+  }
+  
+  @keyframes strokeAnimation {
+    from {
+      stroke-dasharray: 1000; /* Set a large value to cover the entire text length */
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
+  .hover-stroke:hover {
+    -webkit-text-stroke: 1px black; /* Set the stroke width and color */
+    color: transparent; /* Make the text transparent to show only the stroke */
+    animation: strokeAnimation 1s ease-in-out forwards; /* Apply stroke animation */
+  }
+  
+  @keyframes strokeAnimation {
+    from {
+      stroke-dasharray: 1000; /* Set a large value to cover the entire text length */
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
   
 
   /* .accordion{
