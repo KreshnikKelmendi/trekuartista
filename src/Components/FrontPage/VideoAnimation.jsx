@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { motion } from "framer-motion";
-import video1 from "../Assets/videoTrekuartista.mp4";
+import video1 from "../Assets/trekuartista.mp4";
 import soundOffIcon from "../Assets/off.png";
 import soundOnIcon from "../Assets/on.png";
 import scrollDown from "../Assets/scrollDown.png";
