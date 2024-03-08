@@ -24,8 +24,8 @@ const HomePage = () => {
       <AboutUsOnHomePage />
       <Clients />
       <HorizontalSlider type='spotlighted'/>
-      <Newest type='Newest' />
       <Quote />
+      <Newest type='Newest' />
       <TeamOnHomePage />
       <Office />
     </>

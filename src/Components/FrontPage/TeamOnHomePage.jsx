@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { teamMembers } from '../TeamPage/teamMembers';
-import { FaInstagram } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
+import SvgLine2 from './SvgLine2';
 
 const TeamOnHomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -86,15 +85,15 @@ const TeamOnHomePage = () => {
 
   return (
     <div
-      className="py-0 md:py-4 lg:px-[50px]"
+      className="py-0  "
       onTouchStart={isMobile ? handleTouchStart : null}
       onTouchMove={isMobile ? handleTouchMove : null}
       onTouchEnd={isMobile ? handleTouchEnd : null}
     >
-      <div className="px-4 flex mt-[143px] items-center justify-between">
-        <h1 className="flex text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[47px]">
-          Our people
-          <motion.div
+      <div className="flex flex-col lg:flex-row py-10">
+        <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold px-5 lg:px-[50px] font-custom leading-[47px]">
+          Our people <SvgLine2 />
+          {/* <motion.div
             initial={{ scale: 1 }}
             animate={{ scale: [1, 1.3, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -103,10 +102,18 @@ const TeamOnHomePage = () => {
             <svg width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M38.9946 13.5843L39 13.5789H38.9903L25.406 0.0258216L19.5163 5.84967L13.6525 0L0 13.4982C6.55272 19.9988 13.1054 26.4994 19.6592 33L38.9924 13.5865H38.9967L38.9946 13.5843Z" fill="#DF319A"/>
             </svg>
-          </motion.div>
+          </motion.div> */}
         </h1>
+        <p className='lg:w-[665px] h-[160px] px-5 lg:px-0 lg:ml-16 font-custom1'>
+          We uncover the hidden pathways, the shifting landscapes, the unnoticed opportunities, 
+          and the untouched canvases. Those "in plain sight" revolutions that will reshape your 
+          digital presence.
+          <br /> <br />
+          We provide the entrance and the exit strategy, the subtle adjustments that wield significant 
+          impact, and the grand ideas that will redefine your brand journey.
+        </p>
 
-        <div className="flex cursor-pointer">
+        {/* <div className="flex cursor-pointer">
           <svg
             onClick={prevSlide}
             width="20"
@@ -129,14 +136,14 @@ const TeamOnHomePage = () => {
           >
             <path d="M15.2603 0L15.2746 3.29562L15.2911 6.92012L15.2958 9.74293L15.3107 14.1553L15.328 18.9514L15.3406 23.0212L15.3547 26.2758L15.3648 28.8999L15.3755 31.6063L30.6357 15.8626L15.2603 0Z" />
           </svg>
-        </div>
+        </div> */}
       </div>
 
-      <div className="flex overflow-hidden px-3">
+      <div className="flex overflow-hidden mt-5 bg-black">
         {teamMembers.slice(currentSlide, currentSlide + slidesPerPage).map((member, index) => (
           <motion.div
             key={member.id}
-            className={`w-full ${isMobile ? 'md:w-full lg:w-full' : 'md:w-1/2 lg:w-1/3'} flex-1 hover:flex-[2] hover:transition-all hover:duration-500 hover:ease-linear mt-[29px] px-1 justify-center text-[#979797] text-[18px]`}
+            className={`w-full ${isMobile ? 'md:w-full lg:w-full' : 'md:w-1/2 lg:w-1/3'} flex-1 hover:flex-[2] hover:transition-all hover:duration-500 hover:ease-linear lg:mt-0 justify-center text-white text-[18px]`}
             initial={{ x: 100 }}
             animate={{ x: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
@@ -152,15 +159,12 @@ const TeamOnHomePage = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
-               <div className='flex justify-between items-center'>
-        <div className=''>
+               <div className='flex justify-between items-center '>
+        <div className='mx-2'>
           <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
           <p className="text-base font-custom1">{member.position}</p>
         </div>
-        <div className='flex gap-x-[5px]'>
-          <FaInstagram />
-          <FaLinkedin />
-        </div>
+       
       </div>
             </div>
           </motion.div>

@@ -35,7 +35,7 @@ const ourWorks = [
       // Work 3
     {
       id:3,
-      workImage: third,
+      workImage: work5,
       firstSinglePhoto: first,
       secondSinglePhoto: second,
       thirdSinglePhoto: third,
@@ -46,7 +46,7 @@ const ourWorks = [
       // Work 4
     {
       id:4,
-      workImage: work5,
+      workImage: third,
       firstSinglePhoto: first,
       secondSinglePhoto: second,
       thirdSinglePhoto:third,

@@ -120,7 +120,24 @@ body{
     }
   }
   
-  
+/* Fshij dots-it nga karusela */
+.react-multi-carousel-dot-list {
+  display: none;
+}
+
+/* Stilizo dots-it si katrorë */
+.react-multi-carousel-dot {
+  width: 15px;
+  height: 5px;
+  border-radius: 0;
+  background-color: #6E6E6E; /* Ngjyra e dots */
+  margin: 4px 8px; /* Hapësira midis dots-it */
+}
+
+/* Stilizo dots-it aktiv */
+.react-multi-carousel-dot--active {
+  background-color: #ffffff; /* Ngjyra e dots-it aktive */
+}
 
   /* .accordion{
     width: 100%;

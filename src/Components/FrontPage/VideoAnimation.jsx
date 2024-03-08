@@ -33,7 +33,8 @@ function VideoAnimation() {
   };
 
   return (
-    <div className="relative slider-content p-0 h-[100vh] bg-black z-40">
+    <div className="relative slider-content p-0 h-[100vh] z-40">
+     
       <Suspense fallback={<LoadingSpinner />}>
         <video
           src={video1}

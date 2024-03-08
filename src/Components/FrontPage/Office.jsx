@@ -1,98 +1,68 @@
-import React, { useEffect, useState } from 'react';
-import office1 from "../Assets/office1.png";
-import office2 from "../Assets/office2.png";
-import office3 from "../Assets/office3.jpg";
-import office4 from "../Assets/office4.jpg";
-import { Link } from 'react-router-dom';
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import officeImage1 from "../Assets/firstOffice.png";
+import officeImage2 from "../Assets/office5.png";
 
+const carouselData = [
+  {
+    id: 1,
+    image: officeImage1,
+    title: 'The office 1',
+    description: 'We uncover the hidden pathways, the shifting landscapes, the unnoticed opportunities, and the untouched canvases. Those "in plain sight" revolutions that will reshape your digital presence.',
+  },
+  {
+    id: 2,
+    image: officeImage2,
+    title: 'The office 2',
+    description: 'Another set of compelling content for the second office. Lorem ipsum dolor sit amet consectour adis consectour.',
+  },
+];
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
 const Office = () => {
-    const [ref, inView] = useInView({ threshold: 0.9 });
-    const [photoRef, photoInView] = useInView({  triggerOnce: true, // Only trigger the animation once
-    threshold: 0.5 });
-
-    const sliderImages = [office1, office2, office3, office4]; // Add more images as needed
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-    const nextSlide = () => {
-        const next = (currentSlide + 1) % sliderImages.length;
-        setCurrentSlide(next);
-    };
-
-    const prevSlide = () => {
-        const prev = (currentSlide - 1 + sliderImages.length) % sliderImages.length;
-        setCurrentSlide(prev);
-    };
-
-    useEffect(() => {
-        const interval = setInterval(nextSlide, 5000);
-
-        return () => clearInterval(interval); 
-    }, [currentSlide]);
-
-    return (
-        <div className="flex flex-col lg:flex-row lg:px-[60px] mt-[129px]">
-            {/* First Div */}
-            <div className="w-full lg:w-1/2 flex flex-col px-3">
-                <motion.div className="h-full"
-                 ref={ref}
-                 initial={{ opacity: 0, y: -50 }}
-                 animate={inView && { opacity: 1, y: 0, transition: { duration: 0.5 } }}>
-                    <h1 className="text-4xl md:text-5xl lg:text-[45px] font-bold font-custom leading-[47px]">Our Space</h1>
-                    <p className="text-base py-[34px] font-custom1 text-[#979797] font-thin lg:w-[425px]">
-                        We see the gaps, trends, blind spots and white spaces. Those ‘right under your nose’ and ‘never thought about it like that’ game-changers.
-                        <br /> <br /> We see the stories, angles and opportunities. The ways in. And the ways out.
-                    </p>
-                    <Link to="/contact" onClick={() => window.scrollTo({
-                            top: 0,
-                            left: 0,
-                            })}>
-                    <button className="w-[207px] text-black hover:bg-black transition duration-500 ease-in-out hover:text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4">
-                        View more
-                    </button>
-                    </Link>
-                </motion.div>
-                <motion.img
-                    src={office1}
-                    alt="Our Space"
-                    ref={photoRef}
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={inView && { opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: 'easeInOut' }} 
-                    className="max-w-full mt-[41px] object-cover"
-                />
+  return (
+    <div className='w-full pt-[115px] bg-black'>
+      <div className='relative'>
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          pauseOnHover={false}
+          showDots={true}
+          arrows={false}
+        >
+          {carouselData.map((item) => (
+            <div key={item.id}>
+              <img src={item.image} alt='' className='w-full h-[50vh] lg:h-[763px] object-cover' />
+              <div className='absolute top-1/2 left-[5px] lg:left-[50px]'>
+                <p className='font-custom lg:text-[45px] text-white'>{item.title}</p>
+                <p className='lg:w-[514px] h-[62px] text-white mt-[24px]'>{item.description}</p>
+                <button className='mt-12 w-[207px] text-white hover:bg-white transition duration-500 ease-linear hover:text-black text-base border border-white font-custom1 py-2 px-4'>
+                  Show More
+                </button>
+              </div>
             </div>
-
-            {/* Second Div */}
-        
-            <div className="w-full lg:w-1/2 relative">
-                {sliderImages.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`w-full h-full absolute transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-                    >
-                        <img
-                            src={image}
-                            alt={`Slide ${index}`}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                ))}
-                <div className="absolute bottom-5 left-[50px] transform -translate-x-1/2 flex space-x-2">
-                    {sliderImages.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentSlide(index)}
-                            className={`w-2 h-2 rounded-full bg-gray-400 focus:outline-none ${currentSlide === index ? 'bg-gray-800' : ''}`}
-                        />
-                    ))}
-                </div>
-            </div>
-        </div>
-    
-    );
+          ))}
+        </Carousel>
+      </div>
+    </div>
+  );
 };
 
 export default Office;

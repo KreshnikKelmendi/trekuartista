@@ -32,21 +32,19 @@ const Quote = () => {
 
   return (
     <motion.div
-      className="bg-black h-[481px] p-4 text-white md:px-8 lg:px-[176px] flex flex-col justify-center items-center  text-center mt-20 lg:mx-[65px]"
+      className="py-20 text-black md:px-8 flex flex-col tracking-tighter lg:mx-[65px]"
       initial={{ opacity: 0.5, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <motion.h1
-        className="text-2xl md:text-3xl lg:text-5xl font-bold font-custom leading-normal"
+      <h1
+        className="text-2xl px-5 lg:px-0 text-center lg:text-left md:text-3xl lg:leading-[120%] lg:text-[45px] font-bold font-custom"
         key={currentQuote.text}
-        initial={{ y: 0 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        
       >
         {currentQuote.text}
-      </motion.h1>
-      <div className='mt-4 md:mt-6 lg:mt-[60px] text-[#C0BBBB] text-center'>
+      </h1>
+      <div className='mt-6 text-[#C0BBBB] text-center lg:text-left'>
         <p className='text-base md:text-lg lg:text-base font-custom1'>{currentQuote.author}</p>
         <p className='text-base md:text-lg lg:text-base font-custom1'>{currentQuote.role}</p>
       </div>

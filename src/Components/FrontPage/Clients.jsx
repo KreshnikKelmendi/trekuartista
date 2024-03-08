@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import prishtinaHeatSave from '../Assets/prishtinaHeatSave.png';
-import sap from '../Assets/sap.png';
-import unicef from '../Assets/unicef.png';
-import zone from '../Assets/zone.png';
-import dokutech from '../Assets/dokutech.png';
+import prishtinaHeatSave from '../Assets/whitePr.png';
+import sap from '../Assets/whitesap.png';
+import unicef from '../Assets/whiteUnicef.png';
+import zone from '../Assets/whiteZone.png';
+import dokutech from '../Assets/whitedoku.png';
 import floil from '../Assets/floil.png';
 import doni from '../Assets/doni.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import SvgLine from './SvgLine';
 
 const Clients = () => {
   const [showMore, setShowMore] = useState(false);
-  const partnersToShow = showMore ? 25 : 10;
+  const partnersToShow = showMore ? 25 : 8;
 
   const partnerLogos = [
     { src: prishtinaHeatSave, alt: 'Partner 1' },
     { src: sap, alt: 'Partner 2' },
     { src: unicef, alt: 'Partner 3' },
-    { src: sap, alt: 'Partner 4' },
+    { src: dokutech, alt: 'Partner 4' },
     { src: sap, alt: 'Partner 5' },
     { src: zone, alt: 'Partner 6' },
     { src: sap, alt: 'Partner 7' },
@@ -46,13 +47,21 @@ const Clients = () => {
   };
 
   return (
-    <div key={inView} ref={ref} className="lg:flex lg:justify-between py-0 md:py-4 lg:px-[50px]">
-      <div className="px-4">
-        <h1 className="text-4xl lg:text-[45px] font-bold font-custom leading-[.957142857] lg:leading-[55px]">
-          Our beloved<br />partners
+    <div key={inView} ref={ref} className="bg-black flex flex-col lg:flex-row lg:justify-between py-12 md:pb-32 lg:px-[50px]">
+      <div className="px-4 flex flex-col lg:flex-row">
+      <div className='lg:hidden lg:ml-20'>
+        <h1 className="text-4xl lg:text-[45px] text-white font-bold font-custom leading-[.957142857] lg:leading-[55px]">
+          Our beloved partners
+          <SvgLine />
         </h1>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-10 ml-4 md:mt-8 md:ml-16 lg:mt-24 lg:ml-72 2xl:ml-72 gap-8 px-8 md:px-0 md:gap-8 lg:gap-20 justify-center items-center">
+        {/* <button
+          onClick={() => setShowMore(!showMore)}
+          className="my-12 w-[207px] text-white hover:bg-white transition duration-500 ease-linear hover:text-black text-base border border-[#1E1E1E] font-custom1 py-2 px-4"
+        >
+          {showMore ? 'Show Less' : 'Show More'}
+        </button> */}
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 ml-5 lg:ml-0 md:mt-8 2xl:ml-72 gap-8 px-8 md:px-0 md:gap-8 lg:gap-20 justify-center items-center">
           <AnimatePresence>
             {partnerLogos
               ?.slice(0, partnersToShow)
@@ -71,15 +80,22 @@ const Clients = () => {
               ))}
           </AnimatePresence>
         </div>
-
+        <div className='lg:ml-32'>
+        <h1 className="hidden lg:block text-4xl lg:text-[45px] text-white font-bold font-custom leading-[.957142857] lg:leading-[55px]">
+          Our beloved partners
+          <SvgLine />
+        </h1>
+       
         <button
           onClick={() => setShowMore(!showMore)}
-          className="my-12 lg:mt-[120px] w-[207px] text-black hover:bg-black transition duration-500 ease-linear hover:text-white text-base border border-[#1E1E1E] font-custom1 py-2 px-4"
+          className="mt-12 lg:my-12 w-[207px] text-white hover:bg-white transition duration-500 ease-linear hover:text-black text-base border border-white font-custom1 py-2 px-4"
         >
           {showMore ? 'Show Less' : 'Show More'}
         </button>
+        </div>
+        
       </div>
-    </div>
+      </div>
   );
 };
 
