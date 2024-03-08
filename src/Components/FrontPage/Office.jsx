@@ -49,7 +49,7 @@ const Office = () => {
         >
           {carouselData.map((item) => (
             <div key={item.id}>
-              <img src={item.image} alt='' className='w-full h-[50vh] lg:h-[763px] object-cover' />
+              <img src={item.image} alt='' className='w-full h-[50vh] lg:h-[763px] 2xl:h-[85vh] object-cover' />
               <div className='absolute top-1/2 left-[5px] lg:left-[50px]'>
                 <p className='font-custom lg:text-[45px] text-white'>{item.title}</p>
                 <p className='lg:w-[514px] h-[62px] text-white mt-[24px]'>{item.description}</p>

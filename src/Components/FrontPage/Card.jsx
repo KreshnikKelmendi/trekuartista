@@ -33,8 +33,8 @@ const Card = ({title, description, workImage, url, color, i}) => {
                 alt="image" 
               />
             </motion.div>
-            <div className='absolute top-1/2 lg:px-[50px]'>
-                <p className='font-custom text-white lg:text-[45px]'>{title}</p>
+            <div className='absolute top-1/2 px-5 lg:px-[50px]'>
+                <p className='font-custom text-white text-4xl lg:text-[45px]'>{title}</p>
                 <button className="mt-6 w-[207px] text-white hover:bg-black hover:text-white hover:scale-105 transition duration-500 ease-in-out hover:border-black text-base border border-white font-custom1 py-2 px-4">
                     Show More
                 </button>

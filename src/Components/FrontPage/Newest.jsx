@@ -19,7 +19,7 @@ const slideInVariants = (index) => ({
 });
 
 const Newest = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(-1);
+  // const [hoveredIndex, setHoveredIndex] = useState(-1);
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
@@ -44,23 +44,23 @@ const Newest = () => {
             </svg>
           </motion.div> */}
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3">
-          {ourWorks?.slice(0, 6).map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {ourWorks?.slice(0, 3).map((item, index) => (
             <motion.div
               key={index}
               className="relative"
               initial="hidden"
               animate={inView ? 'visible' : 'hidden'}
               variants={slideInVariants(index)}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(-1)}
+              // onMouseEnter={() => setHoveredIndex(index)}
+              // onMouseLeave={() => setHoveredIndex(-1)}
             >
               {/* <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
                 <p className='font-custom1 text-base hover:text-[#DF319A] font-normal text-[#979797] lg:w-[85vh] 2xl:w-[433px]'>
                   {item?.workDescription}
                 </p>
               </Link> */}
-              <div className="relative w-full h-full ">
+              <div className="relative w-full h-full">
                 {item?.workImage?.endsWith('.mp4') ? (
                   <video className="w-full h-[100%] lg:h-[100vh] object-cover" autoPlay playsInline loop muted>
                     <source src={item?.workImage} type="video/mp4" />
@@ -72,7 +72,12 @@ const Newest = () => {
                     alt=""
                   />
                 )}
-                <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
+                {/* bg-gray-800 bg-opacity-30 */}
+                <div className='absolute bottom-0 px-5 py-8 w-full'> 
+                  <p className='font-custom text-white text-4xl lg:text-[45px]'>{item.workName}</p>
+                  <button className='mt-6 w-[207px] text-white transition duration-500 ease-in-out hover:text-white hover:border-black hover:bg-black text-base border border-white font-custom1 py-2 px-4'>Show more</button>
+                </div>
+                {/* <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
                   {hoveredIndex === index && (
                     <motion.div
                       className="absolute inset-0 flex flex-col items-center justify-center text-white bg-gray-800 bg-opacity-80 cursor-pointer p-2 h-[40vh] lg:h-[100vh]"
@@ -95,7 +100,7 @@ const Newest = () => {
                       </motion.p>
                     </motion.div>
                   )}
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           ))}

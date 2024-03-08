@@ -7,7 +7,6 @@ import { FaLinkedin } from 'react-icons/fa';
 
 
 const TeamMember = ({ member, index }) => {
-  const [hoveredMember, setHoveredMember] = useState(null);
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -27,11 +26,10 @@ const TeamMember = ({ member, index }) => {
       variants={variants}
       transition={{ duration: 0.5, delay }}
       className="text-[#979797] justify-center p-2 lg:p-0"
-      onMouseEnter={() => setHoveredMember(member.id)}
-      onMouseLeave={() => setHoveredMember(null)}
+     
     >
       <img
-        src={hoveredMember === member.id ? member.hoverImage : member.image}
+        src={member.image}
         alt={member.name}
         className="w-full h-full object-cover"
       />

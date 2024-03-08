@@ -6,11 +6,11 @@ const Quote = () => {
     {
       text: "We believe that the unbelievable can be reached, and we strive toward it by doing it again and again.",
       author: "Arian Ahmeti",
-      role: "Art Director of Trekuartista",
+      role: "CEO of Trekuartista",
     },
     {
       text: "Motivation is the catalyzing ingredient for every successful innovation.",
-      author: "Bardh Krasniqi",
+      author: "Arian Ahmeti",
       role: "CEO of Trekuartista",
     },
   ];
@@ -38,14 +38,14 @@ const Quote = () => {
       transition={{ duration: 0.5 }}
     >
       <h1
-        className="text-2xl px-5 lg:px-0 text-center lg:text-left md:text-3xl lg:leading-[120%] lg:text-[45px] font-bold font-custom"
+        className="text-2xl px-5 lg:px-0 text-center lg:text-left md:text-3xl lg:leading-[120%] lg:text-[45px] 2xl:px-[180px] 2xl:leading-[150%] font-bold font-custom"
         key={currentQuote.text}
         
       >
         {currentQuote.text}
       </h1>
-      <div className='mt-6 text-[#C0BBBB] text-center lg:text-left'>
-        <p className='text-base md:text-lg lg:text-base font-custom1'>{currentQuote.author}</p>
+      <div className='mt-6 text-[#C0BBBB] text-center lg:text-left 2xl:px-[180px]'>
+        <p className='text-base md:text-lg lg:text-base font-custom1'>{currentQuote.author} </p>
         <p className='text-base md:text-lg lg:text-base font-custom1'>{currentQuote.role}</p>
       </div>
     </motion.div>

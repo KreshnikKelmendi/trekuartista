@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         custom: ['Integral', 'sans'],
-        custom1: ['K2D', 'sans'],
+        custom1: ['Roboto', 'sans'],
         custom2: ['Integral', 'sans']
       },
     },

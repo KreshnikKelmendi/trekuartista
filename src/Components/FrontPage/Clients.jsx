@@ -47,7 +47,7 @@ const Clients = () => {
   };
 
   return (
-    <div key={inView} ref={ref} className="bg-black flex flex-col lg:flex-row lg:justify-between py-12 md:pb-32 lg:px-[50px]">
+    <div key={inView} ref={ref} className="bg-black flex flex-col lg:flex-row lg:justify-between py-12 md:pb-44 lg:px-[50px]">
       <div className="px-4 flex flex-col lg:flex-row">
       <div className='lg:hidden lg:ml-20'>
         <h1 className="text-4xl lg:text-[45px] text-white font-bold font-custom leading-[.957142857] lg:leading-[55px]">
@@ -61,7 +61,7 @@ const Clients = () => {
           {showMore ? 'Show Less' : 'Show More'}
         </button> */}
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 ml-5 lg:ml-0 md:mt-8 2xl:ml-72 gap-8 px-8 md:px-0 md:gap-8 lg:gap-20 justify-center items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 ml-5 lg:ml-0 md:mt-8  gap-8 px-8 md:px-0 md:gap-8 lg:gap-20 justify-center items-center">
           <AnimatePresence>
             {partnerLogos
               ?.slice(0, partnersToShow)
@@ -80,8 +80,8 @@ const Clients = () => {
               ))}
           </AnimatePresence>
         </div>
-        <div className='lg:ml-32'>
-        <h1 className="hidden lg:block text-4xl lg:text-[45px] text-white font-bold font-custom leading-[.957142857] lg:leading-[55px]">
+        <div className='lg:ml-32 2xl:ml-44'>
+        <h1 className="hidden lg:block text-4xl lg:text-[45px] 2xl:w-[410px] text-white font-bold font-custom leading-[.957142857] lg:leading-[55px]">
           Our beloved partners
           <SvgLine />
         </h1>

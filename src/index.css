@@ -8,8 +8,8 @@ body{
 }
 
 @font-face {
-    font-family: K2D;
-    src: url(../public/fonts/font2/K2D-Regular.ttf);
+    font-family: Roboto;
+    src: url(../public/fonts/font2/Roboto-Regular.ttf);
 }
 
 @font-face {

@@ -28,7 +28,7 @@ const ourWorks = [
       firstSinglePhoto: first,
       secondSinglePhoto: second,
       thirdSinglePhoto:third,
-      workName: "Gjelbër - Holtikultura",
+      workName: "Gjelbër",
       category:"Logo",
       workDescription: "Logo / Branding / Packaging Design / Marketing Strategy / Web Design & Development" 
     },

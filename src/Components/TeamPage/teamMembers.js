@@ -15,19 +15,11 @@ import member14 from "../Assets/endriti.png";
 import member15 from "../Assets/kreshnik.png";
 import member16 from "../Assets/valoni.png";
 import member17 from "../Assets/mentori.png";
+import member18 from "../Assets/albertZeqiri.png";
 import hoverImage1 from "../Assets/testCartoon.jpg";
 
 const teamMembers = [
-        // Member 1
-    {
-      id: 1,
-      name: 'Bardh Krasniqi',
-      position: 'CEO Founder',
-      image: member1,
-      hoverImage: hoverImage1,
-      instagramLink: "https://www.instagram.com/bardhkr/",
-      linkedinLink: "https://www.linkedin.com/in/bardh-krasniqi-949872197/"
-    },
+        
         // Member 2
     {
       id: 2,
@@ -52,30 +44,8 @@ const teamMembers = [
       image: member4,
       hoverImage: '',
     },
-        // Member 5
-    {
-      id: 5,
-      name: 'Kestrina Hajrizi',
-      position: 'Finance Manager',
-      image: member5,
-      hoverImage: '',
-    },
-        // Member 6
-    {
-      id: 6,
-      name: 'Fjolla Bislimi',
-      position: 'Project Manager',
-      image: member6,
-      hoverImage: '',
-    },
+        
         // Member 7
-    {
-      id: 7,
-      name: 'Trinë Namani',
-      position: 'Account Manager',
-      image: member7,
-      hoverImage: '',
-    },
         // Member 8
     {
       id: 8,
@@ -101,13 +71,6 @@ const teamMembers = [
       hoverImage: '',
     },
         // Member 11
-    {
-      id: 11,
-      name: 'Euron Nika',
-      position: 'Graphic Designer',
-      image: member11,
-      hoverImage: '',
-    },
         // Member 12
     {
       id: 12,
@@ -117,13 +80,6 @@ const teamMembers = [
       hoverImage: '', 
     },
         // Member 13
-    {
-      id: 13,
-      name: 'Enes Ramaxhiku',
-      position: 'Motion Designer',
-      image: member13,
-      hoverImage: '', 
-    },
         // Member 14
     {
       id: 14,
@@ -161,7 +117,7 @@ const teamMembers = [
       id: 18,
       name: 'Albert Zeqiri',
       position: 'Print Operator',
-      image: '',
+      image: member18,
       hoverImage: '', 
     },
   ];

@@ -13,7 +13,6 @@ export default function HorizontalSlider() {
     offset: ['start start', 'end end']
   });
 
-  // Display only the first 4 items from the ourWorks array
   const displayedWorks = ourWorks.slice(0, 3);
 
   return (
@@ -29,8 +28,8 @@ export default function HorizontalSlider() {
             title={work.workName}
             description={work.workDescription}
             workImage={work.workImage}
-            url={work.workUrl} // Add the appropriate URL if needed
-            color={work.cardColor} // Add the appropriate color if needed
+            url={work.workUrl} 
+            color={work.cardColor} 
             i={i}
           />
         );
