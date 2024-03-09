@@ -20,13 +20,7 @@ const AboutUsOnHomePage = () => {
   return (
     <>
     <div className="bg-black flex flex-col lg:flex-row py-4 lg:py-[97px] lg:px-[50px]">
-      <motion.div ref={ref} initial="hidden"
-    animate={inView ? "visible" : "hidden"}
-    variants={paragraphVariants} className="lg:w-1/2 p-4 flex flex-col lg:order-1" style={{
-      transform: inView ? "none" : "translateX(-200px)",
-      opacity: inView ? 1 : 0,
-      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-    }}>
+      <div className="lg:w-1/2 p-4 flex flex-col lg:order-1">
         <h1 className="text-4xl text-white lg:text-[45px] font-bold font-custom leading-[.957142857] lg:leading-[55px]">We unveil <br />the unseen
           <SvgLine />
         </h1>
@@ -46,14 +40,14 @@ const AboutUsOnHomePage = () => {
                 </button>
           </Link>
    
-  </motion.div>
+  </div>
   <motion.div
     ref={ref}
     initial="hidden"
     animate={inView ? "visible" : "hidden"}
     variants={paragraphVariants}
     className="lg:w-1/2 p-2 lg:order-2" style={{
-      transform: inView ? "none" : "translateX(-200px)",
+      transform: inView ? "none" : "translateX(-400px)",
       opacity: inView ? 1 : 0,
       transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
     }}>
