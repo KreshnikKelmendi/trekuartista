@@ -1,12 +1,11 @@
-import { useInView } from "framer-motion";
-import React, { useEffect, useRef } from 'react';
+import { useInView } from "react-intersection-observer";
+import React, { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import SvgLine from "./SvgLine";
 
 const AboutUsOnHomePage = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const [ref, inView] = useInView({ threshold: 0.6 });
 
   const paragraphVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -21,12 +20,14 @@ const AboutUsOnHomePage = () => {
   return (
     <>
     <div className="bg-black flex flex-col lg:flex-row py-4 lg:py-[97px] lg:px-[50px]">
-      <div ref={ref} className="lg:w-1/2 p-4 flex flex-col lg:order-1">
-        <h1 className="text-4xl text-white lg:text-[45px] font-bold font-custom leading-[.957142857] lg:leading-[55px]"  style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-        }}>We unveil <br />the unseen
+      <motion.div ref={ref} initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+    variants={paragraphVariants} className="lg:w-1/2 p-4 flex flex-col lg:order-1" style={{
+      transform: inView ? "none" : "translateX(-200px)",
+      opacity: inView ? 1 : 0,
+      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+    }}>
+        <h1 className="text-4xl text-white lg:text-[45px] font-bold font-custom leading-[.957142857] lg:leading-[55px]">We unveil <br />the unseen
           <SvgLine />
         </h1>
           <p className="md:hidden my-6 text-white font-custom1 text-[16px] leading-normal">
@@ -45,13 +46,17 @@ const AboutUsOnHomePage = () => {
                 </button>
           </Link>
    
-  </div>
+  </motion.div>
   <motion.div
     ref={ref}
     initial="hidden"
-    animate={isInView ? "visible" : "hidden"}
+    animate={inView ? "visible" : "hidden"}
     variants={paragraphVariants}
-    className="lg:w-1/2 p-2 lg:order-2">
+    className="lg:w-1/2 p-2 lg:order-2" style={{
+      transform: inView ? "none" : "translateX(-200px)",
+      opacity: inView ? 1 : 0,
+      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+    }}>
     <p className="hidden lg:w-[605px] md:block text-white font-custom1 text-base leading-normal">
       We uncover the hidden pathways, the shifting landscapes, the unnoticed opportunities, 
       and the untouched canvases. Those "in plain sight" revolutions that will reshape your 
