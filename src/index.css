@@ -48,8 +48,7 @@ body{
   }
   .logos-slide{
     white-space: nowrap;
-    
-    animation: 12000ms slide infinite linear;
+    animation: 3000ms slide infinite linear;
   }
 
   @keyframes slide {

@@ -48,6 +48,7 @@ const Newest = () => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
+              
               <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
               <div className="relative w-full h-full">
                 {item?.workImage?.endsWith('.mp4') ? (
@@ -69,6 +70,22 @@ const Newest = () => {
                 </div>
               </div>
               </Link>
+              {hoveredIndex === index && (
+                    <motion.div
+                      className="absolute inset-0 flex flex-col items-center justify-center text-white bg-gray-800 bg-opacity-80 cursor-pointer p-2 w-full h-[39vh] lg:h-[80vh] 2xl:h-[60vh]"
+                    >
+                      <motion.p
+                        variants={textVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className='font-custom2 text-[45px] font-normal'
+                      >
+                        {item.workName}
+                      </motion.p>
+                  
+                    </motion.div>
+                  )}
+             
             </motion.div>
           ))}
         </div>
