@@ -135,7 +135,12 @@ body{
 
 /* Stilizo dots-it aktiv */
 .react-multi-carousel-dot--active {
-  background-color: #ffffff; /* Ngjyra e dots-it aktive */
+  background-color: #ffffff;
+}
+
+.imageService{
+  -webkit-mask-image: linear-gradient(to right, transparent 10%, black 100%);
+  mask-image: linear-gradient(to right, transparent 10%, black 100%);
 }
 
   /* .accordion{

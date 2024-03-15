@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
     <div className='bg-black  px-4 md:px-8 lg:px-12 text-white'>
-      <div className='px-[30px] md:py-12 lg:py-20 2xl:py-44 flex flex-col md:flex-col lg:flex-row justify-between'>
+      <div className=' md:py-12 lg:py-20 2xl:py-44 flex flex-col md:flex-col lg:flex-row justify-between'>
         <div className='text-center lg:text-left mt-10 lg:mt-5'>
           <img src={footerLogo} className='w-[220px] h-[26px] object-cover mx-auto lg:mx-0' alt='' />
           <p className='font-custom text-xl mt-[20px]'>
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
       </div>
       {/* <hr className="mx-[28px] border-t-[1px] border-white" /> */}
-      <div className="flex lg:px-[30px] flex-col lg:flex-row items-center justify-between py-[38px]">
+      <div className="flex flex-col lg:flex-row items-center justify-between py-[38px]">
         <p className='text-base font-custom1 font-light'>
         © 2024 Trekuartista L.L.C All rights reserved.
         </p>
