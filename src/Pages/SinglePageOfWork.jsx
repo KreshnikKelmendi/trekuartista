@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ourWorks } from '../Components/Works/workData';
+import transition from '../transition';
 
 const SinglePageOfWork = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,7 +78,7 @@ const SinglePageOfWork = () => {
   );
 };
 
-export default SinglePageOfWork;
+export default transition(SinglePageOfWork);
 
 // import React, { useState } from 'react';
 // import { useParams } from 'react-router-dom';

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import SpaceOffice from '../Components/Contact/SpaceOffice'
 import ContactForm from '../Components/Contact/ContactForm'
 import Map from '../Components/Contact/Map'
+import transition from '../transition'
 
 const ContactPage = () => {
   useEffect(() => {
@@ -17,4 +18,4 @@ const ContactPage = () => {
   )
 }
 
-export default ContactPage
+export default transition(ContactPage)

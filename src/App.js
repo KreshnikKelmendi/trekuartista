@@ -9,19 +9,10 @@ import ContactPage from "./Pages/ContactPage";
 import WorkPage from "./Pages/WorkPage";
 import SinglePageOfWork from "./Pages/SinglePageOfWork";
 import ErrorPage from "./Pages/ErrorPage";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import logo from "./Components/Assets/trekuartistaLogoFooter.png";
 
 function App() {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   return (
     <>
@@ -29,6 +20,7 @@ function App() {
      
         <BrowserRouter>
           <Header />
+          <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/our-team" element={<TeamPage />} />
@@ -38,6 +30,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
+          </AnimatePresence>
           <Footer />
         </BrowserRouter>
   

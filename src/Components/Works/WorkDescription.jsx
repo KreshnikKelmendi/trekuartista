@@ -46,7 +46,7 @@ const WorkDescription = () => {
           </motion.span>
         ))}
       </motion.div>
-      <div className='hidden lg:w-1/2 justify-end items-center lg:flex' >
+      {/* <div className='hidden lg:w-1/2 justify-end items-center lg:flex' >
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 56 37"
@@ -62,7 +62,7 @@ const WorkDescription = () => {
           animate="visible"
           
         >
-          {/* Drawing animation for the pencil */}
+        
           <motion.path
             d="M18.7207 0L22.6107 3.85517L26.8897 8.09425L30.2125 11.4055L35.4154 16.5724L41.0721 22.1872L45.8698 26.9542L49.7112 30.7613L52.807 33.8327L56 37V0H18.7207Z"
             fill="black"
@@ -79,7 +79,7 @@ const WorkDescription = () => {
             variants={pathVariants}
           />
         </motion.svg>
-      </div>
+      </div> */}
     </div>
   );
 };

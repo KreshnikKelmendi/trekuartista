@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { ourWorks } from '../Works/workData';
+import transition from '../../transition';
 
 const textVariants = {
   hidden: { scale: 0.9, opacity: 0.2 },
@@ -39,12 +40,12 @@ const WorkItem = ({ item, index }) => {
       <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
         <div className="relative w-full h-full">
           {item?.workImage?.endsWith('.mp4') ? (
-            <video className="w-full h-[39vh] lg:h-[80vh] 2xl:h-[60vh] object-cover" autoPlay playsInline loop muted>
+            <video className="w-full h-[39vh] lg:h-[80vh] 2xl:h-[60vh] object-cover workImage" autoPlay playsInline loop muted>
               <source src={item?.workImage} type="video/mp4" />
             </video>
           ) : (
             <img
-              className="w-full h-[39vh] lg:h-[80vh] 2xl:h-[60vh] object-cover"
+              className="w-full h-[39vh] lg:h-[80vh] 2xl:h-[60vh] object-cover workImage"
               src={item?.workImage}
               alt=""
             />
@@ -55,6 +56,7 @@ const WorkItem = ({ item, index }) => {
           </div>
         </div>
       </Link>
+      <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
       {hovered && (
         <motion.div
           className="absolute inset-0 flex flex-col items-center justify-center text-white bg-gray-800 bg-opacity-80 cursor-pointer p-2 w-full h-[39vh] lg:h-[80vh] 2xl:h-[60vh]"
@@ -69,6 +71,7 @@ const WorkItem = ({ item, index }) => {
           </motion.p>
         </motion.div>
       )}
+      </Link>
     </motion.div>
   );
 };
@@ -85,4 +88,4 @@ const OurWorks = () => {
   );
 };
 
-export default OurWorks;
+export default transition(OurWorks);

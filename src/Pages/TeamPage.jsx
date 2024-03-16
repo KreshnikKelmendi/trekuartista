@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import DescriptionTeam from '../Components/TeamPage/DescriptionTeam'
 import Team from '../Components/TeamPage/Team'
+import transition from '../transition'
 
 const TeamPage = () => {
   useEffect(() => {
@@ -14,4 +15,4 @@ const TeamPage = () => {
   )
 }
 
-export default TeamPage
+export default transition(TeamPage)
