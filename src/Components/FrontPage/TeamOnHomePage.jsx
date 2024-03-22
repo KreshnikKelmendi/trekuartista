@@ -159,7 +159,7 @@ const TeamOnHomePage = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
-               <div className='flex justify-between items-center '>
+               <div className='flex justify-between items-center'>
         <div className='mx-2'>
           <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
           <p className="text-base font-custom1">{member.position}</p>

@@ -3,6 +3,7 @@ import SpaceOffice from '../Components/Contact/SpaceOffice'
 import ContactForm from '../Components/Contact/ContactForm'
 import Map from '../Components/Contact/Map'
 import transition from '../transition'
+import ZoomParallax from '../Components/Contact/ZoomParallax'
 
 const ContactPage = () => {
   useEffect(() => {
@@ -11,7 +12,8 @@ const ContactPage = () => {
 
   return (
     <>
-      <SpaceOffice />
+      {/* <SpaceOffice /> */}
+      <ZoomParallax />
       <ContactForm />
       <Map />
     </>

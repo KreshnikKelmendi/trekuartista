@@ -25,8 +25,8 @@ const TeamMember = ({ member, index }) => {
       animate={inView ? 'visible' : 'hidden'}
       variants={variants}
       transition={{ duration: 0.5, delay }}
-      className="text-[#979797] justify-center p-2 lg:p-0"
-     
+      className="text-white justify-center p-2 lg:p-0"
+    
     >
       <img
         src={member.image}

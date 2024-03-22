@@ -10,7 +10,7 @@ import member9 from "../Assets/edmiri.png";
 import member10 from "../Assets/eduarti.png";
 import member11 from "../Assets/euroni.png";
 import member12 from "../Assets/andena.png";
-import member13 from "../Assets/enesi.png";
+import member13 from "../Assets/fuadi.jpg";
 import member14 from "../Assets/endriti.png";
 import member15 from "../Assets/kreshnik.png";
 import member16 from "../Assets/valoni.png";
@@ -79,7 +79,13 @@ const teamMembers = [
       image: member12,
       hoverImage: '', 
     },
-        // Member 13
+    {
+      id: 13,
+      name: 'Fuad Shatri',
+      position: 'Junior Motion Designer',
+      image: member13,
+      hoverImage: '', 
+    },
         // Member 14
     {
       id: 14,

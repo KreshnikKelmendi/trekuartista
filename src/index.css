@@ -118,6 +118,23 @@ body{
       stroke-dashoffset: 0;
     }
   }
+
+  
+  .hover-stroke1:hover {
+    -webkit-text-stroke: 1px white; /* Set the stroke width and color */
+    color: transparent; /* Make the text transparent to show only the stroke */
+    animation: strokeAnimation 1s ease-in-out forwards; /* Apply stroke animation */
+  }
+  
+  @keyframes strokeAnimation {
+    from {
+      stroke-dasharray: 1000; /* Set a large value to cover the entire text length */
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
   
 /* Fshij dots-it nga karusela */
 .react-multi-carousel-dot-list {
@@ -129,8 +146,8 @@ body{
   width: 15px;
   height: 5px;
   border-radius: 0;
-  background-color: #6E6E6E; /* Ngjyra e dots */
-  margin: 4px 8px; /* Hapësira midis dots-it */
+  background-color: #6E6E6E; 
+  margin: 4px 8px; 
 }
 
 /* Stilizo dots-it aktiv */
@@ -165,6 +182,14 @@ body{
   height: 100vh;
   background-color: black;
   transform-origin: bottom;
+}
+.textTransition{
+  color: white;
+  z-index: 1;
+  margin: 0;
+  white-space: nowrap;
+  margin-top: auto;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
   /* .accordion{
     width: 100%;

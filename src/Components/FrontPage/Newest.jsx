@@ -30,19 +30,6 @@ const Newest = () => {
         variants={slideInVariants}
       >
         <div className="px-4 flex items-center">
-          {/* <h1 className="flex text-[42px] md:text-5xl lg:text-[45px] font-bold font-custom leading-[40px]">
-          FRESH VENTURES
-          </h1> */}
-          {/* <motion.div
-            initial={{ scale: 1 }}
-            animate={{ scale: [1, 1.3, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className='ml-6 mt-3'
-          >
-            <svg width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M38.9946 13.5843L39 13.5789H38.9903L25.406 0.0258216L19.5163 5.84967L13.6525 0L0 13.4982C6.55272 19.9988 13.1054 26.4994 19.6592 33L38.9924 13.5865H38.9967L38.9946 13.5843Z" fill="#DF319A"/>
-            </svg>
-          </motion.div> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3">
           {ourWorks?.slice(0, 3).map((item, index) => (

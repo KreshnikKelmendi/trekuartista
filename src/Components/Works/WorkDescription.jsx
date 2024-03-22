@@ -31,7 +31,7 @@ const WorkDescription = () => {
     <div className="py-8 flex flex-col lg:flex-row px-5 bg-black lg:py-[70px] lg:px-[50px]">
       <motion.div className="w-full lg:w-1/2">
         <p className='text-[25px] lg:text-[45px] font-custom text-white'>OUR WORK</p>
-        {text.map((el, i) => (
+        {text?.map((el, i) => (
           <motion.span
             className=' ml-0 mt-[40px] lg:mt-0 w-full text-lg font-custom1 text-white '
             initial={{ opacity: 0.1 }}

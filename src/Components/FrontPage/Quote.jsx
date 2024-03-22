@@ -33,8 +33,8 @@ const Quote = () => {
   return (
     <motion.div
       className="py-20 text-black md:px-8 flex flex-col tracking-tighter lg:mx-[65px]"
-      initial={{ opacity: 0.5, y: 0 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: -100 }} // initial position outside the viewport on the left
+      animate={{ opacity: 1, x: 0 }} // animate to the center
       transition={{ duration: 0.5 }}
     >
       <h1

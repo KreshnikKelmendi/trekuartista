@@ -6,6 +6,7 @@ import Newest from '../Components/FrontPage/Newest';
 import Quote from '../Components/FrontPage/Quote';
 import TeamOnHomePage from '../Components/FrontPage/TeamOnHomePage';
 import Office from '../Components/FrontPage/Office';
+import ScrollText from '../Components/FrontPage/ScrollText';
 
 // Import the VideoAnimation component with a different name
 const VideoAnimation = lazy(() => import('../Components/FrontPage/VideoAnimation'));
@@ -27,6 +28,7 @@ const HomePage = () => {
       <Quote />
       <Newest type='Newest' />
       <TeamOnHomePage />
+      <ScrollText />
       <Office />
     </>
   );
