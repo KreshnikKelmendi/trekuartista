@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ourWorks } from '../Components/Works/workData';
 import transition from '../transition';
+import LazyLoad from 'react-lazy-load';
 
 const SinglePageOfWork = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,7 +51,7 @@ const SinglePageOfWork = () => {
       </div>
 
       <div className="w-full h-80 lg:h-screen bg-black px-3 lg:px-[50px]">
-       
+      <LazyLoad height='100%'>
           <motion.img
             
             className="w-full h-full object-cover"
@@ -58,12 +59,13 @@ const SinglePageOfWork = () => {
             alt=""
             
           />
-       
+       </LazyLoad>
       </div>
 
       <div className='grid grid-cols-1 bg-black lg:grid-cols-2 px-3 lg:px-[50px] py-[65px] gap-x-[20px] gap-y-[20px] lg:gap-y-[23px]'>
   {mediaItems?.map((media, index) => (
     <div key={index} className="w-full h-80 lg:h-fit relative">
+      <LazyLoad height='100%'>
       {media && (media.endsWith('.mp4') ? (
         <video className="w-full h-80 lg:h-screen object-cover" autoPlay playsInline loop muted>
           <source src={media} type="video/mp4" />
@@ -71,6 +73,7 @@ const SinglePageOfWork = () => {
       ) : (
         <img src={media} alt='' className="w-full h-80 lg:h-screen object-cover" />
       ))}
+      </LazyLoad>
     </div>
   ))}
 </div>
