@@ -23,9 +23,9 @@ const SinglePageOfWork = () => {
     return <div className='font-custom text-2xl mt-5 justify-center items-center text-center'>WORK NOT FOUND. BAD REQUEST !</div>;
   }
 
-  const { workName, textDescription, workDescription, firstSinglePhoto, secondSinglePhoto, thirdSinglePhoto } = work;
+  const { workName, textDescription, workDescription, firstSinglePhoto, secondSinglePhoto, thirdSinglePhoto, fourthSinglePhoto, fifthSinglePhoto } = work;
 
-  const mediaItems = [secondSinglePhoto, thirdSinglePhoto];
+  const mediaItems = [secondSinglePhoto, thirdSinglePhoto, fourthSinglePhoto, fifthSinglePhoto];
 
   // const slideItems = [thirdSinglePhoto, secondSinglePhoto];
 
@@ -37,19 +37,19 @@ const SinglePageOfWork = () => {
 
   return (
     <>
-      <div className="py-0 md:py-[50px] bg-[#E6E6E6] lg:px-[50px]">
+      <div className="py-0  md:py-[50px] bg-black lg:px-[50px]">
         <div className="flex flex-col lg:flex-row p-4 lg:p-0">
-          <h1 className="text-4xl md:text-[33px] font-bold font-custom leading-[47px]">
+          <h1 className="text-4xl md:text-[33px] text-white font-bold font-custom leading-[47px]">
             {workName}
-            <p className='font-custom1 mt-[11px] text-lg text-[#979797] w-[207px] font-normal leading-[24px]'></p>
+            <p className='font-custom1 mt-[11px] text-lg text-white w-[207px] font-normal leading-[24px]'></p>
           </h1>
-          <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-fit text-lg font-medium font-custom1 text-[#1E1E1E]">
+          <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-fit text-lg font-medium font-custom1 text-white">
             {textDescription}
           </span>
         </div>
       </div>
 
-      <div className="w-full h-80 lg:h-[504px] mt-[35px] px-3 lg:px-[50px]">
+      <div className="w-full h-80 lg:h-screen bg-black px-3 lg:px-[50px]">
        
           <motion.img
             
@@ -61,19 +61,19 @@ const SinglePageOfWork = () => {
        
       </div>
 
-      <div className='grid grid-cols-1 lg:grid-cols-2 px-3 lg:px-[50px] mt-[23px] gap-x-[20px] gap-y-[20px] lg:gap-y-0'>
-        {mediaItems?.map((media, index) => (
-          <div key={index} className="w-full h-80 lg:h-[510px] relative">
-            {media?.endsWith('.mp4') ? (
-              <video className="w-full h-80 lg:h-[510px] object-cover" autoPlay playsInline loop muted>
-                <source src={media} type="video/mp4" />
-              </video>
-            ) : (
-              <img src={media} alt='' className="w-full h-80 lg:h-[510px] object-cover" />
-            )}
-          </div>
-        ))}
-      </div>
+      <div className='grid grid-cols-1 bg-black lg:grid-cols-2 px-3 lg:px-[50px] py-[65px] gap-x-[20px] gap-y-[20px] lg:gap-y-[23px]'>
+  {mediaItems?.map((media, index) => (
+    <div key={index} className="w-full h-80 lg:h-fit relative">
+      {media && (media.endsWith('.mp4') ? (
+        <video className="w-full h-80 lg:h-screen object-cover" autoPlay playsInline loop muted>
+          <source src={media} type="video/mp4" />
+        </video>
+      ) : (
+        <img src={media} alt='' className="w-full h-80 lg:h-screen object-cover" />
+      ))}
+    </div>
+  ))}
+</div>
     </>
   );
 };

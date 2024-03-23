@@ -1,14 +1,10 @@
-import member1 from "../Assets/member1.png";
+
 import member2 from "../Assets/janche.png";
 import member3 from "../Assets/albaKrasniqi.png";
 import member4 from "../Assets/jetlirKuleta.png";
-import member5 from "../Assets/kestrina.png";
-import member6 from "../Assets/fjolla.png";
-import member7 from "../Assets/trina.png";
 import member8 from "../Assets/gentriti.png";
 import member9 from "../Assets/edmiri.png";
 import member10 from "../Assets/eduarti.png";
-import member11 from "../Assets/euroni.png";
 import member12 from "../Assets/andena.png";
 import member13 from "../Assets/fuadi.jpg";
 import member14 from "../Assets/endriti.png";
@@ -16,7 +12,6 @@ import member15 from "../Assets/kreshnik.png";
 import member16 from "../Assets/valoni.png";
 import member17 from "../Assets/mentori.png";
 import member18 from "../Assets/albertZeqiri.png";
-import hoverImage1 from "../Assets/testCartoon.jpg";
 
 const teamMembers = [
         

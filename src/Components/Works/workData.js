@@ -1,10 +1,12 @@
-import work1 from "../Assets/groupICEtea.png"
+import work1 from "../Assets/post9.png"
 import work2 from "../Assets/gjelber.png"
 import work4 from "../Assets/mokne.png"
 import work5 from "../Assets/termokos.png"
-import first from "../Assets/jaffaFirst.png"
-import second from "../Assets/second1.png"
-import third from "../Assets/biberi.mp4";
+import first from "../Assets/post10.png"
+import second from "../Assets/post3.png"
+import third from "../Assets/post5.png";
+import fourth from "../Assets/vegza.mp4"
+import fifth from "../Assets/post7.png"
 import dok from "../Assets/DokuTechFinal.mp4"
 
 const ourWorks = [
@@ -15,7 +17,9 @@ const ourWorks = [
       firstSinglePhoto: first,
       secondSinglePhoto: second,
       thirdSinglePhoto: third,
-      workName: "Floil",
+      fourthSinglePhoto: fourth,
+      fifthSinglePhoto: fifth,
+      workName: "VEGZA",
       category:"Brand Strategy",
       workDescription: "Logo / Branding / Marketing Strategy / Campaign / PR / Animation & 3D / TV Commercial / Advertisement / Web Design & Development", 
       textDescription : "Trekuartista took the lead in conceptualizing, designing, and implementing a holistic brand strategy for Floil oil. This encompassed the creation of a distinctive logo, a comprehensive brand book, and captivating label designs. The collaborative effort aimed to not only establish a visual identity but also to articulate the brand's essence and values. Floil stands as a trailblazer in Kosovo's economy sector, proudly holding the distinction of being the first and sole oil refinery in the region. The unparalleled success of Floil can be attributed not only to its cutting-edge refining capabilities but also to the strategic marketing campaigns that have propelled the company to exceed expectations in both export and import.",
