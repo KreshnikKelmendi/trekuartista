@@ -21,8 +21,8 @@ const ourWorks = [
       fifthSinglePhoto: fifth,
       workName: "VEGZA",
       category:"Brand Strategy",
-      workDescription: "Logo / Branding / Marketing Strategy / Campaign / PR / Animation & 3D / TV Commercial / Advertisement / Web Design & Development", 
-      textDescription : "Trekuartista took the lead in conceptualizing, designing, and implementing a holistic brand strategy for Floil oil. This encompassed the creation of a distinctive logo, a comprehensive brand book, and captivating label designs. The collaborative effort aimed to not only establish a visual identity but also to articulate the brand's essence and values. Floil stands as a trailblazer in Kosovo's economy sector, proudly holding the distinction of being the first and sole oil refinery in the region. The unparalleled success of Floil can be attributed not only to its cutting-edge refining capabilities but also to the strategic marketing campaigns that have propelled the company to exceed expectations in both export and import.",
+      workDescription: "Logo / Branding / Marketing Strategy / PR / Animation & 3D / Web Design & Development", 
+      textDescription : "Embracing the fusion of asymmetry and modernism, Vegza's newest logo redesign beautifully intertwines the timeless essence of heritage with the contemporary edge of innovation. With its dynamic asymmetrical lines, each stroke tells a unique story, reflecting the complexity and depth of their architectural vision.",
       hoverText: "Campaign / Design / Logo"
     },
       // Work 2
