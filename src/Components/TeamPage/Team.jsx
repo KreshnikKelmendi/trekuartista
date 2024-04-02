@@ -7,6 +7,7 @@ import { FaLinkedin } from 'react-icons/fa';
 
 
 const TeamMember = ({ member, index }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -26,10 +27,12 @@ const TeamMember = ({ member, index }) => {
       variants={variants}
       transition={{ duration: 0.5, delay }}
       className="text-white justify-center p-2 lg:p-0"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     
     >
       <img
-        src={member.image}
+        src={isHovered ? member.hoverImage : member.image}
         alt={member.name}
         className="w-full h-[60vh] lg:h-full object-cover"
       />

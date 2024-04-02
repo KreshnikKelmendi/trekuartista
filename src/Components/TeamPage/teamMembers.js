@@ -3,16 +3,24 @@ import member2 from "../Assets/janche.png";
 import member3 from "../Assets/IMG_5735.jpg";
 import member4 from "../Assets/jetlirKuleta.png";
 import member5 from "../Assets/IMG_5733.jpg"
-import member8 from "../Assets/gentriti.png";
+import member8 from "../Assets/Gentriti-1-retouch.jpg";
 import member9 from "../Assets/edmiri.png";
-import member10 from "../Assets/eduarti.png";
-import member12 from "../Assets/andena.png";
-import member13 from "../Assets/fuadi.jpg";
-import member14 from "../Assets/endriti.png";
+import member10 from "../Assets/DSC_5677.png";
+import member11 from "../Assets/IMG_9203.jpg"
+import member12 from "../Assets/IMG_5873.jpg";
+import member13 from "../Assets/5074_updated.jpg";
+import member14 from "../Assets/DSC_5605.png";
 import member15 from "../Assets/DSC_5135.JPG";
 import member16 from "../Assets/valoni.png";
 import member17 from "../Assets/mentori.png";
 import member18 from "../Assets/albertZeqiri.png";
+import dora from "../Assets/DoraHover.jpg"
+import gentrit from "../Assets/Gentrit-2-Retouch.jpg"
+import eduart from "../Assets/DSC_5668.png"
+import endrit from "../Assets/DSC_5618.png"
+import hana from "../Assets/IMG_9205.jpg"
+import fuad from "../Assets/5087_updated.jpg"
+import andena from "../Assets/IMG_9176.jpg"
 
 const teamMembers = [
         
@@ -37,8 +45,8 @@ const teamMembers = [
           id: 5,
           name: 'Dora Kryeziu',
           position: 'Account Manager',
-          image: member5,
-          hoverImage: '',
+          image: dora,
+          hoverImage: member5,
         },
        
     {
@@ -53,40 +61,47 @@ const teamMembers = [
       id: 9,
       name: 'Gentrit Mehmeti',
       position: 'Senior Graphic Designer',
-      image: member8,
-      hoverImage: '',
+      image: gentrit,
+      hoverImage: member8,
     },
         // Member 10
     {
       id: 10,
       name: 'Eduart Demaj',
       position: 'Graphic Designer',
-      image: member10,
-      hoverImage: '',
+      image: eduart,
+      hoverImage: member10,
     },
         // Member 11
+        {
+          id: 11,
+          name: 'Hana Jaha',
+          position: 'Graphic Designer',
+          image: hana,
+          hoverImage: member11,
+        },
         // Member 12
     {
       id: 12,
       name: 'Andena Rexhepi',
       position: 'Junior Graphic Designer',
-      image: member12,
-      hoverImage: '', 
+      image: andena,
+      hoverImage: member12, 
     },
     {
       id: 13,
       name: 'Fuad Shatri',
       position: 'Junior Motion Designer',
-      image: member13,
-      hoverImage: '', 
+      image: fuad,
+      hoverImage: member13, 
     },
         // Member 14
     {
       id: 14,
       name: 'Endrit Morina',
       position: '3D Artist',
-      image: member14,
-      hoverImage: '', 
+      image: endrit,
+      hoverImage: member14, 
     },
         // Member 15
     {
