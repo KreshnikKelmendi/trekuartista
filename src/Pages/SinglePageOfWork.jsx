@@ -60,7 +60,7 @@ const SinglePageOfWork = () => {
             alt=""
           />
         </LazyLoad>
-      </div>
+      </div> 
 
       <div className='grid grid-cols-1 bg-black lg:grid-cols-2 px-3 lg:px-[50px] py-[65px] lg:py-[15px] gap-x-[20px] gap-y-[20px] lg:gap-y-[23px]'>
         {mediaItems?.map((media, index) => (

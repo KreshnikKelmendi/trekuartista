@@ -72,7 +72,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col bg-black text-white lg:flex-row lg:px-[50px] mt-[97px]">
+    <div className="flex flex-col bg-black text-white lg:flex-row lg:px-[50px]">
       {/* First Div */}
       <div className="w-full lg:w-1/2 flex flex-col px-4 py-7 lg:py-[85px]">
         <div className="h-full">

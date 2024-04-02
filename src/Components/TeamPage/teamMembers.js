@@ -1,14 +1,15 @@
 
 import member2 from "../Assets/janche.png";
-import member3 from "../Assets/albaKrasniqi.png";
+import member3 from "../Assets/IMG_5735.jpg";
 import member4 from "../Assets/jetlirKuleta.png";
+import member5 from "../Assets/IMG_5733.jpg"
 import member8 from "../Assets/gentriti.png";
 import member9 from "../Assets/edmiri.png";
 import member10 from "../Assets/eduarti.png";
 import member12 from "../Assets/andena.png";
 import member13 from "../Assets/fuadi.jpg";
 import member14 from "../Assets/endriti.png";
-import member15 from "../Assets/kreshnik.png";
+import member15 from "../Assets/DSC_5135.JPG";
 import member16 from "../Assets/valoni.png";
 import member17 from "../Assets/mentori.png";
 import member18 from "../Assets/albertZeqiri.png";
@@ -32,16 +33,14 @@ const teamMembers = [
       hoverImage: '',
     },
         // Member 4
-    {
-      id: 4,
-      name: 'Jetlir Kuleta',
-      position: 'Print Manager',
-      image: member4,
-      hoverImage: '',
-    },
-        
-        // Member 7
-        // Member 8
+        {
+          id: 5,
+          name: 'Dora Kryeziu',
+          position: 'Account Manager',
+          image: member5,
+          hoverImage: '',
+        },
+       
     {
       id: 8,
       name: 'Edmir Kuleta',

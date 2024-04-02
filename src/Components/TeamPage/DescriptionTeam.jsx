@@ -33,7 +33,7 @@ const DescriptionTeam = () => {
         <p className='text-[25px] lg:text-[45px] font-custom text-white'>Our people</p>
         {text.map((el, i) => (
           <motion.span
-            className=' ml-0 mt-[40px] lg:mt-0 w-full text-lg font-custom1 text-white '
+            className='ml-0 mt-[40px] lg:mt-0 w-full text-lg font-custom1 text-white '
             initial={{ opacity: 0.1 }}
             animate={{ opacity: 1 }}
             transition={{

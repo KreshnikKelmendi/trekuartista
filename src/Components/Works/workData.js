@@ -22,7 +22,7 @@ const ourWorks = [
       workName: "VEGZA",
       category:"Brand Strategy",
       workDescription: "Logo / Branding / Marketing Strategy / PR / Animation & 3D / Web Design & Development", 
-      textDescription : "Embracing the fusion of asymmetry and modernism, Vegza's newest logo redesign beautifully intertwines the timeless essence of heritage with the contemporary edge of innovation. With its dynamic asymmetrical lines, each stroke tells a unique story, reflecting the complexity and depth of their architectural vision.",
+      textDescription: "Embracing the fusion of asymmetry and modernism, Vegza's newest logo redesign beautifully intertwines the timeless essence of heritage with the contemporary edge of innovation. With its dynamic asymmetrical lines, each stroke tells a unique story, reflecting the complexity and depth of their architectural vision.",
       hoverText: "Campaign / Design / Logo"
     },
       // Work 2
@@ -31,7 +31,7 @@ const ourWorks = [
       workImage: work2,
       firstSinglePhoto: first,
       secondSinglePhoto: second,
-      thirdSinglePhoto:third,
+      thirdSinglePhoto: third,
       workName: "Gjelbër",
       category:"Logo",
       workDescription: "Logo / Branding / Packaging Design / Marketing Strategy / Web Design & Development" 
