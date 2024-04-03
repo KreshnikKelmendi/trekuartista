@@ -6,7 +6,6 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
 
-
 const TeamMember = ({ member, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [ref, inView] = useInView({
@@ -22,48 +21,49 @@ const TeamMember = ({ member, index }) => {
 
   return (
     <LazyLoad height='100%'>
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
-      variants={variants}
-      transition={{ duration: 0.5, delay }}
-      className="text-white justify-center p-2 lg:p-0"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <img
-        src={isHovered ? member.hoverImage : member.image}
-        alt={member.name}
-        className="w-full h-[60vh] lg:h-[82vh] object-cover"
-        
-      />
-      <div className='relative justify-between items-center'>
-        <div className='absolute bottom-2 left-2'>
-          <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
-          <p className="text-base font-custom1">{member.position}</p>
-        </div>
-        <div className='flex gap-x-[10px]'>
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        variants={variants}
+        transition={{ duration: 0.5, delay }}
+        className="text-white justify-center p-2 lg:p-0"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <motion.img
+          src={isHovered ? member.hoverImage : member.image}
+          alt={member.name}
+          className="w-full h-[60vh] lg:h-[82vh] object-cover"
+          whileHover={{ scale: isHovered ? 1.01 : 1 }} 
+          transition={{ duration: 0.9, ease: "easeIn" }} 
+        />
+        <div className='relative justify-between items-center'>
+          <div className='absolute bottom-4 left-4'>
+            <h2 className="text-lg font-custom1 mt-2 font-bold">{member.name}</h2>
+            <p className="text-base font-custom1">{member.position}</p>
+          </div>
+          <div className='flex gap-x-[10px]'>
             {member.instagramLink && (
-                <a href={member.instagramLink} target="_blank" rel="noopener noreferrer">
-                  <FaInstagram />
-                </a>
+              <a href={member.instagramLink} target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
             )}
-              {member.linkedinLink && (
-                <a href={member.linkedinLink} target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin />
-                </a>
+            {member.linkedinLink && (
+              <a href={member.linkedinLink} target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
             )}
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
     </LazyLoad>
   );
 };
 
 const Team = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-16 lg:gap-y-[88px] lg:px-[50px] bg-black">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-16 lg:gap-y-[20px] lg:px-[50px] bg-black">
       {teamMembers.map((member, index) => (
         <TeamMember key={member.id} member={member} index={index} />
       ))}
@@ -72,6 +72,7 @@ const Team = () => {
 };
 
 export default Team;
+
 
 
 
