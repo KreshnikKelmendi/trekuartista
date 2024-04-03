@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { teamMembers } from './teamMembers';
 import { FaInstagram } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 
 
 const TeamMember = ({ member, index }) => {
@@ -17,9 +18,10 @@ const TeamMember = ({ member, index }) => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const delay = index * 0.1;
+  const delay = index * 0.15;
 
   return (
+    <LazyLoad height='100%'>
     <motion.div
       ref={ref}
       initial="hidden"
@@ -29,15 +31,15 @@ const TeamMember = ({ member, index }) => {
       className="text-white justify-center p-2 lg:p-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-    
     >
       <img
         src={isHovered ? member.hoverImage : member.image}
         alt={member.name}
-        className="w-full h-[60vh] lg:h-full object-cover"
+        className="w-full h-[60vh] lg:h-[82vh] object-cover"
+        
       />
-      <div className='flex justify-between items-center'>
-        <div className=''>
+      <div className='relative justify-between items-center'>
+        <div className='absolute bottom-2 left-2'>
           <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
           <p className="text-base font-custom1">{member.position}</p>
         </div>
@@ -55,12 +57,13 @@ const TeamMember = ({ member, index }) => {
         </div>
       </div>
     </motion.div>
+    </LazyLoad>
   );
 };
 
 const Team = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-20 lg:gap-y-[108px] lg:px-[50px] bg-black">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-16 lg:gap-y-[88px] lg:px-[50px] bg-black">
       {teamMembers.map((member, index) => (
         <TeamMember key={member.id} member={member} index={index} />
       ))}

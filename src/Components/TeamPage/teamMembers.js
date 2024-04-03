@@ -1,7 +1,5 @@
-
 import member2 from "../Assets/janche.png";
 import member3 from "../Assets/IMG_5735.jpg";
-import member4 from "../Assets/jetlirKuleta.png";
 import member5 from "../Assets/IMG_5733.jpg"
 import member8 from "../Assets/Gentriti-1-retouch.jpg";
 import member9 from "../Assets/edmiri.png";
@@ -11,9 +9,6 @@ import member12 from "../Assets/IMG_5873.jpg";
 import member13 from "../Assets/5074_updated.jpg";
 import member14 from "../Assets/DSC_5605.png";
 import member15 from "../Assets/DSC_5135.JPG";
-import member16 from "../Assets/valoni.png";
-import member17 from "../Assets/mentori.png";
-import member18 from "../Assets/albertZeqiri.png";
 import dora from "../Assets/DoraHover.jpg"
 import gentrit from "../Assets/Gentrit-2-Retouch.jpg"
 import eduart from "../Assets/DSC_5668.png"
@@ -41,13 +36,13 @@ const teamMembers = [
       hoverImage: '',
     },
         // Member 4
-        {
-          id: 5,
-          name: 'Dora Kryeziu',
-          position: 'Account Manager',
-          image: dora,
-          hoverImage: member5,
-        },
+    {
+      id: 5,
+      name: 'Dora Kryeziu',
+      position: 'Account Manager',
+      image: member5,
+      hoverImage: dora,
+    },
        
     {
       id: 8,
@@ -73,25 +68,25 @@ const teamMembers = [
       hoverImage: member10,
     },
         // Member 11
-        {
-          id: 11,
-          name: 'Hana Jaha',
-          position: 'Graphic Designer',
-          image: hana,
-          hoverImage: member11,
-        },
+    {
+      id: 11,
+      name: 'Hana Jaha',
+      position: 'Graphic Designer',
+      image: hana,
+      hoverImage: member11,
+    },
         // Member 12
     {
       id: 12,
       name: 'Andena Rexhepi',
-      position: 'Junior Graphic Designer',
+      position: 'Graphic Designer',
       image: andena,
       hoverImage: member12, 
     },
     {
       id: 13,
       name: 'Fuad Shatri',
-      position: 'Junior Motion Designer',
+      position: 'Motion Designer',
       image: fuad,
       hoverImage: member13, 
     },
@@ -111,30 +106,9 @@ const teamMembers = [
       image: member15,
       hoverImage: '', 
     },
-        // Member 16
-    {
-      id: 16,
-      name: 'Valon Kuleta',
-      position: 'Print Operator',
-      image: member16,
-      hoverImage: '',
-    },
-        // Member 17
-    {
-      id: 17,
-      name: 'Mentor Gashi',
-      position: 'Print Operator',
-      image: member17,
-      hoverImage: '', 
-    },
-        // Member 18
-    {
-      id: 18,
-      name: 'Albert Zeqiri',
-      position: 'Print Operator',
-      image: member18,
-      hoverImage: '', 
-    },
+
+
   ];
+
 
   export { teamMembers }
