@@ -34,7 +34,7 @@ const TeamMember = ({ member, index }) => {
         <motion.img
           src={isHovered ? member.hoverImage : member.image}
           alt={member.name}
-          className="w-full h-[60vh] lg:h-[82vh] object-cover"
+          className="w-full h-[58vh] lg:h-[82vh] object-cover"
           whileHover={{ scale: isHovered ? 1.01 : 1 }} 
           transition={{ duration: 0.9, ease: "easeIn" }} 
         />
@@ -63,7 +63,7 @@ const TeamMember = ({ member, index }) => {
 
 const Team = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-16 lg:gap-y-[20px] lg:px-[50px] bg-black">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-[0px] lg:gap-y-[20px] lg:px-[50px] bg-black">
       {teamMembers.map((member, index) => (
         <TeamMember key={member.id} member={member} index={index} />
       ))}
