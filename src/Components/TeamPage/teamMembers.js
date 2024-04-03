@@ -27,7 +27,7 @@ const teamMembers = [
         
         // Member 2
     {
-      id: 2,
+      id: 1,
       name: 'Arian Ahmeti',
       position: 'CEO Founder',
       image: member2,
@@ -35,7 +35,7 @@ const teamMembers = [
     },
         // Member 3
     {
-      id: 3,
+      id: 2,
       name: 'Alba Krasniqi',
       position: 'Operation Manager',
       image: member3,
@@ -50,7 +50,7 @@ const teamMembers = [
           hoverImage: kestrina,
         },
     {
-      id: 5,
+      id: 4,
       name: 'Dora Kryeziu',
       position: 'Account Manager',
       image: member5,
@@ -58,7 +58,7 @@ const teamMembers = [
     },
        
     {
-      id: 8,
+      id: 5,
       name: 'Edmir Kuleta',
       position: 'Team Leader / Senior Graphic Designer',
       image: member9,
@@ -66,7 +66,7 @@ const teamMembers = [
     },
         // Member 9
     {
-      id: 9,
+      id: 6,
       name: 'Gentrit Mehmeti',
       position: 'Senior Graphic Designer',
       image: gentrit,
@@ -74,7 +74,7 @@ const teamMembers = [
     },
         // Member 10
     {
-      id: 10,
+      id: 7,
       name: 'Eduart Demaj',
       position: 'Graphic Designer',
       image: eduart,
@@ -82,7 +82,7 @@ const teamMembers = [
     },
         // Member 11
     {
-      id: 11,
+      id: 8,
       name: 'Hana Jaha',
       position: 'Graphic Designer',
       image: hana,
@@ -90,14 +90,14 @@ const teamMembers = [
     },
         // Member 12
     {
-      id: 12,
+      id: 9,
       name: 'Andena Rexhepi',
       position: 'Graphic Designer',
       image: andena,
       hoverImage: member12, 
     },
     {
-      id: 13,
+      id: 10,
       name: 'Fuad Shatri',
       position: 'Motion Designer',
       image: fuad,
@@ -105,7 +105,7 @@ const teamMembers = [
     },
         // Member 14
     {
-      id: 14,
+      id: 11,
       name: 'Endrit Morina',
       position: '3D Artist',
       image: endrit,
@@ -113,14 +113,14 @@ const teamMembers = [
     },
         // Member 15
     {
-      id: 15,
+      id: 12,
       name: 'Kreshnik Kelmendi',
       position: 'Web Developer',
       image: member15,
       hoverImage: kreshnik, 
     },
     {
-      id: 16,
+      id: 13,
       name: 'Fiona Rrecaj',
       position: 'TikTok Creator',
       image: fiona,
