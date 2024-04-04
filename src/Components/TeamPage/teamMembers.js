@@ -1,4 +1,4 @@
-import member2 from "../Assets/DSC_5462.JPG";
+import member2 from "../Assets/ariani1.png";
 import member3 from "../Assets/IMG_5735.jpg";
 import member4 from "../Assets/IMG_8442.jpg";
 import member5 from "../Assets/IMG_5733.jpg"
@@ -22,8 +22,10 @@ import fiona from "../Assets/DSC_5024.JPG"
 import kreshnik from "../Assets/32323.png"
 import kestrina from "../Assets/IMG_8444.jpg"
 import alba from "../Assets/IMG_5737.jpg"
-import ariani from "../Assets/DSC_5532.JPG"
+import ariani from "../Assets/ariani2.png"
 import edmiri from "../Assets/DSC_5170.JPG"
+import mirjeta1 from "../Assets/mirjeta.jpg"
+import mirjeta from "../Assets/mirjeta1.jpg"
 
 const teamMembers = [
         
@@ -34,6 +36,7 @@ const teamMembers = [
       position: 'CEO Founder',
       image: ariani,
       hoverImage: member2,
+      linkedinLink: ""
     },
         // Member 3
     {
@@ -42,6 +45,7 @@ const teamMembers = [
       position: 'Operation Manager',
       image: member3,
       hoverImage: alba,
+      linkedinLink: "https://www.linkedin.com/in/alba-krasniqi-87b93a105/"
     },
         // Member 4
         {
@@ -50,6 +54,7 @@ const teamMembers = [
           position: 'Finance Manager',
           image: kestrina,
           hoverImage: member4,
+          linkedinLink: 'https://www.linkedin.com/in/kestrina-hajrizi-92683025a/'
         },
     {
       id: 4,
@@ -57,8 +62,16 @@ const teamMembers = [
       position: 'Account Manager',
       image: member5,
       hoverImage: dora,
+      linkedinLink: 'https://www.linkedin.com/in/dora-kryeziu-872299255/'
     },
-       
+    {
+      id: 40,
+      name: 'Mirjeta Murselaj',
+      position: 'Finance Officer',
+      image: mirjeta1,
+      hoverImage: mirjeta,
+      linkedinLink: 'https://www.linkedin.com/in/mirjeta-murselaj-2a0a94162/'
+    },
     {
       id: 5,
       name: 'Edmir Kuleta',
@@ -70,9 +83,10 @@ const teamMembers = [
     {
       id: 6,
       name: 'Gentrit Mehmeti',
-      position: 'Senior Graphic Designer',
+      position: 'Senior Graphic Designer | UI/UX Designer',
       image: member8,
       hoverImage: gentrit,
+      linkedinLink: 'https://www.linkedin.com/in/gentrit-mehmeti-5a88511b3/'
     },
         // Member 10
     {
@@ -81,6 +95,7 @@ const teamMembers = [
       position: 'Graphic Designer',
       image: member10,
       hoverImage: eduart,
+      linkedinLink: 'https://www.linkedin.com/in/eduart-demaj-524641236/'
     },
         // Member 11
     {
@@ -89,6 +104,7 @@ const teamMembers = [
       position: 'Graphic Designer',
       image: member11,
       hoverImage: hana,
+      linkedinLink: 'https://www.linkedin.com/in/hana-jaha/'
     },
         // Member 12
     {
@@ -97,6 +113,15 @@ const teamMembers = [
       position: 'Graphic Designer',
       image: member12,
       hoverImage: andena, 
+      linkedinLink: 'https://www.linkedin.com/in/andena-rexhepi-069108258/'
+    },
+    {
+      id: 11,
+      name: 'Endrit Morina',
+      position: '3D Artist',
+      image: member14,
+      hoverImage: endrit, 
+      linkedinLink:'https://www.linkedin.com/in/endritmorina/'
     },
     {
       id: 10,
@@ -104,22 +129,7 @@ const teamMembers = [
       position: 'Motion Designer',
       image: member13,
       hoverImage: fuad, 
-    },
-        // Member 14
-    {
-      id: 11,
-      name: 'Endrit Morina',
-      position: '3D Artist',
-      image: member14,
-      hoverImage: endrit, 
-    },
-        // Member 15
-    {
-      id: 12,
-      name: 'Kreshnik Kelmendi',
-      position: 'Web Developer',
-      image: member15,
-      hoverImage: kreshnik, 
+      linkedinLink: 'https://www.linkedin.com/in/fuad-shatri-7411371a5/'
     },
     {
       id: 13,
@@ -127,7 +137,16 @@ const teamMembers = [
       position: 'TikTok Creator',
       image: member16,
       hoverImage: fiona, 
-    }
+      linkedinLink: 'https://www.linkedin.com/in/fiona-rrecaj-45a0b5236/'
+    },
+    {
+      id: 12,
+      name: 'Kreshnik Kelmendi',
+      position: 'Web Developer',
+      image: member15,
+      hoverImage: kreshnik, 
+      linkedinLink: 'https://www.linkedin.com/in/kreshnik-kelmendi-90b796242/'
+    },
 
 
   ];

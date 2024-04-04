@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { teamMembers } from './teamMembers';
-import { FaInstagram } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
 
@@ -17,6 +16,11 @@ const TeamMember = ({ member, index }) => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const iconVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   const delay = index * 0.15;
 
   return (
@@ -27,7 +31,7 @@ const TeamMember = ({ member, index }) => {
         animate={inView ? 'visible' : 'hidden'}
         variants={variants}
         transition={{ duration: 0.5, delay }}
-        className="text-white justify-center p-2 lg:p-0"
+        className="text-white justify-center p-2 lg:p-0 relative"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -35,27 +39,28 @@ const TeamMember = ({ member, index }) => {
           src={isHovered ? member.hoverImage : member.image}
           alt={member.name}
           className="w-full h-[58vh] lg:h-[82vh] object-cover"
-          whileHover={{ scale: isHovered ? 1.01 : 1 }} 
+          whileHover={{ scale: isHovered ? 1.005 : 1 }} 
           transition={{ duration: 0.9, ease: "easeIn" }} 
         />
-        <div className='relative justify-between items-center'>
-          <div className='absolute bottom-4 left-4'>
-            <h2 className="text-lg font-custom1 mt-2 font-bold">{member.name}</h2>
-            <p className="text-base font-custom1">{member.position}</p>
-          </div>
-          <div className='flex gap-x-[10px]'>
-            {member.instagramLink && (
-              <a href={member.instagramLink} target="_blank" rel="noopener noreferrer">
-                <FaInstagram />
-              </a>
-            )}
+        <div className='absolute bottom-4 left-4'>
+          <h2 className="text-lg font-custom1 mt-2 font-bold">{member.name}</h2>
+          <p className="text-base font-custom1">{member.position}</p>
+        </div>
+        {isHovered && (
+          <motion.div
+            className='absolute bottom-4 right-4'
+            initial="hidden"
+            animate="visible"
+            variants={iconVariants}
+            transition={{ duration: 0.5 }}
+          >
             {member.linkedinLink && (
               <a href={member.linkedinLink} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
             )}
-          </div>
-        </div>
+          </motion.div>
+        )}
       </motion.div>
     </LazyLoad>
   );
@@ -72,6 +77,9 @@ const Team = () => {
 };
 
 export default Team;
+
+
+
 
 
 

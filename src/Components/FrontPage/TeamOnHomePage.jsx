@@ -13,7 +13,7 @@ const TeamOnHomePage = () => {
     if (window.innerWidth < 768) {
       return 1;
     } else {
-      return 4;
+      return 5;
     }
   }
 
@@ -152,7 +152,7 @@ const TeamOnHomePage = () => {
               <motion.img
                 src={member.image}
                 alt={member.name}
-                className={`w-full h-[50vh] md:h-[90vh] object-cover cursor-pointer ${
+                className={`w-full h-[55vh] md:h-[90vh] object-cover cursor-pointer ${
                                     index === 0 ? 'active-slide' : ''
                                   }`}
                 
