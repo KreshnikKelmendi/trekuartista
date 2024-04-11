@@ -2,8 +2,8 @@ import member2 from "../Assets/ariani1.png";
 import member3 from "../Assets/IMG_5735.jpg";
 import member4 from "../Assets/IMG_8442.jpg";
 import member5 from "../Assets/IMG_5733.jpg"
-import member8 from "../Assets/Gentriti-1-retouch.jpg";
-import member9 from "../Assets/DSC_5149.JPG";
+import member8 from "../Assets/Gentriti-1.jpg";
+import member9 from "../Assets/DSC_5144.JPG";
 import member10 from "../Assets/DSC_5677.png";
 import member11 from "../Assets/IMG_9203.jpg"
 import member12 from "../Assets/IMG_5873.jpg";
@@ -12,7 +12,7 @@ import member14 from "../Assets/DSC_5605.png";
 import member15 from "../Assets/DSC_5135.JPG";
 import member16 from "../Assets/DSC_5043.JPG"
 import dora from "../Assets/DoraHover.jpg"
-import gentrit from "../Assets/Gentrit-2-Retouch.jpg"
+import gentrit from "../Assets/Gentriti-2.jpg"
 import eduart from "../Assets/DSC_5668.png"
 import endrit from "../Assets/DSC_5618.png"
 import hana from "../Assets/IMG_9205.jpg"
@@ -22,7 +22,7 @@ import fiona from "../Assets/DSC_5024.JPG"
 import kreshnik from "../Assets/32323.png"
 import kestrina from "../Assets/IMG_8444.jpg"
 import alba from "../Assets/IMG_5737.jpg"
-import ariani from "../Assets/ariani2.png"
+import ariani from "../Assets/ariani4.png"
 import edmiri from "../Assets/DSC_5170.JPG"
 import mirjeta1 from "../Assets/mirjeta.jpg"
 import mirjeta from "../Assets/mirjeta1.jpg"
@@ -42,7 +42,7 @@ const teamMembers = [
     {
       id: 2,
       name: 'Alba Krasniqi',
-      position: 'Operation Manager',
+      position: 'Operations Manager',
       image: member3,
       hoverImage: alba,
       linkedinLink: "https://www.linkedin.com/in/alba-krasniqi-87b93a105/"

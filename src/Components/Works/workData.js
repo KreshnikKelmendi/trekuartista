@@ -1,5 +1,5 @@
 import work1 from "../Assets/post9.png"
-import work2 from "../Assets/gjelber.png"
+import work2 from "../Assets/bannerTermokos.jpg"
 import work4 from "../Assets/mokne.png"
 import work5 from "../Assets/termokos.png"
 import first from "../Assets/post10.png"
@@ -8,6 +8,13 @@ import third from "../Assets/post5.png";
 import fourth from "../Assets/vegza.mp4"
 import fifth from "../Assets/post7.png"
 import dok from "../Assets/DokuTechFinal.mp4"
+import termokosBanner from "../Assets/bannerTermokos.jpg"
+import termokos2 from "../Assets/termokos1.jpg"
+import termokos3 from "../Assets/termokos2.jpg"
+import termokos4 from "../Assets/termokos3.jpg"
+import termokos5 from "../Assets/termokos-viz.jpg"
+import termokos6 from "../Assets/termokosVideo.mp4"
+import termokos7 from "../Assets/Logo_Animation.mp4"
 
 const ourWorks = [
       // Work 1
@@ -29,12 +36,17 @@ const ourWorks = [
     { 
       id:2,
       workImage: work2,
-      firstSinglePhoto: first,
-      secondSinglePhoto: second,
-      thirdSinglePhoto: third,
-      workName: "Gjelbër",
-      category:"Logo",
-      workDescription: "Logo / Branding / Packaging Design / Marketing Strategy / Web Design & Development" 
+      firstSinglePhoto: termokosBanner,
+      secondSinglePhoto: termokos2,
+      thirdSinglePhoto: termokos3,
+      fourthSinglePhoto: termokos4,
+      fifthSinglePhoto: termokos5,
+      sixthSinglePhoto: termokos6,
+      seventhSinglePhoto: termokos7,
+      workName: "Termokos",
+      category:"Brand Strategy",
+      workDescription: "Logo / Branding / Packaging Design / Marketing Strategy" ,
+      textDescription: "We take great pride in partaking in one of the most monumental transformations within the public sphere, marking it as a beacon of success and innovation since the year 2006. In the mission of reshaping TERMOKOS, Trekuartista ingeniously infused the distinctive silhouette of its buildings into the design, preserving the essence of its origin while infusing an artistic approach."
     },
       // Work 3
     {

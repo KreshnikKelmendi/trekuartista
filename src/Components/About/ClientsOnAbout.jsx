@@ -39,9 +39,9 @@ const ClientsOnAbout = () => {
         </div>
       </div>
 
-      <div className="logos bg-[#E6E6E6]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-[93px] gap-x-14 py-5 lg:gap-y-[110px] gap-y-16 px-16 lg:px-[90px] lg:py-[84px]">
         {partnerLogos.map((logo, index) => (
-          <div key={index} className='logos-slide'>
+          <div key={index}>
             <img className='w-[128px] h-[43px] object-contain' src={logo.src} alt={logo.alt} />
           </div>
         ))}

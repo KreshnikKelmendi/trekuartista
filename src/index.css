@@ -192,54 +192,32 @@ body{
   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-@keyframes slide {
-  from {
+.slider{
+  margin:  auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+.slider .slide-track{
+  animation: scroll 40s linear infinite;
+  display: flex;
+  padding: 50px;
+  width: (250px * 14);
+}
+.slider .slide{
+  height: 100px;
+  width: 250px;
+}
+
+@keyframes scroll {
+  0%{
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100%{
+    transform: translateX(calc(-250px * 7));
   }
-}
-
-.logos {
-  overflow: hidden;
-  padding: 60px 0;
-  white-space: nowrap;
-  position: relative;
-}
-
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
-
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-
-.logos:hover .logos-slide {
-  animation-play-state: paused;
-}
-
-.logos-slide {
-  display: inline-block;
-  animation: 5s slide infinite linear;
-}
-
-.logos-slide img {
-  height: 50px;
-  margin: 0 40px;
 }
   /* .accordion{
     width: 100%;
