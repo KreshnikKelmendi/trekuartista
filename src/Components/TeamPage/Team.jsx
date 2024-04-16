@@ -39,7 +39,7 @@ const TeamMember = ({ member, index }) => {
           src={isHovered ? member.hoverImage : member.image}
           alt={member.name}
           className="w-full h-[58vh] lg:h-[82vh] object-cover"
-          whileHover={{ scale: isHovered ? 1.005 : 1 }} 
+          whileHover={{ scale: isHovered ? 1.019 : 1 }} 
           transition={{ duration: 0.9, ease: "easeIn" }} 
         />
         <div className='absolute bottom-4 left-4'>

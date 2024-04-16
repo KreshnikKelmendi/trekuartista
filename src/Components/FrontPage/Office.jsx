@@ -95,7 +95,7 @@ const Images = ({ imgIndex }) => {
               scale: imgIndex === idx ? 1 : 0.90,
             }}
             transition={SPRING_OPTIONS}
-            className="aspect-video w-full lg:h-[763px] shrink-0 object-cover"
+            className="aspect-video w-full lg:h-[763px] 2xl:h-[863px] shrink-0 object-cover"
           />
         );
       })}

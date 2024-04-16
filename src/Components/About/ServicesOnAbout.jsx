@@ -118,6 +118,7 @@ const ServicesOnAbout = () => {
         </div>
       </div>
       <div className='lg:w-1/2 overflow-hidden hidden lg:block'>
+        <>
         <AnimatePresence>
           {hoveredService !== null && (
             <motion.img
@@ -131,6 +132,7 @@ const ServicesOnAbout = () => {
             />
           )}
         </AnimatePresence>
+        </>
       </div>
     </div>
   );

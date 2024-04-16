@@ -23,7 +23,7 @@ const Newest = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
-    <div className="py-0 md:py-2 " ref={ref}>
+    <div className="py-0 md:py-16 " ref={ref}>
       <motion.div
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
@@ -92,7 +92,7 @@ const Newest = () => {
             </motion.div>
           ))}
         </div>
-        <div className='justify-center items-center text-center'>
+        {/* <div className='justify-center items-center text-center'>
           <Link 
             to="/our-works" 
             onClick={() => window.scrollTo({
@@ -103,7 +103,7 @@ const Newest = () => {
               View more
             </button>
           </Link>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

@@ -150,7 +150,7 @@ const TeamOnHomePage = () => {
           >
             <div className="rounded-lg">
               <motion.img
-                src={member.image}
+                src={member.hoverImage}
                 alt={member.name}
                 className={`w-full h-[55vh] md:h-[90vh] object-cover cursor-pointer ${
                                     index === 0 ? 'active-slide' : ''
@@ -159,8 +159,8 @@ const TeamOnHomePage = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
-               <div className='flex justify-between items-center'>
-        <div className='mx-2'>
+               <div className='flex relative justify-between items-center'>
+        <div className='mx-2 absolute bottom-4 left-3'>
           <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
           <p className="text-base font-custom1">{member.position}</p>
         </div>

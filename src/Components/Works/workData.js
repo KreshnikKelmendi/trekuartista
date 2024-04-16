@@ -1,14 +1,14 @@
 import work1 from "../Assets/post9.png"
-import work2 from "../Assets/bannerTermokos.jpg"
+import work2 from "../Assets/termokos.png"
 import work4 from "../Assets/mokne.png"
 import work5 from "../Assets/termokos.png"
 import first from "../Assets/post10.png"
 import second from "../Assets/post3.png"
 import third from "../Assets/post5.png";
 import fourth from "../Assets/vegza.mp4"
-import fifth from "../Assets/post7.png"
+import fifth from "../Assets/post7.jpg"
 import dok from "../Assets/DokuTechFinal.mp4"
-import termokosBanner from "../Assets/bannerTermokos.jpg"
+import termokosBanner from "../Assets/firstTermokos.jpg"
 import termokos2 from "../Assets/termokos1.jpg"
 import termokos3 from "../Assets/termokos2.jpg"
 import termokos4 from "../Assets/termokos3.jpg"
@@ -39,10 +39,10 @@ const ourWorks = [
       firstSinglePhoto: termokosBanner,
       secondSinglePhoto: termokos2,
       thirdSinglePhoto: termokos3,
-      fourthSinglePhoto: termokos4,
-      fifthSinglePhoto: termokos5,
-      sixthSinglePhoto: termokos6,
-      seventhSinglePhoto: termokos7,
+      fourthSinglePhoto: termokos6,
+      fifthSinglePhoto: termokos4,
+      sixthSinglePhoto: termokos7,
+      seventhSinglePhoto: termokos5,
       workName: "Termokos",
       category:"Brand Strategy",
       workDescription: "Logo / Branding / Packaging Design / Marketing Strategy" ,
