@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 
 const DescriptionTeam = () => {
   const text =
-    'We like working together and performing professionally. Our team includes experienced business strategists, communication specialists, graphic and web designers, 3D animators, drawing illustrators, and programmers, ensuring that our clients receive professionalism and polish.'.split(
+    'Meet our vibrant collective of makers, thinkers and explorers - a fusion of creative minds dedicated to crafting dream brands, groundbreaking campaigns, and mesmerizing visuals. Together, we embark on a journey of innovation and imagination, shaping narratives that captivate hearts and inspire action.'.split(
       ' '
     );
 

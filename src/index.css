@@ -59,34 +59,6 @@ body{
       transform: translateX(-100%);
     }
   }
-
-  .motionBg:hover{
-    background-image: url(././Components/Assets/motion3.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: auto;
-    width: auto;
-    transition: 1s all ease;
-  }
-  .communicationBg:hover{
-    background-image: url(././Components/Assets/doni.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: auto;
-    width: auto;
-    transition: 1s all ease;
-  }
-  .webBg:hover{
-    background-image: url(././Components/Assets/122121121221.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: auto;
-    width: auto;
-    transition: 1s all ease;
-  }
   .text-stroke {
     -webkit-text-stroke: 1px black; /* Set the stroke width and color */
     color: transparent; /* Make the text transparent to show only the stroke */

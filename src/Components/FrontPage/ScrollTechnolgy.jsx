@@ -37,7 +37,7 @@ import officeImage1 from "../Assets/firstOffice.png";
 import officeImage2 from "../Assets/office5.png";
 
 const data = [
-  { id:1, name: "UI/X DESIGN CONCEPT", description: "Lorem ipsum dolor sit amet consectotiu"},
+  { id:1, name: "UI/X DESIGN CONCEPT", description: "Having understood your requirements we embark on a creative journey to develop design ideas. We utilize collaborative brainstorming and prototyping, which in return breathes life into the concepts and we further refine them with valuable user feedback. This iterative process ensures that our final designs are user-centered and all options have been explored to deliver cutting-edge solutions that engage and convert. Having understood your requirements we embark on a creative journey to develop design ideas. We utilize collaborative brainstorming and prototyping, which in return breathes life into the concepts and we further refine them with valuable user feedback. This iterative process ensures that our final designs are user-centered and all options have been explored to deliver cutting-edge solutions that engage and convert."},
   { id:2, name: "UI/X DESINGFDFDF CONCEPT", description: "Lorem ipsum dolor sit amet consectotiu"},
 ];
 

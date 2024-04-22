@@ -25,14 +25,10 @@ const AboutUsOnHomePage = () => {
           <SvgLine />
         </h1>
           <p className="md:hidden my-6 text-white font-custom1 text-[16px] leading-normal">
-                We uncover the hidden pathways, the shifting landscapes, the unnoticed opportunities, 
-                and the untouched canvases. Those "in plain sight" revolutions that will reshape your 
-                digital presence. <br /> <br />We provide the entrance and the exit strategy, the subtle 
-                adjustments that wield significant impact, and the grand ideas that will redefine your brand journey.
-                <br /> <br />
-                Our expertise encompasses profound insights, cutting-edge design, and captivating storytelling. Whether you
-                represent a well-established brand or a rising star, we offer a perspective that breaks the mold and sets 
-                your digital presence apart.
+          Step into our vibrant world at Trekuartista, where we breathe life into brands and reimagine the art of marketing.<br /> <br />
+          Here, we're not just creators; we're architects of innovation, building bridges between imagination and impact. 
+          From crafting visual identities to launching captivating campaigns, we infuse every project with a touch of magic and a dash of daring.
+          Join us as we carve new paths, rewrite the rules, and redefine what it means to stand out in a crowded marketplace.
           </p>
           <Link to="/about-trekuartista" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
                 <button className="my-6 lg:my-12 w-[207px] text-white hover:bg-white hover:scale-105 transition duration-500 ease-in-out hover:text-black text-base border border-white font-custom1 py-2 px-4">
@@ -52,13 +48,10 @@ const AboutUsOnHomePage = () => {
       transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
     }}>
     <p className="hidden lg:w-[605px] md:block text-white font-custom1 text-base leading-normal">
-      We uncover the hidden pathways, the shifting landscapes, the unnoticed opportunities, 
-      and the untouched canvases. Those "in plain sight" revolutions that will reshape your 
-      digital presence. <br /> <br />We provide the entrance and the exit strategy, the subtle 
-      adjustments that wield significant impact, and the grand ideas that will redefine your brand journey.<br /> <br />
-      Our expertise encompasses profound insights, cutting-edge design, and captivating storytelling. Whether you
-      represent a well-established brand or a rising star, we offer a perspective that breaks the mold and sets 
-      your digital presence apart.
+    Step into our vibrant world at Trekuartista, where we breathe life into brands and reimagine the art of marketing.<br /> <br />
+    Here, we're not just creators; we're architects of innovation, building bridges between imagination and impact. From crafting visual identities to launching captivating campaigns, we infuse every project with a touch of magic and a dash of daring.
+    <br /> <br />
+    Join us as we carve new paths, rewrite the rules, and redefine what it means to stand out in a crowded marketplace.
     </p>
   </motion.div>
   

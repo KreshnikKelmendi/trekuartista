@@ -4,7 +4,16 @@ import officeImage1 from "../Assets/firstOffice.png";
 import officeImage2 from "../Assets/office5.png";
 
 const imgs = [
-  officeImage1, officeImage2
+  {
+    src: officeImage1,
+    text: "Text for image 1",
+    description: "Lorem ipsum dolor sit amet consectour, lorem apis dolis"
+  },
+  {
+    src: officeImage2,
+    text: "Text for image 2",
+    description: "Lorem ipsum dolor sit amet consectour, lorem apis dolis"
+  }
 ];
 
 const ONE_SECOND = 3000;
@@ -82,12 +91,13 @@ export default Office
 const Images = ({ imgIndex }) => {
   return (
     <>
-      {imgs.map((imgSrc, idx) => {
+      {imgs.map((imgData, idx) => {
         return (
           <motion.div
             key={idx}
             style={{
-              backgroundImage: `url(${imgSrc})`,
+              position: "relative", // Ensuring relative positioning for text maps
+              backgroundImage: `url(${imgData.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -96,7 +106,15 @@ const Images = ({ imgIndex }) => {
             }}
             transition={SPRING_OPTIONS}
             className="aspect-video w-full lg:h-[763px] 2xl:h-[863px] shrink-0 object-cover"
-          />
+          >
+            {/* Text overlay */}
+            {imgIndex === idx && (
+              <div style={{ position: "absolute", top: "50%", left: "5%", transform: "translate(-5%, -50%)" }}>
+                <p className="text-[45px] text-white font-custom">{imgData.text}</p>
+                <p className="text-white text-[16px] font-custom1 mt-[24px] lg:w-[514px]">{imgData.description}</p>
+              </div>
+            )}
+          </motion.div>
         );
       })}
     </>

@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 
 const WorkDescription = () => {
   const text =
-    'Every project is a close collaboration between our clients and us. Projects are a joint effort with our clients. We specialize in solutions, creative design, motion, 3D, and Web Development, achieving great results together.'.split(
+    'Explore the showcase of our mastery, where we blend creativity and strategy to craft exceptional brand experiences.'.split(
       ' '
     );
 

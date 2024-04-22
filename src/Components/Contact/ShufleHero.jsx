@@ -12,10 +12,10 @@ const ShuffleHero = () => {
         <h1 className="text-4xl md:text-[33px] font-bold text-white font-custom leading-[47px]">
           Our space
         </h1>
-        <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-[425px] text-base font-medium font-custom1 text-white">
-          Trekuartista is an advertising agency providing full-scale marketing services. <br /> <br />
-          Founded in 2012 in Prishtina, we have consistently garnered successful outcomes for clients through creative and aggressive marketing strategies.
-          We believe in research-based recommendations, close tracking wherever possible, and exceptional creative work.
+        <span className="ml-0 lg:ml-[37px] mt-[33px] lg:mt-0 w-full lg:w-[505px] text-base font-medium font-custom1 text-white">
+        Nestled in the heart of Prishtina, our space is a dynamic workspace where creativity knows no bounds. <br /> <br />
+        It's more than just a place to work—it's a vibrant hub where ideas come to life. From warm collaborative nooks to top-notch amenities, our space is designed to inspire innovation and foster collaboration.<br /> <br />
+        Whether you're brainstorming with colleagues, hosting client meetings, or diving into focused work, our space provides the perfect environment to fuel your creativity and drive success.
         </span>
       </div>
     </div>

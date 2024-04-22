@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { teamMembers } from '../TeamPage/teamMembers';
 import SvgLine2 from './SvgLine2';
+import { FaLinkedin } from 'react-icons/fa';
 
 const TeamOnHomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(calculateSlidesPerPage());
   const [touchStartX, setTouchStartX] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
+  const [hoveredMember, setHoveredMember] = useState(null);
 
   function calculateSlidesPerPage() {
     if (window.innerWidth < 768) {
@@ -71,6 +73,10 @@ const TeamOnHomePage = () => {
     setIsPaused(false);
   };
 
+  const handleMemberHover = (id) => {
+    setHoveredMember(id);
+  };
+
   const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
@@ -105,12 +111,9 @@ const TeamOnHomePage = () => {
           </motion.div> */}
         </h1>
         <p className='lg:w-[665px] h-[160px] px-5 lg:px-0 lg:ml-16 font-custom1'>
-          We uncover the hidden pathways, the shifting landscapes, the unnoticed opportunities, 
-          and the untouched canvases. Those "in plain sight" revolutions that will reshape your 
-          digital presence.
+          Meet our vibrant collective of makers, thinkers and explorers - a fusion of creative minds dedicated to crafting dream brands, groundbreaking campaigns, and mesmerizing visuals. 
           <br /> <br />
-          We provide the entrance and the exit strategy, the subtle adjustments that wield significant 
-          impact, and the grand ideas that will redefine your brand journey.
+          Together, we embark on a journey of innovation and imagination, shaping narratives that captivate hearts and inspire action.
         </p>
 
         {/* <div className="flex cursor-pointer">
@@ -147,8 +150,10 @@ const TeamOnHomePage = () => {
             initial={{ x: 100 }}
             animate={{ x: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
+            onMouseEnter={() => handleMemberHover(member.id)}
+            onMouseLeave={() => handleMemberHover(null)}
           >
-            <div className="rounded-lg">
+            <div className="rounded-lg relative">
               <motion.img
                 src={member.hoverImage}
                 alt={member.name}
@@ -159,13 +164,18 @@ const TeamOnHomePage = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
+              
                <div className='flex relative justify-between items-center'>
-        <div className='mx-2 absolute bottom-4 left-3'>
-          <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
-          <p className="text-base font-custom1">{member.position}</p>
-        </div>
-       
-      </div>
+                  <div className='mx-2 absolute bottom-4 left-3'>
+                    <h2 className="text-lg font-custom1 font-semibold mt-2">{member.name}</h2>
+                    <p className="text-base font-custom1">{member.position}</p>
+                    {hoveredMember === member.id && (
+                          <div className=" w-full text-center py-2">
+                            <a href={member.linkedinLink} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400"><FaLinkedin /></a>
+                          </div>
+                        )}
+                  </div>
+              </div>
             </div>
           </motion.div>
         ))}
