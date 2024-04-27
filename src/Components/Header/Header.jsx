@@ -149,7 +149,7 @@ const Header = () => {
         
       </header>
 
-      <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-1 z-30">
+      <div className="hidden lg:flex flex-col items-end mt-10 fixed bottom-1 right-0 mr-2 z-30">
         <a href='https://www.instagram.com/trekuartista/' target='_blank' rel="noreferrer" className='text-gray-300 text-[30px] hover:text-[#DF319A] hover:scale-110'>
           <i className="fab fa-instagram-square"></i>
         </a>

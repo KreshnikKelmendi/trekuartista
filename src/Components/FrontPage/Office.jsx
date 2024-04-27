@@ -110,7 +110,7 @@ const Images = ({ imgIndex }) => {
             {/* Text overlay */}
             {imgIndex === idx && (
               <div style={{ position: "absolute", top: "50%", left: "5%", transform: "translate(-5%, -50%)" }}>
-                <p className="text-[45px] text-white font-custom">{imgData.text}</p>
+                <p className="text-[36px] lg:text-[45px] text-white font-custom">{imgData.text}</p>
                 <p className="text-white text-[16px] font-custom1 mt-[24px] lg:w-[514px]">{imgData.description}</p>
               </div>
             )}
