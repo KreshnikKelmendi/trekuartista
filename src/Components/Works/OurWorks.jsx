@@ -78,7 +78,7 @@ const WorkItem = ({ item, index }) => {
 
 const OurWorks = () => {
   return (
-    <div className="py-0 bg-black">
+    <div className="pb-10 bg-black">
       <div className="grid px-3 lg:px-[50px] grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-x-6 gap-y-12">
         {ourWorks?.map((item, index) => (
           <WorkItem key={index} item={item} index={index} />

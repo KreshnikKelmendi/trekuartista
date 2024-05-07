@@ -2,12 +2,22 @@ import React from 'react';
 import footerLogo from "../Assets/trekuartistaLogoFooter.png";
 import ScrollToTopButton from '../ScrollToTop/ScrollToTopButton';
 import { Link } from 'react-router-dom';
+import styles from "./bubble.module.css";
+import ReadyToTalk from './ReadyToTalk';
 
 const Footer = () => {
   return (
     <>
-    <div className='bg-black px-4 md:px-8 lg:px-12 text-white'>
-      <div className='py-16 z-50 md:py-12 lg:py-20 2xl:py-44 flex flex-col md:flex-col lg:flex-row justify-between'>
+    <ReadyToTalk />
+    <div className='bg-black pt-20 px-4 md:px-8 lg:px-12 text-white'>
+    <p className="text-[30px] text-left lg:text-[45px] font-custom lg:w-[1109px] leading-tight">
+      {"We love creating unforgettable digital experiences, brands and websites with people like you.".split("").map((child, idx) => (
+        <span className={styles.hoverText} key={idx}>
+          {child}
+        </span>
+      ))}
+    </p>
+      <div className='py-16 lg:mt-16 md:py-12 lg:py-20 2xl:py-24 flex flex-col md:flex-col lg:flex-row justify-between'>
         <div className='text-center lg:text-left mt-10 lg:mt-5'>
           <img src={footerLogo} className='w-[220px] h-[26px] object-cover mx-auto lg:mx-0' alt='' />
           <p className='font-custom text-xl mt-[20px]'>
@@ -34,47 +44,47 @@ const Footer = () => {
             </Link>
           </div>
           <div className='text-white py-10 lg:py-0 flex flex-col space-y-[23px]'>
-            <a href='#' className='text-base font-custom1 font-semibold hover:text-[#DF319A]'>
+            <p className='text-base font-custom1 font-semibold hover:text-[#DF319A]'>
               WHAT WE DO
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Drive success
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Marketing strategies
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Brand Identities
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Advertising
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
-              Consulting and Training
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Web  Design & Development
-            </a>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
+              Consulting and Training
+            </p>
           </div>
           <div className='text-white py-10 lg:py-0 flex flex-col space-y-[23px]'>
-            <a href='#' className='text-base line-through font-custom1  font-semibold hover:text-[#DF319A]'>
+            <p className='text-base line-through font-custom1  font-semibold hover:text-[#DF319A]'>
               WHAT WE DON'T
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Work on weekends
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Say no to coffee
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Take no for an answer
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Accept mediocrity
-            </a>
-            <a href='#' className='text-base font-custom1 font-light hover:text-[#DF319A]'>
+            </p>
+            <p className='text-base font-custom1 font-light hover:text-[#DF319A] hover:scale-105 hover:duration-700'>
               Sacrifice quality for profit
-            </a>
+            </p>
           </div>
         </div>
       </div>

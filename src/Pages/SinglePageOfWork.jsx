@@ -62,7 +62,7 @@ const SinglePageOfWork = () => {
         </LazyLoad>
       </div> 
 
-      <div className='grid grid-cols-1 bg-black lg:grid-cols-2 px-3 lg:px-[50px] py-[65px] lg:py-[15px] gap-x-[20px] gap-y-[20px] lg:gap-y-[23px] overflow-hidden'>
+      <div className='grid grid-cols-1 bg-black lg:grid-cols-2 px-3 lg:px-[50px] py-[20px] lg:py-[15px] gap-x-[20px] gap-y-[20px] lg:gap-y-[23px] overflow-hidden'>
         {mediaItems?.map((media, index) => (
           <div key={index} className="w-full h-80 lg:h-fit relative">
             <LazyLoad height='100%'>

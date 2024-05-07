@@ -1,12 +1,12 @@
 import work1 from "../Assets/post9.png"
 import work2 from "../Assets/termokos.png"
-import work4 from "../Assets/mokne.png"
+import work3 from "../Assets/mokne.png"
 import work5 from "../Assets/termokos.png"
-import first from "../Assets/post10.png"
-import second from "../Assets/post3.png"
-import third from "../Assets/post5.png";
-import fourth from "../Assets/vegza.mp4"
-import fifth from "../Assets/post7.jpg"
+import vegza1 from "../Assets/post10.png"
+import vegza2 from "../Assets/post3.png"
+import vegza3 from "../Assets/post5.png";
+import vegza4 from "../Assets/vegza.mp4"
+import vegza5 from "../Assets/post7.jpg"
 import dok from "../Assets/DokuTechFinal.mp4"
 import termokosBanner from "../Assets/firstTermokos.jpg"
 import termokos2 from "../Assets/termokos1.jpg"
@@ -15,17 +15,23 @@ import termokos4 from "../Assets/termokos3.jpg"
 import termokos5 from "../Assets/termokos-viz.jpg"
 import termokos6 from "../Assets/termokosVideo.mp4"
 import termokos7 from "../Assets/Logo_Animation.mp4"
+import mokne1 from "../Assets/mokne1.png"
+import mokne2 from "../Assets/mokne2.png"
+import mokne3 from "../Assets/mokneVideo1.mp4"
+import mokne4 from "../Assets/mokne4.png"
+import mokne5 from "../Assets/mokne5.png"
+import mokne6 from "../Assets/mokneVideo2.mp4"
 
 const ourWorks = [
       // Work 1
     { 
       id:1,
       workImage: work1,
-      firstSinglePhoto: first,
-      secondSinglePhoto: second,
-      thirdSinglePhoto: third,
-      fourthSinglePhoto: fourth,
-      fifthSinglePhoto: fifth,
+      firstSinglePhoto: vegza1,
+      secondSinglePhoto: vegza2,
+      thirdSinglePhoto: vegza3,
+      fourthSinglePhoto: vegza4,
+      fifthSinglePhoto: vegza5,
       workName: "VEGZA",
       category:"Brand Strategy",
       workDescription: "Logo / Branding / Marketing Strategy / PR / Animation & 3D / Web Design & Development", 
@@ -51,47 +57,51 @@ const ourWorks = [
       // Work 3
     {
       id:3,
-      workImage: work5,
-      firstSinglePhoto: first,
-      secondSinglePhoto: second,
-      thirdSinglePhoto: third,
-      workName: "Dokutech",
+      workImage: mokne5,
+      firstSinglePhoto: mokne5,
+      secondSinglePhoto: mokne1,
+      thirdSinglePhoto: mokne2,
+      fourthSinglePhoto: mokne3,
+      fifthSinglePhoto: mokne4,
+      sixthSinglePhoto: mokne5,
+      seventhSinglePhoto: mokne6,
+      workName: "MOKNE",
       category:"Brand Strategy",
       workDescription: "Bottle / Mokne / Logo / Design Brand Strategy / Natyral Water from Istog"
     },
       // Work 4
-    {
-      id:4,
-      workImage: third,
-      firstSinglePhoto: first,
-      secondSinglePhoto: second,
-      thirdSinglePhoto:third,
-      workName: "Termokos",
-      category:"Design",
-      workDescription: "Brand / Logo / Brand Strategy / Design / The city's Heating Station"
-    },
-      // Work 5
-    {
-      id:5,
-      workImage: work4,
-      firstSinglePhoto: first,
-      secondSinglePhoto: second,
-      thirdSinglePhoto:third,
-      workName: "Mokne",
-      category: "Printing",
-      workDescription: "Brand / Logo"
-    },
-    // Work 6
-    {
-      id:6,
-      workImage: work5,
-      firstSinglePhoto: first,
-      secondSinglePhoto: second,
-      thirdSinglePhoto:third,
-      workName: "Termokos3",
-      category: "Printing",
-      workDescription: "Brand / Logo"
-    }
+    // {
+    //   id:4,
+    //   workImage: third,
+    //   firstSinglePhoto: first,
+    //   secondSinglePhoto: second,
+    //   thirdSinglePhoto:third,
+    //   workName: "Termokos",
+    //   category:"Design",
+    //   workDescription: "Brand / Logo / Brand Strategy / Design / The city's Heating Station"
+    // },
+    //   // Work 5
+    // {
+    //   id:5,
+    //   workImage: work4,
+    //   firstSinglePhoto: first,
+    //   secondSinglePhoto: second,
+    //   thirdSinglePhoto:third,
+    //   workName: "Mokne",
+    //   category: "Printing",
+    //   workDescription: "Brand / Logo"
+    // },
+    // // Work 6
+    // {
+    //   id:6,
+    //   workImage: work5,
+    //   firstSinglePhoto: first,
+    //   secondSinglePhoto: second,
+    //   thirdSinglePhoto:third,
+    //   workName: "Termokos3",
+    //   category: "Printing",
+    //   workDescription: "Brand / Logo"
+    // }
 ]
 
 export { ourWorks }

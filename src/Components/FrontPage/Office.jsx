@@ -60,7 +60,7 @@ const Office = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-black py-8">
+    <div className="relative overflow-hidden bg-black pt-8">
       <motion.div
         drag="x"
         dragConstraints={{

@@ -34,7 +34,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[400px] w-[100vh] overflow-hidden"
+      className="group relative h-[400px] w-[200vh] overflow-hidden"
     >
       <div className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"></div>
       <div className="absolute inset-0 z-10 grid">
@@ -42,7 +42,7 @@ const Card = ({ card }) => {
             <p className="font-custom justify-start p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
             {card.title}
             </p>
-            <p className="text-white">{card.description}</p>
+            <p className="text-white p-8 w-[650px]">{card.description}</p>
         </div>
       </div>
     </div>
