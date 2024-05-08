@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ReadyToTalk = () => {
   return (
@@ -8,10 +9,12 @@ const ReadyToTalk = () => {
           <p className='font-custom1'>Lorem ipsum dolor sit amet</p>
        </div>
        <div className='lg:w-1/2 text-right'>
-          <button className='border border-[#000000] lg:w-[207px] w-80 h-[50px] font-custom1 text-[16px] hover:bg-black hover:text-white hover:duration-300'>Start a project</button>
+          <Link to="/contact" onClick={() => window.scrollTo({ top: 2100, left: 0 })}>
+            <button className='border border-[#000000] lg:w-[207px] w-80 h-[50px] font-custom1 text-[16px] hover:bg-black hover:text-white hover:duration-300'>Start a project</button>
+          </Link>
        </div>
     </div>
-  )
-}
+  );
+};
 
-export default ReadyToTalk
+export default ReadyToTalk;
