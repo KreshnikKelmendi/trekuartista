@@ -90,7 +90,7 @@ import { useInView } from 'react-intersection-observer';
 import FetchData from '../hooks/FetchData';
 
 const ImageWithAnimation = ({ member, index }) => {
-  const apiUrl = "https://trekuartista-cms-as46r.ondigitalocean.app/";
+  const apiUrl = "https://trekuartista-cms-as46r.ondigitalocean.app";
   const [hoveredMember, setHoveredMember] = useState(null);
   const [ref, inView] = useInView({ triggerOnce: true });
 
@@ -124,7 +124,7 @@ const ImageWithAnimation = ({ member, index }) => {
 };
 
 const Team = () => {
-  const apiUrl = "https://trekuartista-cms-as46r.ondigitalocean.app/";
+  const apiUrl = "https://trekuartista-cms-as46r.ondigitalocean.app";
 
   let { loading, error, data } = FetchData(`${apiUrl}/api/teams?populate=*`);
 
