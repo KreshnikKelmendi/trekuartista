@@ -115,14 +115,14 @@ const teamMembers = [
         hoverImage: andena, 
         linkedinLink: 'https://www.linkedin.com/in/andena-rexhepi-069108258/'
       },
-      {
-        id: 14,
-        name: 'Kreshnik Kelmendi',
-        position: 'Web Developer',
-        image: member15,
-        hoverImage: kreshnik, 
-        linkedinLink: 'https://www.linkedin.com/in/kreshnik-kelmendi-90b796242/'
-      },
+      // {
+      //   id: 14,
+      //   name: 'Kreshnik Kelmendi',
+      //   position: 'Web Developer',
+      //   image: member15,
+      //   hoverImage: kreshnik, 
+      //   linkedinLink: 'https://www.linkedin.com/in/kreshnik-kelmendi-90b796242/'
+      // },
       {
         id: 13,
         name: 'Fiona Rrecaj',
