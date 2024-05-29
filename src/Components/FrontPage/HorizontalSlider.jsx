@@ -28,7 +28,7 @@ export default function HorizontalSlider() {
             title={work.workName}
             description={work.workDescription}
             workImage={work.workImage}
-            url={work.workUrl} 
+            id={work.id}
             color={work.cardColor} 
             i={i}
           />

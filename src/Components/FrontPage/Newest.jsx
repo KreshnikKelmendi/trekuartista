@@ -62,7 +62,9 @@ const Newest = () => {
                 {/* bg-gray-800 bg-opacity-30 */}
                 <div className='absolute bottom-0 px-5 py-8 w-full'> 
                   <p className='font-custom text-white text-4xl lg:text-[45px]'>{item.workName}</p>
+                  <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
                   <button className='mt-6 w-[207px] text-white transition duration-500 ease-in-out hover:text-white hover:border-black hover:bg-black text-base border border-white font-custom1 py-2 px-4'>Show more</button>
+                  </Link>
                 </div>
                 {/* <Link to={`/our-works/${item.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
                   {hoveredIndex === index && (
