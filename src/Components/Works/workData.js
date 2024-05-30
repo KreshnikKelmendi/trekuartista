@@ -1,5 +1,5 @@
 import work1 from "../Assets/post9.png"
-import work2 from "../Assets/termokos.png"
+import work2 from "../Assets/termokos5.jpg"
 import work3 from "../Assets/mokne.png"
 import work5 from "../Assets/termokos.png"
 import vegza1 from "../Assets/post10.png"

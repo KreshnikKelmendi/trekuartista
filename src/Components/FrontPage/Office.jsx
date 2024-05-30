@@ -109,7 +109,7 @@ const Images = ({ imgIndex }) => {
           >
             {/* Text overlay */}
             {imgIndex === idx && (
-              <div style={{ position: "absolute", top: "50%", left: "5%", transform: "translate(-5%, -50%)" }}>
+              <div className="px-4" style={{ position: "absolute", top: "50%", left: "5%", transform: "translate(-5%, -50%)" }}>
                 <p className="text-[36px] lg:text-[45px] text-white font-custom">{imgData.text}</p>
                 <p className="text-white text-[16px] font-custom1 mt-[24px] lg:w-[514px]">{imgData.description}</p>
               </div>
@@ -123,7 +123,7 @@ const Images = ({ imgIndex }) => {
 
 const Dots = ({ imgIndex, setImgIndex }) => {
   return (
-    <div className="mt-4 flex w-full justify-center gap-2 absolute bottom-16">
+    <div className="mt-4 flex w-full justify-center gap-2 absolute bottom-2 lg:bottom-16">
       {imgs?.map((_, idx) => {
         return (
           <button

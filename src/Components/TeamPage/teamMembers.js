@@ -1,4 +1,4 @@
-import member2 from "../Assets/ariani1.png";
+import member2 from "../Assets/ariani1-compress.png";
 import member3 from "../Assets/IMG_5735.jpg";
 import member4 from "../Assets/IMG_6361.jpg";
 import member5 from "../Assets/IMG_5733.jpg"
@@ -8,7 +8,7 @@ import member10 from "../Assets/DSC_5677.png";
 import member11 from "../Assets/IMG_9203.jpg"
 import member12 from "../Assets/IMG_5873.jpg";
 import member13 from "../Assets/5074_updated.jpg";
-import member14 from "../Assets/endriti2.png";
+import member14 from "../Assets/endriti2-compress.png";
 import member15 from "../Assets/DSC_5135.JPG";
 import member16 from "../Assets/image00002.jpeg"
 import dora from "../Assets/DoraHover.jpg"
@@ -22,7 +22,7 @@ import fiona from "../Assets/image00001.jpeg"
 import kreshnik from "../Assets/32323.png"
 import kestrina from "../Assets/IMG_6362.jpg"
 import alba from "../Assets/IMG_5794.jpg"
-import ariani from "../Assets/ariani4.png"
+import ariani from "../Assets/ariani4-compress.png"
 import edmiri from "../Assets/DSC_5170.JPG"
 import mirjeta1 from "../Assets/mirjeta.jpg"
 import mirjeta from "../Assets/mirjeta1.jpg"
@@ -115,14 +115,14 @@ const teamMembers = [
         hoverImage: andena, 
         linkedinLink: 'https://www.linkedin.com/in/andena-rexhepi-069108258/'
       },
-      // {
-      //   id: 14,
-      //   name: 'Kreshnik Kelmendi',
-      //   position: 'Web Developer',
-      //   image: member15,
-      //   hoverImage: kreshnik, 
-      //   linkedinLink: 'https://www.linkedin.com/in/kreshnik-kelmendi-90b796242/'
-      // },
+      {
+        id: 14,
+        name: 'Kreshnik Kelmendi',
+        position: 'Web Developer',
+        image: member15,
+        hoverImage: kreshnik, 
+        linkedinLink: 'https://www.linkedin.com/in/kreshnik-kelmendi-90b796242/'
+      },
       {
         id: 13,
         name: 'Fiona Rrecaj',

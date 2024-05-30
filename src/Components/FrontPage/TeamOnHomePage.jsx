@@ -157,7 +157,7 @@ const TeamOnHomePage = () => {
               <motion.img
                 src={member.hoverImage}
                 alt={member.name}
-                className={`w-full h-[55vh] md:h-[90vh] object-cover cursor-pointer ${
+                className={`w-full h-[60vh] md:h-[90vh] object-cover cursor-pointer ${
                                     index === 0 ? 'active-slide' : ''
                                   }`}
                 
