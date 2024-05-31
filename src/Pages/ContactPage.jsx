@@ -15,7 +15,8 @@ const ContactPage = () => {
     <>
       {/* <SpaceOffice /> */}
       {/* <ZoomParallax /> */}
-      <ShuffleHero />
+      {/* <ShuffleHero /> */}
+      <SpaceOffice />
       <ContactForm />
       <Map />
     </>

@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { teamMembers } from '../TeamPage/teamMembers';
 import SvgLine2 from './SvgLine2';
 import { FaLinkedin } from 'react-icons/fa';
+import SvgLine from './SvgLine';
 
 const TeamOnHomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

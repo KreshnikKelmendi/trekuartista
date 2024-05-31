@@ -6,12 +6,12 @@ import officeImage2 from "../Assets/office5.png";
 const imgs = [
   {
     src: officeImage1,
-    text: "Text for image 1",
+    text: "Text for image",
     description: "Lorem ipsum dolor sit amet consectour, lorem apis dolis"
   },
   {
     src: officeImage2,
-    text: "Text for image 2",
+    text: "Text for image",
     description: "Lorem ipsum dolor sit amet consectour, lorem apis dolis"
   }
 ];

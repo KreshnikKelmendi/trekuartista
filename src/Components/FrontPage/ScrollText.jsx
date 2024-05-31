@@ -32,9 +32,7 @@ const ScrollText = () => {
         },
         {
             title: 'Web development',
-            content: `Having understood your requirements we embark on a creative journey to develop design ideas. 
-            We utilize collaborative brainstorming and prototyping, which in return breathes life into the concepts and we further refine them with valuable user feedback. 
-            This iterative process ensures that our final designs are user-centered and all options have been explored to deliver cutting-edge solutions that engage and convert`
+            content: `Our team of expert developers and designers provides a comprehensive range of web development services. We build dynamic, responsive, and user-friendly web applications tailored to your business needs. Our solutions ensure seamless user experiences and are optimized for performance and security.`
         }
     ];
 
@@ -72,8 +70,12 @@ const ScrollText = () => {
     return (
         <>
             <div className='bg-black lg:py-[102px] overflow-hidden textTransition justify-center items-center mx-auto text-center'>
-            <motion.h1 className='hidden lg:flex text-white font-custom text-4xl lg:text-[60px] 2xl:text-[95px]' style={{ x }}>We craft digital experiences</motion.h1>                <h1 className='mt-12 flex lg:hidden text-white text-xl font-custom mx-auto justify-center text-center'>We craft digital experiences</h1>
+                 <motion.h1 className='hidden lg:flex text-white font-custom text-4xl lg:text-[60px] 2xl:text-[95px]' style={{ x }}>We craft digital experiences</motion.h1>
             </div>
+            <div className='bg-black pt-16 lg:py-[102px] lg:hidden justify-center items-center mx-auto px-4'>
+                 <motion.h1 className=' text-white font-custom text-4xl lg:text-[60px] 2xl:text-[95px]'>We craft digital experiences</motion.h1>
+            </div>
+            
 
             {/* Display current service with smooth transitions */}
             <div className='text-white bg-black lg:h-[60vh] px-5 lg:px-[60px] py-16 lg:py-[100px] flex flex-col lg:flex-row lg:justify-between'>
@@ -81,7 +83,7 @@ const ScrollText = () => {
                     <p className='font-custom text-4xl lg:text-[45px] leading-tight w-fit lg:w-[520px]'>{services[currentServiceIndex].title}</p>
                 </div>
                 <div className='lg:w-1/2 py-5'>
-                    <p className={`font-custom1 lg:w-[520px] 2xl:w-[665px] lg:h-[342px] text-[16px] transition-all duration-1000 ${blurContent ? 'blur' : ''}`}>
+                    <p className={`font-custom1 lg:w-[520px] 2xl:w-[665px] lg:h-[342px] text-[16px] transition-all duration-1000 ${blurContent ? '' : ''}`}>
                         {services[currentServiceIndex].content}
                     </p>
                 </div>

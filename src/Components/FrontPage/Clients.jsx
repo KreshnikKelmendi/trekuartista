@@ -1,36 +1,12 @@
 import React, { useState } from 'react';
-import prishtinaHeatSave from '../Assets/whitePr.png';
-import sap from '../Assets/whitesap.png';
-import unicef from '../Assets/whiteUnicef.png';
-import zone from '../Assets/whiteZone.png';
-import dokutech from '../Assets/whitedoku.png';
-import floil from '../Assets/floil.png';
-import doni from '../Assets/doni.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SvgLine from './SvgLine';
+import { partnerLogos } from '../Works/clients';
 
 const Clients = () => {
   const [showMore, setShowMore] = useState(false);
   const partnersToShow = showMore ? 25 : 8;
-
-  const partnerLogos = [
-    { src: prishtinaHeatSave, alt: 'Partner 1' },
-    { src: sap, alt: 'Partner 2' },
-    { src: unicef, alt: 'Partner 3' },
-    { src: dokutech, alt: 'Partner 4' },
-    { src: sap, alt: 'Partner 5' },
-    { src: zone, alt: 'Partner 6' },
-    { src: sap, alt: 'Partner 7' },
-    { src: unicef, alt: 'Partner 8' },
-    { src: zone, alt: 'Partner 9' },
-    { src: prishtinaHeatSave, alt: 'Partner 10' },
-    { src: floil, alt: 'partner 11' },
-    { src: dokutech, alt: 'partner 11' },
-    { src: doni, alt: 'partner 11' },
-    { src: dokutech, alt: 'partner 11' },
-    { src: floil, alt: 'partner 11' },
-  ];
 
   const [ref, inView] = useInView({
     triggerOnce: false, 
