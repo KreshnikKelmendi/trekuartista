@@ -22,10 +22,54 @@ import mokne4 from "../Assets/mokne4.png"
 import mokne5 from "../Assets/mokne5.png"
 import mokne6 from "../Assets/mokneVideo2.mp4"
 
+import mainBoyut from "../Assets/boyut1.png"
+import boyut2 from "../Assets/BOYUT2.png"
+import boyut3 from "../Assets/boyut3.png"
+import boyut4 from "../Assets/boyut4.png"
+import boyut5 from "../Assets/boyut5.png"
+import boyut6 from "../Assets/boyut6.png"
+import boyut7 from "../Assets/boyut7.png"
+import boyut8 from "../Assets/boyut10.mp4"
+import boyut9 from "../Assets/boyut8.png"
+import boyut10 from "../Assets/boyut9.png"
+import boyut11 from "../Assets/boyutAnimation.mp4"
+import boyut12 from "../Assets/boyut11.mp4"
+import boyut13 from "../Assets/boyut12.png"
+import boyut14 from "../Assets/boyut13.png"
+import boyut15 from "../Assets/boyut14.png"
+import boyut16 from "../Assets/boyut15.mp4"
+import boyut17 from "../Assets/boyut16.png"
+
 const ourWorks = [
+  { 
+    id:1,
+    workImage: mainBoyut,
+    firstSinglePhoto: mainBoyut,
+    secondSinglePhoto: boyut2,
+    thirdSinglePhoto: boyut3,
+    fourthSinglePhoto: boyut4,
+    fifthSinglePhoto: boyut5,
+    sixthSinglePhoto: boyut6,
+    seventhSinglePhoto: boyut7,
+    eightSinglePhoto: boyut8,
+    ninthSinglePhoto: boyut9,
+    tenthSinglePhoto: boyut10,
+    eleventhSinglePhoto: boyut12,
+    twelfthSinglePhoto: boyut11,
+    thirteenSinglePhoto: boyut13,
+    fourteenthSinglePhoto: boyut14,
+    fifteenthSinglePhoto: boyut15,
+    sixteenthSinglePhoto: boyut16,
+    seventeenthSinglePhoto: boyut17,
+    workName: "BOYUT",
+    category:"Brand Strategy",
+    workDescription: "Logo / Branding / Marketing Strategy / PR / Animation & 3D", 
+    textDescription: "We are incredibly proud to have played a key role in Boyut Plastik's transformative journey. Our creative approach to the new logo design blends the brand's unique features with an artistic flair, preserving its core identity while embracing innovation. Boyut Plastik continues to lead in plastics and sustainable solutions, dedicated to ongoing improvement and excellence.",
+    hoverText: "Campaign / Design / Logo"
+  },
       // Work 1
     { 
-      id:1,
+      id:2,
       workImage: work1,
       firstSinglePhoto: vegza1,
       secondSinglePhoto: vegza2,
@@ -40,7 +84,7 @@ const ourWorks = [
     },
       // Work 2
     { 
-      id:2,
+      id:3,
       workImage: work2,
       firstSinglePhoto: termokosBanner,
       secondSinglePhoto: termokos2,
@@ -56,7 +100,7 @@ const ourWorks = [
     },
       // Work 3
     {
-      id:3,
+      id:4,
       workImage: mokne5,
       firstSinglePhoto: mokne5,
       secondSinglePhoto: mokne1,
