@@ -105,13 +105,13 @@ const Images = ({ imgIndex }) => {
               scale: imgIndex === idx ? 1 : 0.90,
             }}
             transition={SPRING_OPTIONS}
-            className="aspect-video w-full lg:h-[763px] 2xl:h-[863px] shrink-0 object-cover"
+            className="aspect-video w-full h-96 lg:h-[763px] 2xl:h-[863px] shrink-0 object-cover"
           >
             {/* Text overlay */}
             {imgIndex === idx && (
               <div className="px-4" style={{ position: "absolute", top: "50%", left: "5%", transform: "translate(-5%, -50%)" }}>
-                <p className="text-[36px] lg:text-[45px] text-white font-custom">{imgData.text}</p>
-                <p className="text-white text-[16px] font-custom1 mt-[24px] lg:w-[514px]">{imgData.description}</p>
+                {/* <p className="text-[36px] lg:text-[45px] text-white font-custom">{imgData.text}</p>
+                <p className="text-white text-[16px] font-custom1 mt-[24px] lg:w-[514px]">{imgData.description}</p> */}
               </div>
             )}
           </motion.div>
